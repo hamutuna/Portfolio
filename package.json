@@ -2,12 +2,13 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build && mkdir -p public/amp && cp public/index.html public/amp/index.html && node cmd/ampify.js"
+    "build": "gatsby build --prefix-paths && mkdir -p public/amp && cp public/index.html public/amp/index.html && node cmd/ampify.js"
   },
   "dependencies": {
     "ampifyjs": "^0.0.3",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
+    "gh-pages": "^1.1.0",
     "react": "^16.3.0",
     "recursive-readdir": "^2.2.2",
     "styled-components": "^3.2.5"
