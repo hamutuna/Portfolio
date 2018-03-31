@@ -8,6 +8,7 @@
     "ampifyjs": "^0.0.3",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
+    "react": "^16.3.0",
     "recursive-readdir": "^2.2.2",
     "styled-components": "^3.2.5"
   },
