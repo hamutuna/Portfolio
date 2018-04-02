@@ -1,4 +1,6 @@
 [ignore]
+.*/.cache/.*
+.*/node_modules/.*
 
 [include]
 
