@@ -7,11 +7,13 @@ export const Section = styled.section`
   background-color: lightgray;
   border: 1px solid gray;
 
-  ${props => {
+  ${(props) => {
     if (props.isHalf) {
       return css`
         width: calc(50% - 2px);
       `;
     }
+
+    return css``;
   }};
 `;
