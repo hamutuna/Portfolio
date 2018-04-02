@@ -10,4 +10,13 @@ injectGlobal`
   body {
     margin: 0;
   }
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
 `;
