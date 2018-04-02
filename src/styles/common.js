@@ -14,3 +14,9 @@ export const row = css`
   justify-content: center;
   align-items: center;
 `;
+
+export const circle = (size: number) => css`
+  width: ${size}px;
+  height: ${size}px;
+  border-radius: 50%;
+`;

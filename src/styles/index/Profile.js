@@ -1,7 +1,7 @@
 // @flow
 import styled from 'styled-components';
 
-import { column, row } from '../../styles/common';
+import { column, row, circle } from '../../styles/common';
 
 export const Section = styled.section`
   ${column};
@@ -14,9 +14,7 @@ export const Title = styled.h1`
 
 export const Image = styled.img`
   background-color lightgray;
-  width: 212px;
-  height: 212px;
-  border-radius: 50%;
+  ${circle(212)};
 `;
 
 export const IconWrapper = styled.div`
