@@ -6,8 +6,9 @@
   },
   "dependencies": {
     "ampifyjs": "^0.0.3",
-    "gatsby": "^1.9.241",
+    "gatsby": "^2.0.0-alpha.12",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-react-next": "^1.0.11",
     "gh-pages": "^1.1.0",
     "react": "^16.3.0",
     "recursive-readdir": "^2.2.2",
