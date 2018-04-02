@@ -1,6 +1,8 @@
 // @flow
 import styled, { css } from 'styled-components';
 
+import { pc } from '../../var';
+
 export const Section = styled.section`
   height: 490px;
   width: calc(100% - 2px);
@@ -16,4 +18,8 @@ export const Section = styled.section`
 
     return css``;
   }};
+
+  ${pc} {
+    width: calc(50% - 2px);
+  }
 `;
