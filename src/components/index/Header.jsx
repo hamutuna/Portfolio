@@ -5,7 +5,9 @@ import * as s from '../../styles/index/Header';
 
 export default () => (
   <s.Header>
-    <s.Logo />
+    <a href="/">
+      <s.Logo />
+    </a>
     <s.Navi>
       <s.NaviItemList>
         <s.NaviItem>Profile</s.NaviItem>
