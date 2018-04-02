@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import { pc } from '../../var';
 
-export const Section = styled.section`
+export const Work = styled.a`
   height: 490px;
   width: calc(100% - 2px);
   background-color: lightgray;

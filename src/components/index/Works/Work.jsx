@@ -11,5 +11,5 @@ export default (props: Props) => {
   const { id } = props;
   const isHalf = id === 'work2' || id === 'work3';
 
-  return <s.Section isHalf={isHalf} />;
+  return <s.Work href={id} isHalf={isHalf} />;
 };
