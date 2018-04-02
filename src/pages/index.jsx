@@ -4,7 +4,7 @@ import * as React from 'react';
 import Header from '../components/index/Header';
 import FirstView from '../components/index/FirstView';
 import Profile from '../components/index/Profile';
-import Skills from '../components/index/Skills';
+import Skills from '../components/index/Skills/Skills';
 import Works from '../components/index/Works';
 import Footer from '../components/index/Footer';
 
