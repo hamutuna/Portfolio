@@ -1,18 +1,7 @@
 // @flow
 import * as React from 'react';
 
-type Skill = {
-  id: string,
-  title: string,
-};
-
-type Work = {
-  id: string,
-  title: string,
-  position: string,
-  skills: [Skill],
-  ingenuity: string,
-};
+import type { Work } from '../../entities/types';
 
 type Props = {
   pageContext: {
