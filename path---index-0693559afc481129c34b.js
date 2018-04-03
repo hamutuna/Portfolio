@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{232:function(o){o.exports={data:{allWorksJson:{edges:[{node:{id:"1"}},{node:{id:"2"}},{node:{id:"3"}},{node:{id:"4"}}]},allSkillsJson:{edges:[{node:{id:"sketch",title:"Sketch"}},{node:{id:"photoshop",title:"adobe Photoshop"}},{node:{id:"xd",title:"adobe XD"}},{node:{id:"javaScript",title:"JavaScript"}}]}},pageContext:{}}}}]);
+//# sourceMappingURL=path---index-0693559afc481129c34b.js.map

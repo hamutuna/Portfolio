@@ -297,10 +297,10 @@ function (_React$Component) {
 /*!********************************!*\
   !*** ./.cache/json/index.json ***!
   \********************************/
-/*! exports provided: pageContext, default */
+/*! exports provided: data, pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{}};
+module.exports = {"data":{"allWorksJson":{"edges":[{"node":{"id":"1"}},{"node":{"id":"2"}},{"node":{"id":"3"}},{"node":{"id":"4"}}]},"allSkillsJson":{"edges":[{"node":{"id":"sketch","title":"Sketch"}},{"node":{"id":"photoshop","title":"adobe Photoshop"}},{"node":{"id":"xd","title":"adobe XD"}},{"node":{"id":"javaScript","title":"JavaScript"}}]}},"pageContext":{}};
 
 /***/ }),
 
@@ -322,7 +322,7 @@ module.exports = {"layoutContext":{}};
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"1","title":"案件1","position":"デザイナーを担当した","skills":["1"],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"1","title":"案件1","position":"デザイナーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"xd","title":"adobe XD"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -333,7 +333,7 @@ module.exports = {"pageContext":{"work":{"id":"1","title":"案件1","position":"
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"コーダーを担当した","skills":["2"],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"コーダーを担当した","skills":[{"id":"javaScript","title":"JavaScript"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -344,7 +344,7 @@ module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"3","title":"案件3","position":"デザイナーを担当した","skills":["3"],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"3","title":"案件3","position":"デザイナーを担当した","skills":[{"id":"photoshop","title":"adobe Photoshop"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -355,7 +355,7 @@ module.exports = {"pageContext":{"work":{"id":"3","title":"案件3","position":"
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"4","title":"案件4","position":"コーダーを担当した","skills":["4"],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"4","title":"案件4","position":"コーダーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"javaScript","title":"JavaScript"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -28890,12 +28890,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../styles/index/Skills/Skills */ "./src/styles/index/Skills/Skills.js");
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var skills = ['skill_1', 'skill_2', 'skill_3'];
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var skills = props.skills;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Title"], null, "Skills"), skills.map(function (skill) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Skill"], {
-      title: skill,
-      key: skill
+      title: skill.title,
+      key: skill.id
     });
   }));
 });
@@ -28918,11 +28918,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var id = props.id;
-  var isHalf = id === 'works/2' || id === 'works/3';
+  var isHalf = id === '2' || id === '3';
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Works_Work__WEBPACK_IMPORTED_MODULE_1__["Work"], {
-    href: id,
+    href: "works/" + id,
     isHalf: isHalf
-  });
+  }, id);
 });
 
 /***/ }),
@@ -28943,12 +28943,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var works = ['works/1', 'works/2', 'works/3', 'works/4'];
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var works = props.works;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Description"], null, "Description here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["WorksWrapper"], null, works.map(function (w) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Work__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      id: w,
-      key: w
+      id: w.id,
+      key: w.id
     });
   })));
 });
@@ -28983,11 +28983,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./src/pages/index.jsx ***!
   \*****************************/
-/*! exports provided: default */
+/*! exports provided: default, query */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "query", function() { return query; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_index_FirstView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/index/FirstView */ "./src/components/index/FirstView.jsx");
@@ -28999,9 +29000,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_FirstView__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Profile__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Works_Works__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var _props$data = props.data,
+      allSkillsJson = _props$data.allSkillsJson,
+      allWorksJson = _props$data.allWorksJson;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_FirstView__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Profile__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    skills: allSkillsJson.edges.map(function (edge) {
+      return edge.node;
+    })
+  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Works_Works__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    works: allWorksJson.edges.map(function (edge) {
+      return edge.node;
+    })
+  }));
 });
+var query = "** extracted graphql fragment **";
 
 /***/ }),
 
@@ -29344,7 +29357,11 @@ __webpack_require__.r(__webpack_exports__);
       position = _pageContext$work.position,
       skills = _pageContext$work.skills,
       ingenuity = _pageContext$work.ingenuity;
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, title), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u62C5\u5F53\u7BC4\u56F2"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, position), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u4F7F\u7528skill"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, skills), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u5DE5\u592B\u3057\u305F\u70B9"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, ingenuity));
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, title), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u62C5\u5F53\u7BC4\u56F2"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, position), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u4F7F\u7528skill"), skills.map(function (skill) {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+      key: skill.id
+    }, skill.title);
+  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u5DE5\u592B\u3057\u305F\u70B9"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, ingenuity));
 });
 
 /***/ }),

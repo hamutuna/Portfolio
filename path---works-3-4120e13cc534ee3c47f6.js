@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{234:function(o){o.exports={pageContext:{work:{id:"3",title:"案件3",position:"デザイナーを担当した",skills:[{id:"photoshop",title:"adobe Photoshop"}],ingenuity:"xxを工夫した"}}}}}]);
+//# sourceMappingURL=path---works-3-4120e13cc534ee3c47f6.js.map
