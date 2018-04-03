@@ -4,7 +4,7 @@
     "develop": "gatsby develop",
     "build":
       "rm -r ./public && gatsby build --prefix-paths && mkdir -p public/amp && cp public/index.html public/amp/index.html && node cmd/ampify.js",
-    "lint": "eslint ./src || flow ./src"
+    "lint": "eslint ./src --ext=.js --ext=.jsx || flow ./src"
   },
   "dependencies": {
     "ampifyjs": "^0.0.3",
