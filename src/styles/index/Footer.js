@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 import { row } from '../../styles/common';
 
+import _NaviItem from '../../components/_common/NaviItem';
+
 export const Footer = styled.footer`
   width: 100%;
   height: 140px;
   margin-top: 180px;
 `;
 
-export const NaviItem = styled.li`
+export const NaviItem = styled(_NaviItem)`
   ${row};
   justify-content: left;
   height: 85px;

@@ -2,10 +2,11 @@
 import React from 'react';
 
 import * as s from '../../styles/index/Profile';
+import { anchors } from '../_common/NaviItem';
 
 export default () => (
   <s.Section>
-    <s.Title>Profile</s.Title>
+    <s.Title id={anchors.profile}>Profile</s.Title>
     <s.Image />
     <s.IconWrapper>
       <s.Icon />

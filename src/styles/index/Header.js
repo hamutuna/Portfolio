@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { row } from '../../styles/common';
 import { pc } from '../../styles/var';
 
+import _NaviItem from '../../components/_common/NaviItem';
+
 export const Header = styled.header`
   ${row};
   justify-content: space-between;
@@ -32,7 +34,7 @@ export const NaviItemList = styled.ol`
   }
 `;
 
-export const NaviItem = styled.li`
+export const NaviItem = styled(_NaviItem)`
   ${pc} {
     &:not(:first-child) {
       margin-left: 75px;

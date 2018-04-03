@@ -4,6 +4,7 @@ import React from 'react';
 import Work from './Work';
 
 import * as s from '../../../styles/index/Works/Works';
+import { anchors } from '../../_common/NaviItem';
 
 import type { Work as TWork } from '../../../entities/types';
 
@@ -16,7 +17,7 @@ export default (props: Props) => {
 
   return (
     <s.Section>
-      <h1>Works</h1>
+      <h1 id={anchors.works}>Works</h1>
       <s.Description>Description here.</s.Description>
       <s.WorksWrapper>
         {works.map((w) => <Work id={w.id} key={w.id} />)}

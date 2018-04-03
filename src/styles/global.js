@@ -19,4 +19,10 @@ injectGlobal`
   li {
     list-style: none;
   }
+
+  button {
+    appearance: none;
+    background: none;
+    border: none;
+  }
 `;
