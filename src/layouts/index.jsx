@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
 
-import Header from '../components/index/Header';
-import Footer from '../components/index/Footer';
+import Header from '../components/_common/Header';
+import Footer from '../components/_common/Footer';
 
 import '../styles/global';
 
