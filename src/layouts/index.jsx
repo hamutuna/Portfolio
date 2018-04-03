@@ -10,12 +10,10 @@ type Props = {
   children: () => React.Element<any>,
 };
 
-export default (props: Props) => {
-  return (
-    <React.Fragment>
-      <Header />
-      <main>{props.children()}</main>
-      <Footer />
-    </React.Fragment>
-  );
-};
+export default (props: Props) => (
+  <React.Fragment>
+    <Header />
+    <main>{props.children()}</main>
+    <Footer />
+  </React.Fragment>
+);
