@@ -10,7 +10,10 @@ exports.createPages = ({ graphql, actions }) => {
               id
               title
               position
-              skills
+              skills {
+                id
+                title
+              }
               ingenuity
             }
           }

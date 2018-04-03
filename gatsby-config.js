@@ -10,4 +10,7 @@ module.exports = {
     },
     'gatsby-transformer-json',
   ],
+  mapping: {
+    'WorksJson.skills': 'SkillsJson',
+  },
 };

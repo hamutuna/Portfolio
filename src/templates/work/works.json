@@ -3,28 +3,28 @@
     "id": "1",
     "title": "案件1",
     "position": "デザイナーを担当した",
-    "skills": ["1"],
+    "skills": ["sketch", "xd"],
     "ingenuity": "xxを工夫した"
   },
   {
     "id": "2",
     "title": "案件2",
     "position": "コーダーを担当した",
-    "skills": ["2"],
+    "skills": ["javaScript"],
     "ingenuity": "xxを工夫した"
   },
   {
     "id": "3",
     "title": "案件3",
     "position": "デザイナーを担当した",
-    "skills": ["3"],
+    "skills": ["photoshop"],
     "ingenuity": "xxを工夫した"
   },
   {
     "id": "4",
     "title": "案件4",
     "position": "コーダーを担当した",
-    "skills": ["4"],
+    "skills": ["sketch", "javaScript"],
     "ingenuity": "xxを工夫した"
   }
 ]
