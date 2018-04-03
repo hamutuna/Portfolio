@@ -9,7 +9,11 @@ type Props = {
 
 export default (props: Props) => {
   const { id } = props;
-  const isHalf = id === 'works/2' || id === 'works/3';
+  const isHalf = id === '2' || id === '3';
 
-  return <s.Work href={id} isHalf={isHalf} />;
+  return (
+    <s.Work href={`works/${id}`} isHalf={isHalf}>
+      {id}
+    </s.Work>
+  );
 };
