@@ -7,16 +7,25 @@ import Footer from '../components/_common/Footer';
 
 import '../styles/global';
 
-smoothscroll.polyfill();
-
 type Props = {
   children: () => React.Element<any>,
 };
 
-export default (props: Props) => (
-  <React.Fragment>
-    <Header />
-    <main>{props.children()}</main>
-    <Footer />
-  </React.Fragment>
-);
+export default class Template extends React.Component<Props> {
+  componentDidMount() {
+    // windowを触るので、ssr中は実行しないようにここで実行
+    smoothscroll.polyfill();
+  }
+
+  render() {
+    const { children } = this.props;
+
+    return (
+      <React.Fragment>
+        <Header />
+        <main>{children()}</main>
+        <Footer />
+      </React.Fragment>
+    );
+  }
+}
