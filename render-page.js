@@ -322,7 +322,7 @@ module.exports = {"layoutContext":{}};
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"id":"1"}};
+module.exports = {"pageContext":{"work":{"id":"1","title":"案件1","position":"デザイナーを担当した","skills":["1"],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -333,7 +333,7 @@ module.exports = {"pageContext":{"id":"1"}};
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"id":"2"}};
+module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"コーダーを担当した","skills":["2"],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -344,7 +344,7 @@ module.exports = {"pageContext":{"id":"2"}};
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"id":"3"}};
+module.exports = {"pageContext":{"work":{"id":"3","title":"案件3","position":"デザイナーを担当した","skills":["3"],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -355,18 +355,7 @@ module.exports = {"pageContext":{"id":"3"}};
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"id":"4"}};
-
-/***/ }),
-
-/***/ "./.cache/json/works.json":
-/*!********************************!*\
-  !*** ./.cache/json/works.json ***!
-  \********************************/
-/*! exports provided: pageContext, default */
-/***/ (function(module) {
-
-module.exports = {"pageContext":{"id":"4"}};
+module.exports = {"pageContext":{"work":{"id":"4","title":"案件4","position":"コーダーを担当した","skills":["4"],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -400,10 +389,10 @@ var _Users_note109_Workspace_hamutuna_portfolio_cache_json_layout_index_json__WE
 /*!***************************!*\
   !*** ./.cache/pages.json ***!
   \***************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, default */
+/*! exports provided: 0, 1, 2, 3, 4, default */
 /***/ (function(module) {
 
-module.exports = [{"componentChunkName":"component---src-pages-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-works-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works.json","path":"works/4"},{"componentChunkName":"component---src-pages-works-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-1.json","path":"/works/1"},{"componentChunkName":"component---src-pages-works-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-2.json","path":"/works/2"},{"componentChunkName":"component---src-pages-works-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-3.json","path":"/works/3"},{"componentChunkName":"component---src-pages-works-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-4.json","path":"/works/4"}];
+module.exports = [{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-1.json","path":"/works/1"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-2.json","path":"/works/2"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-3.json","path":"/works/3"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-4.json","path":"/works/4"},{"componentChunkName":"component---src-pages-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"index.json","path":"/"}];
 
 /***/ }),
 
@@ -698,13 +687,13 @@ exports.layouts = {
   "layout---index": preferDefault(__webpack_require__(/*! ./.cache/layouts/index.js */ "./.cache/layouts/index.js"))
 };
 exports.components = {
-  "component---src-pages-index-jsx": preferDefault(__webpack_require__(/*! ./src/pages/index.jsx */ "./src/pages/index.jsx")),
-  "component---src-pages-works-jsx": preferDefault(__webpack_require__(/*! ./src/pages/works.jsx */ "./src/pages/works.jsx"))
+  "component---src-templates-work-index-jsx": preferDefault(__webpack_require__(/*! ./src/templates/work/index.jsx */ "./src/templates/work/index.jsx")),
+  "component---src-pages-index-jsx": preferDefault(__webpack_require__(/*! ./src/pages/index.jsx */ "./src/pages/index.jsx"))
 };
 exports.json = (_exports$json = {
   "layout-index.json": __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"),
-  "index.json": __webpack_require__(/*! ./.cache/json/index.json */ "./.cache/json/index.json")
-}, _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works.json"] = __webpack_require__(/*! ./.cache/json/works.json */ "./.cache/json/works.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-1.json"] = __webpack_require__(/*! ./.cache/json/works-1.json */ "./.cache/json/works-1.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-2.json"] = __webpack_require__(/*! ./.cache/json/works-2.json */ "./.cache/json/works-2.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-3.json"] = __webpack_require__(/*! ./.cache/json/works-3.json */ "./.cache/json/works-3.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-4.json"] = __webpack_require__(/*! ./.cache/json/works-4.json */ "./.cache/json/works-4.json"), _exports$json);
+  "works-1.json": __webpack_require__(/*! ./.cache/json/works-1.json */ "./.cache/json/works-1.json")
+}, _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-2.json"] = __webpack_require__(/*! ./.cache/json/works-2.json */ "./.cache/json/works-2.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-3.json"] = __webpack_require__(/*! ./.cache/json/works-3.json */ "./.cache/json/works-3.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-4.json"] = __webpack_require__(/*! ./.cache/json/works-4.json */ "./.cache/json/works-4.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__(/*! ./.cache/json/index.json */ "./.cache/json/index.json"), _exports$json);
 
 /***/ }),
 
@@ -29016,26 +29005,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/pages/works.jsx":
-/*!*****************************!*\
-  !*** ./src/pages/works.jsx ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var pageContext = props.pageContext;
-  var nth = pageContext.id;
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, "work ", nth, " page!!!");
-});
-
-/***/ }),
-
 /***/ "./src/styles/common.js":
 /*!******************************!*\
   !*** ./src/styles/common.js ***!
@@ -29352,6 +29321,31 @@ var WorksWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].sec
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pc", function() { return pc; });
 var pc = '@media (min-width: 376px)';
+
+/***/ }),
+
+/***/ "./src/templates/work/index.jsx":
+/*!**************************************!*\
+  !*** ./src/templates/work/index.jsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var pageContext = props.pageContext;
+  var _pageContext$work = pageContext.work,
+      id = _pageContext$work.id,
+      title = _pageContext$work.title,
+      position = _pageContext$work.position,
+      skills = _pageContext$work.skills,
+      ingenuity = _pageContext$work.ingenuity;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, title), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u62C5\u5F53\u7BC4\u56F2"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, position), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u4F7F\u7528skill"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, skills), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h2", null, "\u5DE5\u592B\u3057\u305F\u70B9"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, ingenuity));
+});
 
 /***/ }),
 

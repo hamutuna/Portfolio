@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{232:function(n){n.exports={pageContext:{id:"4"}}},236:function(n){n.exports={pageContext:{id:"4"}}}}]);
-//# sourceMappingURL=path---works-4-ac410614578e4e5332a8.js.map
