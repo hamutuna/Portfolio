@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build --prefix-paths && mkdir -p public/amp && cp public/index.html public/amp/index.html && node cmd/ampify.js",
+    "build":
+      "rm -r ./public && gatsby build --prefix-paths && mkdir -p public/amp && cp public/index.html public/amp/index.html && node cmd/ampify.js",
     "lint": "eslint ./src || flow ./src"
   },
   "dependencies": {
