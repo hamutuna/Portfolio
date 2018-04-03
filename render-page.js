@@ -24654,6 +24654,453 @@ function resolvePathname(to) {
 
 /***/ }),
 
+/***/ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* smoothscroll v0.4.0 - 2018 - Dustan Kasten, Jeremias Menichelli - MIT License */
+(function () {
+  'use strict';
+
+  // polyfill
+  function polyfill() {
+    // aliases
+    var w = window;
+    var d = document;
+
+    // return if scroll behavior is supported and polyfill is not forced
+    if (
+      'scrollBehavior' in d.documentElement.style &&
+      w.__forceSmoothScrollPolyfill__ !== true
+    ) {
+      return;
+    }
+
+    // globals
+    var Element = w.HTMLElement || w.Element;
+    var SCROLL_TIME = 468;
+
+    // object gathering original scroll methods
+    var original = {
+      scroll: w.scroll || w.scrollTo,
+      scrollBy: w.scrollBy,
+      elementScroll: Element.prototype.scroll || scrollElement,
+      scrollIntoView: Element.prototype.scrollIntoView
+    };
+
+    // define timing method
+    var now =
+      w.performance && w.performance.now
+        ? w.performance.now.bind(w.performance)
+        : Date.now;
+
+    /**
+     * indicates if a the current browser is made by Microsoft
+     * @method isMicrosoftBrowser
+     * @param {String} userAgent
+     * @returns {Boolean}
+     */
+    function isMicrosoftBrowser(userAgent) {
+      var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+      return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+    }
+
+    /*
+     * IE has rounding bug rounding down clientHeight and clientWidth and
+     * rounding up scrollHeight and scrollWidth causing false positives
+     * on hasScrollableSpace
+     */
+    var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+    /**
+     * changes scroll position inside an element
+     * @method scrollElement
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function scrollElement(x, y) {
+      this.scrollLeft = x;
+      this.scrollTop = y;
+    }
+
+    /**
+     * returns result of applying ease math function to a number
+     * @method ease
+     * @param {Number} k
+     * @returns {Number}
+     */
+    function ease(k) {
+      return 0.5 * (1 - Math.cos(Math.PI * k));
+    }
+
+    /**
+     * indicates if a smooth behavior should be applied
+     * @method shouldBailOut
+     * @param {Number|Object} firstArg
+     * @returns {Boolean}
+     */
+    function shouldBailOut(firstArg) {
+      if (
+        firstArg === null ||
+        typeof firstArg !== 'object' ||
+        firstArg.behavior === undefined ||
+        firstArg.behavior === 'auto' ||
+        firstArg.behavior === 'instant'
+      ) {
+        // first argument is not an object/null
+        // or behavior is auto, instant or undefined
+        return true;
+      }
+
+      if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+        // first argument is an object and behavior is smooth
+        return false;
+      }
+
+      // throw error when behavior is not supported
+      throw new TypeError(
+        'behavior member of ScrollOptions ' +
+          firstArg.behavior +
+          ' is not a valid value for enumeration ScrollBehavior.'
+      );
+    }
+
+    /**
+     * indicates if an element has scrollable space in the provided axis
+     * @method hasScrollableSpace
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function hasScrollableSpace(el, axis) {
+      if (axis === 'Y') {
+        return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+      }
+
+      if (axis === 'X') {
+        return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+      }
+    }
+
+    /**
+     * indicates if an element has a scrollable overflow property in the axis
+     * @method canOverflow
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function canOverflow(el, axis) {
+      var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+      return overflowValue === 'auto' || overflowValue === 'scroll';
+    }
+
+    /**
+     * indicates if an element can be scrolled in either axis
+     * @method isScrollable
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function isScrollable(el) {
+      var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+      var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+      return isScrollableY || isScrollableX;
+    }
+
+    /**
+     * finds scrollable parent of an element
+     * @method findScrollableParent
+     * @param {Node} el
+     * @returns {Node} el
+     */
+    function findScrollableParent(el) {
+      var isBody;
+
+      do {
+        el = el.parentNode;
+
+        isBody = el === d.body;
+      } while (isBody === false && isScrollable(el) === false);
+
+      isBody = null;
+
+      return el;
+    }
+
+    /**
+     * self invoked function that, given a context, steps through scrolling
+     * @method step
+     * @param {Object} context
+     * @returns {undefined}
+     */
+    function step(context) {
+      var time = now();
+      var value;
+      var currentX;
+      var currentY;
+      var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+      // avoid elapsed times higher than one
+      elapsed = elapsed > 1 ? 1 : elapsed;
+
+      // apply easing to elapsed time
+      value = ease(elapsed);
+
+      currentX = context.startX + (context.x - context.startX) * value;
+      currentY = context.startY + (context.y - context.startY) * value;
+
+      context.method.call(context.scrollable, currentX, currentY);
+
+      // scroll more if we have not reached our destination
+      if (currentX !== context.x || currentY !== context.y) {
+        w.requestAnimationFrame(step.bind(w, context));
+      }
+    }
+
+    /**
+     * scrolls window or element with a smooth behavior
+     * @method smoothScroll
+     * @param {Object|Node} el
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function smoothScroll(el, x, y) {
+      var scrollable;
+      var startX;
+      var startY;
+      var method;
+      var startTime = now();
+
+      // define scroll context
+      if (el === d.body) {
+        scrollable = w;
+        startX = w.scrollX || w.pageXOffset;
+        startY = w.scrollY || w.pageYOffset;
+        method = original.scroll;
+      } else {
+        scrollable = el;
+        startX = el.scrollLeft;
+        startY = el.scrollTop;
+        method = scrollElement;
+      }
+
+      // scroll looping over a frame
+      step({
+        scrollable: scrollable,
+        method: method,
+        startTime: startTime,
+        startX: startX,
+        startY: startY,
+        x: x,
+        y: y
+      });
+    }
+
+    // ORIGINAL METHODS OVERRIDES
+    // w.scroll and w.scrollTo
+    w.scroll = w.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scroll.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? arguments[0]
+              : w.scrollX || w.pageXOffset,
+          // use top prop, second argument if present or fallback to scrollY
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+              ? arguments[1]
+              : w.scrollY || w.pageYOffset
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : w.scrollX || w.pageXOffset,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : w.scrollY || w.pageYOffset
+      );
+    };
+
+    // w.scrollBy
+    w.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0])) {
+        original.scrollBy.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined ? arguments[1] : 0
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+        ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      );
+    };
+
+    // Element.prototype.scroll and Element.prototype.scrollTo
+    Element.prototype.scroll = Element.prototype.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        // if one number is passed, throw error to match Firefox implementation
+        if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+          throw new SyntaxError('Value could not be converted');
+        }
+
+        original.elementScroll.call(
+          this,
+          // use left prop, first number argument or fallback to scrollLeft
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+          // use top prop, second argument or fallback to scrollTop
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+        );
+
+        return;
+      }
+
+      var left = arguments[0].left;
+      var top = arguments[0].top;
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        this,
+        this,
+        typeof left === 'undefined' ? this.scrollLeft : ~~left,
+        typeof top === 'undefined' ? this.scrollTop : ~~top
+      );
+    };
+
+    // Element.prototype.scrollBy
+    Element.prototype.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.elementScroll.call(
+          this,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left + this.scrollLeft
+            : ~~arguments[0] + this.scrollLeft,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top + this.scrollTop
+            : ~~arguments[1] + this.scrollTop
+        );
+
+        return;
+      }
+
+      this.scroll({
+        left: ~~arguments[0].left + this.scrollLeft,
+        top: ~~arguments[0].top + this.scrollTop,
+        behavior: arguments[0].behavior
+      });
+    };
+
+    // Element.prototype.scrollIntoView
+    Element.prototype.scrollIntoView = function() {
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scrollIntoView.call(
+          this,
+          arguments[0] === undefined ? true : arguments[0]
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      var scrollableParent = findScrollableParent(this);
+      var parentRects = scrollableParent.getBoundingClientRect();
+      var clientRects = this.getBoundingClientRect();
+
+      if (scrollableParent !== d.body) {
+        // reveal element inside parent
+        smoothScroll.call(
+          this,
+          scrollableParent,
+          scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+        );
+
+        // reveal parent in viewport unless is fixed
+        if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+          w.scrollBy({
+            left: parentRects.left,
+            top: parentRects.top,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // reveal element in viewport
+        w.scrollBy({
+          left: clientRects.left,
+          top: clientRects.top,
+          behavior: 'smooth'
+        });
+      }
+    };
+  }
+
+  if (true) {
+    // commonjs
+    module.exports = { polyfill: polyfill };
+  } else {}
+
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/styled-components/dist/styled-components.es.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/styled-components/dist/styled-components.es.js ***!
@@ -28771,6 +29218,104 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./src/components/_common/Footer.jsx":
+/*!*******************************************!*\
+  !*** ./src/components/_common/Footer.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Footer */ "./src/styles/index/Footer.js");
+/* harmony import */ var _NaviItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NaviItem */ "./src/components/_common/NaviItem.jsx");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["Footer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+    targetId: _NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].profile
+  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+    targetId: _NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].skills
+  }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+    targetId: _NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].works
+  }, "Works"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["Copy"], null, "\xA9 \uFE0FTSUNODA NATSUMI"));
+});
+
+/***/ }),
+
+/***/ "./src/components/_common/Header.jsx":
+/*!*******************************************!*\
+  !*** ./src/components/_common/Header.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_index_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Header */ "./src/styles/index/Header.js");
+/* harmony import */ var _NaviItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NaviItem */ "./src/components/_common/NaviItem.jsx");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Header"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Logo"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Navi"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItemList"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+    targetId: _NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].profile
+  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+    targetId: _NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].skills
+  }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+    targetId: _NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].works
+  }, "Works"))));
+});
+
+/***/ }),
+
+/***/ "./src/components/_common/NaviItem.jsx":
+/*!*********************************************!*\
+  !*** ./src/components/_common/NaviItem.jsx ***!
+  \*********************************************/
+/*! exports provided: anchors, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "anchors", function() { return anchors; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var anchors = {
+  profile: 'profile',
+  skills: 'skills',
+  works: 'works'
+};
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var children = props.children,
+      targetId = props.targetId,
+      className = props.className;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", {
+    className: className
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", {
+    href: "#",
+    onClick: function onClick() {
+      var target = document.querySelector("#" + targetId);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, children));
+});
+
+/***/ }),
+
 /***/ "./src/components/index/FirstView.jsx":
 /*!********************************************!*\
   !*** ./src/components/index/FirstView.jsx ***!
@@ -28791,48 +29336,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/index/Footer.jsx":
-/*!*****************************************!*\
-  !*** ./src/components/index/Footer.jsx ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Footer */ "./src/styles/index/Footer.js");
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["Footer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], null, "profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], null, "skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], null, "works"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Footer__WEBPACK_IMPORTED_MODULE_1__["Copy"], null, "\xA9 \uFE0FTSUNODA NATSUMI"));
-});
-
-/***/ }),
-
-/***/ "./src/components/index/Header.jsx":
-/*!*****************************************!*\
-  !*** ./src/components/index/Header.jsx ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_index_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Header */ "./src/styles/index/Header.js");
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Header"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Logo"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Navi"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItemList"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], null, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], null, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], null, "Works"))));
-});
-
-/***/ }),
-
 /***/ "./src/components/index/Profile.jsx":
 /*!******************************************!*\
   !*** ./src/components/index/Profile.jsx ***!
@@ -28845,10 +29348,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Profile */ "./src/styles/index/Profile.js");
+/* harmony import */ var _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Title"], null, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Image"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["IconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Description"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Title"], {
+    id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].profile
+  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Image"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["IconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Description"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
 });
 
 /***/ }),
@@ -28888,11 +29395,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../styles/index/Skills/Skills */ "./src/styles/index/Skills/Skills.js");
+/* harmony import */ var _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var skills = props.skills;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Title"], null, "Skills"), skills.map(function (skill) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Title"], {
+    id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].skills
+  }, "Skills"), skills.map(function (skill) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Skill"], {
       title: skill.title,
       key: skill.id
@@ -28940,12 +29451,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Work */ "./src/components/index/Works/Work.jsx");
 /* harmony import */ var _styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../styles/index/Works/Works */ "./src/styles/index/Works/Works.js");
+/* harmony import */ var _common_NaviItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var works = props.works;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Description"], null, "Description here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["WorksWrapper"], null, works.map(function (w) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_3__["anchors"].works
+  }, "Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Description"], null, "Description here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["WorksWrapper"], null, works.map(function (w) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Work__WEBPACK_IMPORTED_MODULE_1__["default"], {
       id: w.id,
       key: w.id
@@ -28964,18 +29479,48 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_index_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/index/Header */ "./src/components/index/Header.jsx");
-/* harmony import */ var _components_index_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/index/Footer */ "./src/components/index/Footer.jsx");
-/* harmony import */ var _styles_global__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/global */ "./src/styles/global.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Template; });
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! smoothscroll-polyfill */ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js");
+/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_common_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/_common/Header */ "./src/components/_common/Header.jsx");
+/* harmony import */ var _components_common_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/_common/Footer */ "./src/components/_common/Footer.jsx");
+/* harmony import */ var _styles_global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/global */ "./src/styles/global.js");
 
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("main", null, props.children()), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
-});
+
+
+
+var Template =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(Template, _React$Component);
+
+  function Template() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Template.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    // windowを触るので、ssr中は実行しないようにここで実行
+    smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_2___default.a.polyfill();
+  };
+
+  _proto.render = function render() {
+    var children = this.props.children;
+    return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_common_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("main", null, children()), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_common_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  };
+
+  return Template;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+
 
 /***/ }),
 
@@ -29062,7 +29607,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 
 
-var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  @font-face {\n    font-family: 'Operator Mono';\n    src: url('../fonts/Operator-Mono.ttf');\n  }\n\n  body {\n    margin: 0;\n  }\n\n  ul, ol {\n    margin: 0;\n    padding: 0;\n  }\n\n  li {\n    list-style: none;\n  }\n"]);
+var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  @font-face {\n    font-family: 'Operator Mono';\n    src: url('../fonts/Operator-Mono.ttf');\n  }\n\n  body {\n    margin: 0;\n  }\n\n  ul, ol {\n    margin: 0;\n    padding: 0;\n  }\n\n  li {\n    list-style: none;\n  }\n\n  button {\n    appearance: none;\n    background: none;\n    border: none;\n  }\n"]);
 
  // eslint-disable-next-line no-unused-expressions
 
@@ -29108,6 +29653,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 /* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/common */ "./src/styles/common.js");
+/* harmony import */ var _components_common_NaviItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: 100%;\n  height: 140px;\n  margin-top: 180px;\n"]),
@@ -29116,8 +29662,9 @@ var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteral
 
 
 
+
 var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].footer(_templateObject);
-var NaviItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject2, _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"]);
+var NaviItem = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_components_common_NaviItem__WEBPACK_IMPORTED_MODULE_3__["default"])(_templateObject2, _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"]);
 var Copy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].small(_templateObject3, _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"]);
 
 /***/ }),
@@ -29141,6 +29688,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 /* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/common */ "./src/styles/common.js");
 /* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/var */ "./src/styles/var.js");
+/* harmony import */ var _components_common_NaviItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n  justify-content: space-between;\n  width: 100%;\n  height: 50px;\n  background-color: darkgray;\n"]),
@@ -29152,11 +29700,12 @@ var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteral
 
 
 
+
 var Header = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"]);
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject2);
 var Navi = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav(_templateObject3, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
 var NaviItemList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ol(_templateObject4, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"], _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"]);
-var NaviItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject5, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
+var NaviItem = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_components_common_NaviItem__WEBPACK_IMPORTED_MODULE_4__["default"])(_templateObject5, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
 
 /***/ }),
 
