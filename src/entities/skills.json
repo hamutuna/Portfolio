@@ -4,15 +4,35 @@
     "title": "Sketch"
   },
   {
-    "id": "photoshop",
-    "title": "adobe Photoshop"
-  },
-  {
     "id": "xd",
     "title": "adobe XD"
   },
   {
-    "id": "javaScript",
-    "title": "JavaScript"
+    "id": "photoshop",
+    "title": "adobe Photoshop"
+  },
+  {
+    "id": "illustrator",
+    "title": "adobe Illustrator"
+  },
+  {
+    "id": "html5",
+    "title": "Html 5"
+  },
+  {
+    "id": "css3",
+    "title": "Css 3"
+  },
+  {
+    "id": "zeplin",
+    "title": "Zeplin"
+  },
+  {
+    "id": "github",
+    "title": "GitHub"
+  },
+  {
+    "id": "wordpress",
+    "title": "WordPress"
   }
 ]
