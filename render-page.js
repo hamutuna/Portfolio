@@ -305,7 +305,7 @@ function (_React$Component) {
 /*! exports provided: data, pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"data":{"allWorksJson":{"edges":[{"node":{"id":"1"}},{"node":{"id":"2"}},{"node":{"id":"3"}},{"node":{"id":"4"}}]},"allSkillsJson":{"edges":[{"node":{"id":"sketch","title":"Sketch"}},{"node":{"id":"photoshop","title":"adobe Photoshop"}},{"node":{"id":"xd","title":"adobe XD"}},{"node":{"id":"javaScript","title":"JavaScript"}}]}},"pageContext":{}};
+module.exports = {"data":{"allWorksJson":{"edges":[{"node":{"id":"1"}},{"node":{"id":"2"}},{"node":{"id":"3"}},{"node":{"id":"4"}}]},"allSkillsJson":{"edges":[{"node":{"id":"sketch","title":"Sketch"}},{"node":{"id":"xd","title":"adobe XD"}},{"node":{"id":"photoshop","title":"adobe Photoshop"}},{"node":{"id":"illustrator","title":"adobe Illustrator"}},{"node":{"id":"html5","title":"Html 5"}},{"node":{"id":"css3","title":"Css 3"}},{"node":{"id":"zeplin","title":"Zeplin"}},{"node":{"id":"github","title":"GitHub"}},{"node":{"id":"wordpress","title":"WordPress"}}]}},"pageContext":{}};
 
 /***/ }),
 
@@ -338,7 +338,7 @@ module.exports = {"pageContext":{"work":{"id":"1","title":"案件1","position":"
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"コーダーを担当した","skills":[{"id":"javaScript","title":"JavaScript"}],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"コーダーを担当した","skills":[{"id":"html5","title":"Html 5"},{"id":"css3","title":"Css 3"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -360,7 +360,7 @@ module.exports = {"pageContext":{"work":{"id":"3","title":"案件3","position":"
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"4","title":"案件4","position":"コーダーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"javaScript","title":"JavaScript"}],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"4","title":"案件4","position":"コーダーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"html5","title":"Html 5"},{"id":"css3","title":"Css 3"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -29266,6 +29266,138 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./src/assets/images/avatar.png":
+/*!**************************************!*\
+  !*** ./src/assets/images/avatar.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/avatar-eac8a35e816e512a69cfcc95c74bc020.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/contact_fb.png":
+/*!******************************************!*\
+  !*** ./src/assets/images/contact_fb.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADYCAYAAACJIC3tAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU6SURBVHgB7d3Lq9R1GMfx72+cY6kdKiqjyyKKouhmBNLdkha1yI2IYasMN63aRNmulf4DrUJbRYa0qbZdoMKCCInIpYYaaZr3W+pMbuY7c6BA83ycOTOvFwjPcI5u5M3zMDrn15QBj61+/77ePK80G/pfaZYPfNt0gcl1rDd0S/miN3dK553e/P3H63b05lYBYgQGQc3Ms7C1beBr1xbgYh3pDa1O80SdCxAjMAhqz+u2NtZXjbMQ/qfaTqfp1nfgbTAIEhgEtS+chcsLMHsGmrLBIEhgENS+8OuaAsym2pQNBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZB7QKX6Jab+g/YeWbpHXV++N7Fdb7j9uvqfNP1C+u84Oqpf/0zz57r1Pn0mbN1PnnqXJ2PnThT50NHT9d5/8GTA/PxOm/a+lMZNhsMggQGQU5E/tP9d99c57WrltR56YO31blpyqyYarcG5qvqPL2oP99846JyKZyIMOYEBkFORMrU1Lw6v75maZ1XvnBvnVuzdQtOGBsMggQGQU7ECbVw4B98N7z5fJ0fvf+WwuyxwSBIYBDkRJwgrVb/ncB333iuzs7CHBsMggQGQU7ECfLKiofq/PiS2wt5NhgECQyCnIhjbvEN/Udwv7pySeHKssEgSGAQ5EQcc2teerDO8wc+lsKVYYNBkMAgyIk4hq6a3/9rfXHZXYXhscEgSGAQ5EQcQ48+0P/4yaIF8wvDY4NBkMAgyIk4hh65zyeUR4UNBkECgyAn4hi6584byrD9daT/gLwtn/9S523bd9f5jz/7D8s7dfpsGUc2GAQJDIKciGPo1sXTZRgOHj5V59fWf1rnA4dOlEllg0GQwCDIiTiGphcN5/8ffvDJ9jpP8lk4yAaDIIFBkBNxDC1cMFWG4Yftewoz2WAQJDAIciKOoVbTlGHYd+B4YSYbDIIEBkFORGZNp9stzGSDQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkHNk6s3+WF2Id9uWVu4st778Mc6f/TZz2XYbDAIEhgE+dHZjJVdew6VUWKDQZDAIMiJyFjZuftwGSU2GAQJDIKciMx5p8+cq/O+g8fKKLHBIEhgEOREZM7btbf/zuGoPSbaBoMggUGQE5E577c9R8qossEgSGAQ5ERkztu5d7Q+ojLIBoMggUGQE5E5b9de7yLCRBIYBDkRmfN27RmtTzEPssEgSGAQ5ERkTvr77Pk6/77/aBlVNhgECQyCPF1lDA3rqS5Pvby5MJMNBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAS1L/w6PvD6mgJcrtqUDQZBAoOgdumWL+urpqwowGVqvupNNhgECQyC2q1us773otN0lw187doCXKwjvaHVKW/XuQAxAoOg9jdb1/7ae/H0qs1P9OZOq2zsf1v32YHfM11gch3rj83Xvel8Of9Wb/5u67odvdkGgyCBQdA/ogikh9JCmBgAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./src/assets/images/contact_mail.png":
+/*!********************************************!*\
+  !*** ./src/assets/images/contact_mail.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_css3.png":
+/*!******************************************!*\
+  !*** ./src/assets/images/skill_css3.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_css3-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_github.png":
+/*!********************************************!*\
+  !*** ./src/assets/images/skill_github.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_github-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_html5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/images/skill_html5.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_html5-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_illustrator.png":
+/*!*************************************************!*\
+  !*** ./src/assets/images/skill_illustrator.png ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_illustrator-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_photoshop.png":
+/*!***********************************************!*\
+  !*** ./src/assets/images/skill_photoshop.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_photoshop-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_sketch.png":
+/*!********************************************!*\
+  !*** ./src/assets/images/skill_sketch.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_sketch-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_wordpress.png":
+/*!***********************************************!*\
+  !*** ./src/assets/images/skill_wordpress.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_wordpress-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_xd.png":
+/*!****************************************!*\
+  !*** ./src/assets/images/skill_xd.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_xd-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/skill_zeplin.png":
+/*!********************************************!*\
+  !*** ./src/assets/images/skill_zeplin.png ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/skill_zeplin-96802114a12c36070b7475e414376860.png";
+
+/***/ }),
+
 /***/ "./src/components/_common/Footer.jsx":
 /*!*******************************************!*\
   !*** ./src/components/_common/Footer.jsx ***!
@@ -29397,13 +29529,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Profile */ "./src/styles/index/Profile.js");
 /* harmony import */ var _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
+/* harmony import */ var _assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/images/contact_fb.png */ "./src/assets/images/contact_fb.png");
+/* harmony import */ var _assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_images_contact_mail_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/images/contact_mail.png */ "./src/assets/images/contact_mail.png");
+/* harmony import */ var _assets_images_contact_mail_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_images_contact_mail_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/images/avatar.png */ "./src/assets/images/avatar.png");
+/* harmony import */ var _assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Title"], {
     id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].profile
-  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Image"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["IconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Description"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+    src: _assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_5___default.a
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["IconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.facebook.com/tunaoisi4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+    src: _assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3___default.a
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "mailto:tuna.oisi4@gmail.com"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+    src: _assets_images_contact_mail_png__WEBPACK_IMPORTED_MODULE_4___default.a
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Description"], null, "\u7FA4\u99AC\u770C\u307F\u3069\u308A\u5E02\u51FA\u8EAB\u3002\u5927\u5B66\u5352\u696D\u5F8C\u3001\u301C\u306E\u904B\u7528\u301Cweb\u30C7\u30B6\u30A4\u30CA\u30FC\u3092\u7D4C\u3066\u3001 2017\u5E74\u3088\u308AUX\u696D\u52D9\u306B\u643A\u308F\u308B\u3002 \u5E38\u306B\u4EBA\u9593\u306E\u6F5C\u5728\u610F\u8B58\u306B\u554F\u3044\u304B\u3051\u308B\u3088\u3046\u306A\u30C7\u30B6\u30A4\u30F3\u3092\u76EE\u6307\u3057\u3066\u3044\u308B\u3002"));
 });
 
 /***/ }),
@@ -29420,13 +29571,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../styles/index/Skills/Skill */ "./src/styles/index/Skills/Skill.js");
+/* harmony import */ var _assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/images/skill_sketch.png */ "./src/assets/images/skill_sketch.png");
+/* harmony import */ var _assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/images/skill_xd.png */ "./src/assets/images/skill_xd.png");
+/* harmony import */ var _assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../assets/images/skill_photoshop.png */ "./src/assets/images/skill_photoshop.png");
+/* harmony import */ var _assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../assets/images/skill_illustrator.png */ "./src/assets/images/skill_illustrator.png");
+/* harmony import */ var _assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../assets/images/skill_html5.png */ "./src/assets/images/skill_html5.png");
+/* harmony import */ var _assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../assets/images/skill_css3.png */ "./src/assets/images/skill_css3.png");
+/* harmony import */ var _assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../assets/images/skill_zeplin.png */ "./src/assets/images/skill_zeplin.png");
+/* harmony import */ var _assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../assets/images/skill_github.png */ "./src/assets/images/skill_github.png");
+/* harmony import */ var _assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../assets/images/skill_wordpress.png */ "./src/assets/images/skill_wordpress.png");
+/* harmony import */ var _assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10__);
 
 
+
+
+
+
+
+
+
+
+
+var imgMap = {
+  sketch: _assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+  xd: _assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+  photoshop: _assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+  illustrator: _assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+  html5: _assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+  css3: _assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+  zeplin: _assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+  github: _assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9___default.a,
+  wordpress: _assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10___default.a
+};
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var title = props.title;
+  var _props$skill = props.skill,
+      id = _props$skill.id,
+      title = _props$skill.title;
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     className: props.className
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Image"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Description"], null, title));
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+    src: imgMap[id],
+    alt: title
+  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Description"], null, title));
 });
 
 /***/ }),
@@ -29449,13 +29643,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var skills = props.skills;
+  var columns = 3;
+  var rowChunks = [];
+
+  for (var i = 0; i < skills.length; i += columns) {
+    rowChunks.push(skills.slice(i, i + columns));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Title"], {
     id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].skills
-  }, "Skills"), skills.map(function (skill) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Skill"], {
-      title: skill.title,
-      key: skill.id
-    });
+  }, "Skills"), rowChunks.map(function (chunk, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["SkillsWrapper"], {
+      key: chunk.map(function (skill) {
+        return skill.id;
+      }).join()
+    }, chunk.map(function (skill, j) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Skill"], {
+        skill: skill,
+        key: skill.id,
+        index: i * columns + j
+      });
+    }));
   }));
 });
 
@@ -29776,23 +29984,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 /* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/common */ "./src/styles/common.js");
+/* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/var */ "./src/styles/var.js");
 
 
-var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n  padding: 0 34px;\n"]),
+var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n  padding: 0 34px;\n\n  ", " {\n    padding: 0 248px;\n  }\n"]),
     _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 92px;\n"]),
     _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  background-color lightgray;\n  ", ";\n"]),
     _templateObject4 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n  margin-top: 42px;\n"]),
     _templateObject5 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  background-color gray;\n  width: 72px;\n  height: 72px;\n\n  &:nth-child(1) {\n    margin-right: 15px;\n  }\n\n  &:nth-child(2) {\n    margin-left: 15px;\n  }\n"]),
-    _templateObject6 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n"]);
+    _templateObject6 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n\n  ", " {\n    text-align: center;\n    min-width: 330px;\n  }\n"]);
 
 
 
-var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_2__["column"]);
+
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_2__["column"], _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1(_templateObject2);
 var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject3, Object(_styles_common__WEBPACK_IMPORTED_MODULE_2__["circle"])(212));
 var IconWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4, _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"]);
 var Icon = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject5);
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject6);
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject6, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
 
 /***/ }),
 
@@ -29815,14 +30025,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n"]),
-    _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  background-color: lightgray;\n  ", ";\n"]),
-    _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n"]);
+    _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n"]);
 
 
 
 var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_2__["column"]);
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject2, Object(_styles_common__WEBPACK_IMPORTED_MODULE_2__["circle"])(212));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject3);
+var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject, Object(_styles_common__WEBPACK_IMPORTED_MODULE_2__["circle"])(212));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject2);
 
 /***/ }),
 
@@ -29830,31 +30039,44 @@ var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_t
 /*!*******************************************!*\
   !*** ./src/styles/index/Skills/Skills.js ***!
   \*******************************************/
-/*! exports provided: Section, Title, Skill */
+/*! exports provided: Section, Title, SkillsWrapper, Skill */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsWrapper", function() { return SkillsWrapper; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Skill", function() { return Skill; });
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/taggedTemplateLiteralLoose.js");
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 /* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../common */ "./src/styles/common.js");
-/* harmony import */ var _components_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/index/Skills/Skill */ "./src/components/index/Skills/Skill.jsx");
+/* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../styles/var */ "./src/styles/var.js");
+/* harmony import */ var _components_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/index/Skills/Skill */ "./src/components/index/Skills/Skill.jsx");
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n"]),
     _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()([""]),
-    _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 96px;\n\n  &:nth-of-type(1) {\n    margin-top: 0;\n  }\n"]);
+    _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", " {\n    ", ";\n    margin-top: 96px;\n\n    &:nth-of-type(1) {\n      margin-top: 0;\n    }\n  }\n"]),
+    _templateObject4 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n\n  ", " {\n    margin-top: 0;\n    margin-left: 78px;\n\n    &:first-child {\n      margin-left: 0;\n    }\n  }\n"]),
+    _templateObject5 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n        margin-top: 0;\n      "]),
+    _templateObject6 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n      margin-top: 96px;\n    "]);
+
 
 
 
 
 var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _common__WEBPACK_IMPORTED_MODULE_2__["column"]);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1(_templateObject2);
-var Skill = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_components_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_3__["default"])(_templateObject3);
+var SkillsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"], _common__WEBPACK_IMPORTED_MODULE_2__["row"]);
+var Skill = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_components_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_4__["default"])(_templateObject4, function (props) {
+  if (props.index === 0) {
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject5);
+  }
+
+  return Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject6);
+}, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
 
 /***/ }),
 
