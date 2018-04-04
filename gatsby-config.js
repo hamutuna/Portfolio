@@ -1,6 +1,7 @@
 module.exports = {
   pathPrefix: '/portfolio',
   plugins: [
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
