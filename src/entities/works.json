@@ -10,7 +10,7 @@
     "id": "2",
     "title": "案件2",
     "position": "コーダーを担当した",
-    "skills": ["javaScript"],
+    "skills": ["html5", "css3"],
     "ingenuity": "xxを工夫した"
   },
   {
@@ -24,7 +24,7 @@
     "id": "4",
     "title": "案件4",
     "position": "コーダーを担当した",
-    "skills": ["sketch", "javaScript"],
+    "skills": ["sketch", "html5", "css3"],
     "ingenuity": "xxを工夫した"
   }
 ]
