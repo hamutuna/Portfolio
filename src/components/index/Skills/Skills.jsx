@@ -16,7 +16,7 @@ export default (props: Props) => {
   return (
     <s.Section>
       <s.Title id={anchors.skills}>Skills</s.Title>
-      {skills.map((skill) => <s.Skill title={skill.title} key={skill.id} />)}
+      {skills.map((skill) => <s.Skill skill={skill} key={skill.id} />)}
     </s.Section>
   );
 };

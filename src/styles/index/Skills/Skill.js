@@ -8,7 +8,6 @@ export const Section = styled.section`
 `;
 
 export const Image = styled.img`
-  background-color: lightgray;
   ${circle(212)};
 `;
 
