@@ -1,7 +1,11 @@
 // @flow
 import * as React from 'react';
 
-export const anchors = { profile: 'profile', skills: 'skills', works: 'works' };
+export const anchors = {
+  profile: 'profile',
+  skills: 'skills',
+  works: 'works',
+};
 
 type Anchors = $Keys<typeof anchors>;
 
@@ -21,7 +25,9 @@ export default (props: Props) => {
         onClick={() => {
           const target = document.querySelector(`#${targetId}`);
           if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({
+              behavior: 'smooth',
+            });
           }
         }}
       >

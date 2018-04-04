@@ -9,6 +9,14 @@ module.exports = {
   },
   rules: {
     'arrow-parens': ['error', 'always'],
-    'object-curly-newline': ['error', 'never'],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: 'always',
+        ObjectPattern: { multiline: true },
+        ImportDeclaration: 'never',
+        ExportDeclaration: { multiline: true, minProperties: 3 },
+      },
+    ],
   },
 };
