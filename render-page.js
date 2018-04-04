@@ -94,7 +94,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var plugins = []; // During bootstrap, we write requires at top of this file which looks like:
+var plugins = [{
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js */ "./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
 //     plugin: require("/path/to/plugin1/gatsby-ssr.js"),
@@ -2858,6 +2863,49 @@ function memoizeStringOnly(callback) {
 }
 
 module.exports = memoizeStringOnly;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+
+var _server = __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.replaceRenderer = function (_ref) {
+  var bodyComponent = _ref.bodyComponent,
+      replaceBodyHTMLString = _ref.replaceBodyHTMLString,
+      setHeadComponents = _ref.setHeadComponents;
+
+  var sheet = new _styledComponents.ServerStyleSheet();
+
+  var app = _react2.default.createElement(
+    _styledComponents.StyleSheetManager,
+    { sheet: sheet.instance },
+    bodyComponent
+  );
+
+  var body = (0, _server.renderToString)(app);
+
+  replaceBodyHTMLString(body);
+  setHeadComponents([sheet.getStyleElement()]);
+
+  return;
+};
 
 /***/ }),
 
