@@ -2,10 +2,15 @@
 import styled from 'styled-components';
 
 import { column, row, circle } from '../../styles/common';
+import { pc } from '../../styles/var';
 
 export const Section = styled.section`
   ${column};
   padding: 0 34px;
+
+  ${pc} {
+    padding: 0 248px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -38,4 +43,9 @@ export const Icon = styled.img`
 
 export const Description = styled.p`
   margin-top: 66px;
+
+  ${pc} {
+    text-align: center;
+    min-width: 330px;
+  }
 `;
