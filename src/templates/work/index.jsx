@@ -2,6 +2,7 @@
 import * as React from 'react';
 
 import type { Work } from '../../entities/types';
+import * as s from '../../styles/works/index';
 
 type Props = {
   pageContext: {
@@ -14,7 +15,8 @@ export default (props: Props) => {
   const { title, description, position, skills, ingenuity } = pageContext.work;
 
   return (
-    <div>
+    <s.Wrapper>
+      <s.FirstView />
       <h1>{title}</h1>
       <p>{description}</p>
       <h2>担当範囲</h2>
@@ -23,6 +25,6 @@ export default (props: Props) => {
       {skills.map((skill) => <p key={skill.id}>{skill.title}</p>)}
       <h2>工夫した点</h2>
       <p>{ingenuity}</p>
-    </div>
+    </s.Wrapper>
   );
 };
