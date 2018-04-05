@@ -29979,11 +29979,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/var */ "./src/styles/var.js");
 
 
-var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: 100v;\n  height: calc(100vh - headerHeight - ", ");\n  background-color: lightgray;\n"]);
+var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: 100v;\n  height: calc(100vh - ", " - ", ");\n  background-color: lightgray;\n"]);
 
 
 
-var FirstView = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject, _styles_var__WEBPACK_IMPORTED_MODULE_2__["underFirstView"]);
+var FirstView = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject, _styles_var__WEBPACK_IMPORTED_MODULE_2__["headerHeight"], _styles_var__WEBPACK_IMPORTED_MODULE_2__["underFirstView"]);
 
 /***/ }),
 
