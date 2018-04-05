@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { column, row, circle } from '../../styles/common';
 import { pc } from '../../styles/var';
 
+import Svg from '../../components/_common/Svg';
+
 export const Section = styled.section`
   ${column};
   padding: 0 34px;
@@ -22,23 +24,23 @@ export const Image = styled.img`
   ${circle(212)};
 `;
 
+const iconSize = 72;
+
 export const IconWrapper = styled.div`
   ${row};
   margin-top: 42px;
+  width: ${iconSize * 2 + 15 * 2}px;
+  justify-content: space-between;
 `;
 
-export const Icon = styled.img`
-  background-color gray;
-  width: 72px;
-  height: 72px;
+export const FBIcon = styled.img`
+  width: ${iconSize}px;
+  height: ${iconSize}px;
+`;
 
-  &:nth-child(1) {
-    margin-right: 15px;
-  }
-
-  &:nth-child(2) {
-    margin-left: 15px;
-  }
+export const MailIcon = styled(Svg)`
+  width: ${iconSize}px;
+  height: ${iconSize}px;
 `;
 
 export const Description = styled.p`

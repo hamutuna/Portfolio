@@ -4,7 +4,6 @@ import React from 'react';
 import * as s from '../../styles/index/Profile';
 import { anchors } from '../_common/NaviItem';
 import fb from '../../assets/images/contact_fb.png';
-import mail from '../../assets/images/contact_mail.png';
 import avatar from '../../assets/images/avatar.png';
 
 export default () => (
@@ -13,10 +12,10 @@ export default () => (
     <s.Image src={avatar} />
     <s.IconWrapper>
       <a href="https://www.facebook.com/tunaoisi4">
-        <s.Icon src={fb} />
+        <s.FBIcon src={fb} />
       </a>
       <a href="mailto:tuna.oisi4@gmail.com">
-        <s.Icon src={mail} />
+        <s.MailIcon id="mail" />
       </a>
     </s.IconWrapper>
     <s.Description>
