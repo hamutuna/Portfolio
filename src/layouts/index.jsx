@@ -4,6 +4,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 import Header from '../components/_common/Header';
 import Footer from '../components/_common/Footer';
+import Sprite from '../components/_common/Sprite';
 
 import '../styles/global';
 
@@ -22,6 +23,7 @@ export default class Template extends React.Component<Props> {
 
     return (
       <React.Fragment>
+        <Sprite />
         <Header />
         <main>{children()}</main>
         <Footer />
