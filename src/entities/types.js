@@ -8,6 +8,7 @@ export type Skill = {
 export type Work = {
   id: string,
   title: string,
+  description: string,
   position: string,
   skills: [Skill],
   ingenuity: string,

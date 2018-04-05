@@ -11,11 +11,12 @@ type Props = {
 
 export default (props: Props) => {
   const { pageContext } = props;
-  const { id, title, position, skills, ingenuity } = pageContext.work;
+  const { title, description, position, skills, ingenuity } = pageContext.work;
 
   return (
     <div>
       <h1>{title}</h1>
+      <p>{description}</p>
       <h2>担当範囲</h2>
       <p>{position}</p>
       <h2>使用skill</h2>
