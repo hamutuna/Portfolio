@@ -1,6 +1,20 @@
 // @flow
 import React from 'react';
 
-import { FirstView } from '../../styles/index/FirstView';
+import * as s from '../../styles/index/FirstView';
 
-export default () => <FirstView>first view</FirstView>;
+type Props = {
+  image: {
+    resolutions: {},
+  },
+};
+
+export default (props: Props) => {
+  const { image } = props;
+
+  return (
+    <s.FirstView>
+      <s.Image resolutions={image.resolutions} />
+    </s.FirstView>
+  );
+};
