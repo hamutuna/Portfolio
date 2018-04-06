@@ -305,7 +305,7 @@ function (_React$Component) {
 /*! exports provided: data, pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"data":{"allWorksJson":{"edges":[{"node":{"id":"1"}},{"node":{"id":"2"}},{"node":{"id":"3"}},{"node":{"id":"4"}}]},"allSkillsJson":{"edges":[{"node":{"id":"sketch","title":"Sketch"}},{"node":{"id":"xd","title":"adobe XD"}},{"node":{"id":"photoshop","title":"adobe Photoshop"}},{"node":{"id":"illustrator","title":"adobe Illustrator"}},{"node":{"id":"html5","title":"Html 5"}},{"node":{"id":"css3","title":"Css 3"}},{"node":{"id":"zeplin","title":"Zeplin"}},{"node":{"id":"github","title":"GitHub"}},{"node":{"id":"wordpress","title":"WordPress"}}]},"firstViewImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAACE4AAAhOAFFljFgAAADUklEQVRIx5VVaU8TQRjmF/pBIiZEiBiN+CdMjCdyBDzQ8Ek/iSBQDoMaBSPKHQgJAaRySDgKtLvd3bbb2d328X1nu7Nbbid5OtuZd573nqkAjdU/KXT2LuFD/wq6Y8uEFfnd2bOE3T0LwUgcZPCO1rr7l9EV88Hy7/uWsLahSZkK/vn8bR3VtwZQe2cI124PoYZQWz+Eqrp+zC0kFOHi8iGu3oiRzCDJlFA/iMraXgx+ivuExWIR541CoQDP81AoyVoZIS3teDOP3YTvgecVQgtNS2Br25Du7eyZJVjY3jFh2y6KxQKEEGVKOt7O40nrBPS0rdbYOEk4M7eLh80TaGmfQdvrWbS+mkHzy2k6MEmx0dWBg2QWA8Nx9A2t4lHLOO4+HqP4LUt3V9e0/3HZl9k/zFBCVhD7uIqv3zcw8mNTKugi0pV4KnSZSc+CL3Ou3tDl00iigpwUx3GQzzs0uzIJUQReVIQHaKNQVJs880EmcV1XZZn35H6AEmFgxBkxLEYsxIWGcplL5svIOkbHNmWgA4yO/S0rC023VTKi4DUuMeUyk1XW9lEX9OPK9RiqGHUxXK7pxcLiviJc+n2I6psDco9lWJY751J1DwaH4yFhJitIQxLJlEnfDjIZR84WFbzjFhShEC4ODg0YRg7pEgzTpnMWcjkREjouk5gUXIcC7nLlHYuN315EeLBPshY8l5MVgrtJEWbJQk03VTb9TPuIlhHv67pOpZMniLK5rJdtWyCZ1FSJBOD+jVYBryUS+zBNU+5FwcoVIbP7WjxJELUs+B9Yr2kaGWCXkfHZMkK2LEoWRbDG8WPFpmnBzuWkgqNyEUKX4pjzu+EEwmAwoa6npQFnFrYgAcMwz70g2CojnZaKT7oDylzmuJzm8tEs83yaUt9CCmw2mz1GdpSQXU6lNJkEXuJLoli6MI4RWpYlLRXCOZWQ/6dSSUpK9uwY+jVn0wFP4iRBPzRcNllqOZuynZcwCHyB2LYTWpjPu7In+TVToD426KDjeopwcyst357GZ1NooTenpX0ajc+ncL/xFyamd0LCqdld3Gv4iackyI9T04tpNLRN4kHTOOLrmnpXGGxlABH5Lms9/iOEJ5EvzQGCq/0ij5mM4UUFL/qY/QM8fETXfJjDUQAAAABJRU5ErkJggg==","width":400,"height":567,"src":"/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png","srcSet":"/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png 1x,\n/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-91a3d.png 1.5x,\n/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-1ce6e.png 2x,\n/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-8d087.png 3x"}}},"pageContext":{}};
+module.exports = {"data":{"html5Image":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_html5-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_html5-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_html5-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_html5-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"allWorksJson":{"edges":[{"node":{"id":"project1"}},{"node":{"id":"project2"}},{"node":{"id":"project3"}},{"node":{"id":"project4"}}]},"firstViewImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAACE4AAAhOAFFljFgAAADUklEQVRIx5VVaU8TQRjmF/pBIiZEiBiN+CdMjCdyBDzQ8Ek/iSBQDoMaBSPKHQgJAaRySDgKtLvd3bbb2d328X1nu7Nbbid5OtuZd573nqkAjdU/KXT2LuFD/wq6Y8uEFfnd2bOE3T0LwUgcZPCO1rr7l9EV88Hy7/uWsLahSZkK/vn8bR3VtwZQe2cI124PoYZQWz+Eqrp+zC0kFOHi8iGu3oiRzCDJlFA/iMraXgx+ivuExWIR541CoQDP81AoyVoZIS3teDOP3YTvgecVQgtNS2Br25Du7eyZJVjY3jFh2y6KxQKEEGVKOt7O40nrBPS0rdbYOEk4M7eLh80TaGmfQdvrWbS+mkHzy2k6MEmx0dWBg2QWA8Nx9A2t4lHLOO4+HqP4LUt3V9e0/3HZl9k/zFBCVhD7uIqv3zcw8mNTKugi0pV4KnSZSc+CL3Ou3tDl00iigpwUx3GQzzs0uzIJUQReVIQHaKNQVJs880EmcV1XZZn35H6AEmFgxBkxLEYsxIWGcplL5svIOkbHNmWgA4yO/S0rC023VTKi4DUuMeUyk1XW9lEX9OPK9RiqGHUxXK7pxcLiviJc+n2I6psDco9lWJY751J1DwaH4yFhJitIQxLJlEnfDjIZR84WFbzjFhShEC4ODg0YRg7pEgzTpnMWcjkREjouk5gUXIcC7nLlHYuN315EeLBPshY8l5MVgrtJEWbJQk03VTb9TPuIlhHv67pOpZMniLK5rJdtWyCZ1FSJBOD+jVYBryUS+zBNU+5FwcoVIbP7WjxJELUs+B9Yr2kaGWCXkfHZMkK2LEoWRbDG8WPFpmnBzuWkgqNyEUKX4pjzu+EEwmAwoa6npQFnFrYgAcMwz70g2CojnZaKT7oDylzmuJzm8tEs83yaUt9CCmw2mz1GdpSQXU6lNJkEXuJLoli6MI4RWpYlLRXCOZWQ/6dSSUpK9uwY+jVn0wFP4iRBPzRcNllqOZuynZcwCHyB2LYTWpjPu7In+TVToD426KDjeopwcyst357GZ1NooTenpX0ajc+ncL/xFyamd0LCqdld3Gv4iackyI9T04tpNLRN4kHTOOLrmnpXGGxlABH5Lms9/iOEJ5EvzQGCq/0ij5mM4UUFL/qY/QM8fETXfJjDUQAAAABJRU5ErkJggg==","width":400,"height":567,"src":"/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png","srcSet":"/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png 1x,\n/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-91a3d.png 1.5x,\n/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-1ce6e.png 2x,\n/portfolio/static/first_view-7a2138f8048138fff07ba5f9f7318d16-8d087.png 3x"}},"profileImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAFcUlEQVQ4y01UeVCVVRT/yJkytX8aM3EBAsfEFDIgWWRVcMulyEHgwXsgiFgjg0qAiiCKhqbhAoiKmiCmxqajCJhAQ6ZQGhDb4+285Xv4FpbAqe9xf93vIU535s69c+bc3z3nd87vMIODeoZfZjPLmAfZN/h7S0vzNPPgQPTYy6FyVb9U2fzrI66q+jZXduMH1c+PHlRQuxDANN735MlvbYKD/a0YHzjMtZ6Mwai1YV6t/n5pmMGgk+pYFS4VF0IkikBQ0AqEBPvBz88Tq1b54ciRg+jq+lOu1kgjJt8FBHhPYJhMukkbYzKz3wP/QirtQsJ2IRcU4MWtDPIZDwr0IqtDfImvrwdxcVnEzbF9jxMIwtCvlqK8vCyP+f8aGTFY02RZJQXjoNbILDmH0yxxoi0kfls4yczYS0qvXSSXiwtIYmIs8fBwJQ4OczF9+puW+HgR1/RLPWjKZ3iMoqL8iSh1rCJsaHgAJrPecupkzvjnm4KRc3gfaWioIXq9GgYjC41WCVW/BE1N9eTq1QskIyMVc2xnkuo7P3FanQI5OQcn0ufJNRi0Uo77G2JxhyVlz1d48rSJUOIxMmqG0cRieMSEW7evIzJyCy5cOIeKypto/eMxiYwIhVC41WIZH0NGxjdyCjeDUamk0QaDhkbHcvn5p0h8XDSpf3gfRfRhamoyTpzIob9nIipqKxzs58LOfg5mzXoXy5e78WCU2wBoWSV3KGsf3p46RcT0irvLaWGgo8Zjx7LI0iUfEleXxaDkY7GzE5wc58PRcR7s7Gzh7LwACxbYg+fQnm4Hh3lwd3clz54/4Y4ezYTt7JlVjFjco+QBJdKu8dzcLLJ2TSCWLVuC3TT1tLTdiKLV3LlzG7ZvF0EoCkdMTCQEgi1wcrLDwoWO/Gfkfk2V5XB2BubbzW7jAbmBgX50/PU7SU1NIhs3hGAD3c3Nj3DjxjVcvnwePb3t0L9Q00+70SfpRM2DaqtPaOhGzKbp19RUkYzMdHh+5Gxkenu7Ob1ehdbWZpKcnEhCgv2xefNaPG1pxgqfTxEbK4BCKQbPa0pKElJp1JmZaUhKSsCOHbFwWboQnZ3PSVZWOrzdPzbyHKoMRg3a2lvIzsQYsmZ1APypIrQ6JYqpUu7dr0RDYy0am+roWQeZohfp6Xvg6uIMby83RIR/QWiXWFL27uL5bmP6+noqhkcMkEg6uShBKElIEJLAQG+cPn0cMnkPrwRQjvCgthqlpcWgfQe3T1zg4+MB50WOKCo6S0b+NnEJCTGwn/d+NaNUSYRDQ3ravBru+PFseHm6kq1hmxHg7wmRcCtu3SoB9aEcP0NhYR5WhwRi5UpfrF8fAgpCeE71A/1cXJwQU9+aEsMYXiimabUyucms47VpKSm5hOzs/aSi8kcrV1+GrsfNm9dQdv0KNm1cC17D+/enIL8gj/SKO3jdW9RU0wkJsQra2O9Y1aLWSCIGB1leWhyrVxG6eQ6pWgZx4EAKreZnFDwdu5O/hlwhhkolIXpWBqWyh8jk3RydOigoyBNYwVTKPquglSpx3uiokTqLOR0rtyhpZRsb6wglm/AtVP/wHuK2RZP09L3kRtkVtLf9ZjGb1NzY2AAU8s5zPEZ5+VUbRqORvp48A6z8zOioASwrx9UrBVxIcADn5uZiWbduFa1+IHF3X2qJiRFwd+/e4s6eyUVFeSl02r5zk+87Op5OTBvKwesBSyOMyD93Ql5Hq5qelozAAG+Eh4fSHtyFMhqZVidHaclFVFaUKb47fkgw+a6lpXECQ6OWWU+ppJN5+c+w1ZhfeGoGbRVRbe2dKpEovO3x4wajRiMz0gK0dXU9q87NPRwzWYDSkvM2ra/AZNJ25j9h4rPzJM7l7gAAAABJRU5ErkJggg==","width":400,"height":400,"src":"/portfolio/static/avatar-eac8a35e816e512a69cfcc95c74bc020-f6f0c.png","srcSet":"/portfolio/static/avatar-eac8a35e816e512a69cfcc95c74bc020-f6f0c.png 1x,\n/portfolio/static/avatar-eac8a35e816e512a69cfcc95c74bc020-91a3d.png 1.5x,\n/portfolio/static/avatar-eac8a35e816e512a69cfcc95c74bc020-1ce6e.png 2x"}},"sketchImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_sketch-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_sketch-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_sketch-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_sketch-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"xdImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_xd-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_xd-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_xd-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_xd-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"photoshopImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_photoshop-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_photoshop-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_photoshop-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_photoshop-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"illustratorImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_illustrator-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_illustrator-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_illustrator-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_illustrator-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"allSkillsJson":{"edges":[{"node":{"id":"sketch","title":"Sketch"}},{"node":{"id":"xd","title":"adobe XD"}},{"node":{"id":"photoshop","title":"adobe Photoshop"}},{"node":{"id":"illustrator","title":"adobe Illustrator"}},{"node":{"id":"html5","title":"Html 5"}},{"node":{"id":"css3","title":"Css 3"}},{"node":{"id":"zeplin","title":"Zeplin"}},{"node":{"id":"github","title":"GitHub"}},{"node":{"id":"wordpress","title":"WordPress"}}]},"css3Image":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_css3-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_css3-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_css3-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_css3-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"zeplinImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_zeplin-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_zeplin-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_zeplin-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_zeplin-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"githubImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_github-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_github-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_github-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_github-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"wordpressImage":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAACE4AAAhOAFFljFgAAAEfUlEQVQ4y12TaUxUVxTH7wybYEAYYBDsIFgYkGWQTR1g2ASGMjDjYIdFQKx20Sb91g82bVJbTJN+LSamH5qmkNBawYksFQKUUhYtoJIqtQphKVtZFUZEmPfe6bl35k0aX/LLPfee//mf+27uJSvaUkK/tbfKifhZDGf2bJ2s9tkyVvsi+5A3kDFkAtfrkVNcybvOVLuaXyZFWJ3o5Qie6yokG4UVMouhipo4iw02iirdN/VVi4LxHYDic8DjuFlU+edGYWUBzT8+lk89JEy8lGuymeaXOuEu/Z8XVriKRhgz0XpBuedaQfnshu40oGYX4baLquBlYSXOy2qopickmXrYChdOnJKgsT92cbIbEdwRFTDDxZy39y7lmRZWtaWwlFeyiwiot+Iav6urBIyv2H2kzHAuq1g2n13sJv7+Sn6J4zyh5rx0RV9C89OWvFJYzzEBxhwiIPwc8iy3BNDDwAqmNHq36XS9t83YSJa1NrNnJ85LN00m3y3DWe/N5Eue04llYTPpRtNMhqFvObMYsIZHBIT7N9NI52OTaYXOZFyt8xlXF7hQk5l0W5PZhHOSVYNR/oRY2S8IU2QPAHERdz2pKaydT9PDRIqOQwTEupBmoPMSMpaUJ78bmep0LzbT+b4q06XNN0E6X6T1Y0ZdrsHc3QP9/OSHM/w/X81xQ8qnfLf3SZp7otb2zRzXweOjWo5ij80ELnwsIa99f8Wc9uSvE3feTAZhoRTA0g3wYhBg9VPgf9n7EkZJ6GikXjeRnAcP43P4hwk5wqOEHBqvk3uxGZ8jl8Xxvir9ix63M36vrpGojS8J7LTEC0K/xsr3qnnuN802XHUHy9fkvTbymexBXIYwqsoC/DOB8kCVCWQoSrMzocqGv2Oz4GlsNjyKyYQRlTqJnaVJUr17hQB/gwhCE9mBawQWqsl3NDccmxKCtdbhKA0MHdYIDIzJQLh69I5SDTi+ogwpU2BAqXbcm+WPnC5DgxSgVQprn0g7a0klu6sDymP64YhUquWxThikHkq1hfSGJtePhKmhN/SolTL85nGMkzvYHQRXdr4vviE/bX9LpkaC3X3ERvgympn2EKvj/rDFnaQrOKF84GAS4GjtUiQICNeP805FfI3jck8RN7hO9ovzjqC4S78HJ9Ia3l5jvXMwGXB8nybd2wNV478GHYH2IBWHsUDpOXAEbgeqmm8HxWhveSb6f09SvVv3H85tC4hp7GbaOLBruS46D1TN4xp7IKRVHl3aHRALLfJoa4t/tGCHp2sd8hjA/HarPGq7HWOmw5xDJ4/e7QlQUc0HzKzZL4qdk1kWWdvlGwVmWYQV4cw+EQJiRfhbskig/G9NQA2P7Hazmsg66oENJKTJW+m40De8wq62einB7BUOGFt/9gzjEOE1OJq76RUGbajFuF6sv+mttD2Sxn3hjtfyo0fo2QaPkFmzxyFo9AiFBvcQimCHrdEcahZRe1Gsc3iIO8ROkiZ7hx9cFF71rsEX6lwVfRjv1LkogMJiV0Uv5i7iyK4QniGrFb3+A1dDd4FNCP5lAAAAAElFTkSuQmCC","width":400,"height":401,"src":"/portfolio/static/skill_wordpress-96802114a12c36070b7475e414376860-f6f0c.png","srcSet":"/portfolio/static/skill_wordpress-96802114a12c36070b7475e414376860-f6f0c.png 1x,\n/portfolio/static/skill_wordpress-96802114a12c36070b7475e414376860-91a3d.png 1.5x,\n/portfolio/static/skill_wordpress-96802114a12c36070b7475e414376860-1ce6e.png 2x"}},"project1Image":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAACE4AAAhOAFFljFgAAADUklEQVRIx5VVaU8TQRjmF/pBIiZEiBiN+CdMjCdyBDzQ8Ek/iSBQDoMaBSPKHQgJAaRySDgKtLvd3bbb2d328X1nu7Nbbid5OtuZd573nqkAjdU/KXT2LuFD/wq6Y8uEFfnd2bOE3T0LwUgcZPCO1rr7l9EV88Hy7/uWsLahSZkK/vn8bR3VtwZQe2cI124PoYZQWz+Eqrp+zC0kFOHi8iGu3oiRzCDJlFA/iMraXgx+ivuExWIR541CoQDP81AoyVoZIS3teDOP3YTvgecVQgtNS2Br25Du7eyZJVjY3jFh2y6KxQKEEGVKOt7O40nrBPS0rdbYOEk4M7eLh80TaGmfQdvrWbS+mkHzy2k6MEmx0dWBg2QWA8Nx9A2t4lHLOO4+HqP4LUt3V9e0/3HZl9k/zFBCVhD7uIqv3zcw8mNTKugi0pV4KnSZSc+CL3Ou3tDl00iigpwUx3GQzzs0uzIJUQReVIQHaKNQVJs880EmcV1XZZn35H6AEmFgxBkxLEYsxIWGcplL5svIOkbHNmWgA4yO/S0rC023VTKi4DUuMeUyk1XW9lEX9OPK9RiqGHUxXK7pxcLiviJc+n2I6psDco9lWJY751J1DwaH4yFhJitIQxLJlEnfDjIZR84WFbzjFhShEC4ODg0YRg7pEgzTpnMWcjkREjouk5gUXIcC7nLlHYuN315EeLBPshY8l5MVgrtJEWbJQk03VTb9TPuIlhHv67pOpZMniLK5rJdtWyCZ1FSJBOD+jVYBryUS+zBNU+5FwcoVIbP7WjxJELUs+B9Yr2kaGWCXkfHZMkK2LEoWRbDG8WPFpmnBzuWkgqNyEUKX4pjzu+EEwmAwoa6npQFnFrYgAcMwz70g2CojnZaKT7oDylzmuJzm8tEs83yaUt9CCmw2mz1GdpSQXU6lNJkEXuJLoli6MI4RWpYlLRXCOZWQ/6dSSUpK9uwY+jVn0wFP4iRBPzRcNllqOZuynZcwCHyB2LYTWpjPu7In+TVToD426KDjeopwcyst357GZ1NooTenpX0ajc+ncL/xFyamd0LCqdld3Gv4iackyI9T04tpNLRN4kHTOOLrmnpXGGxlABH5Lms9/iOEJ5EvzQGCq/0ij5mM4UUFL/qY/QM8fETXfJjDUQAAAABJRU5ErkJggg==","width":400,"height":567,"src":"/portfolio/static/work_project1-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png","srcSet":"/portfolio/static/work_project1-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png 1x,\n/portfolio/static/work_project1-7a2138f8048138fff07ba5f9f7318d16-91a3d.png 1.5x,\n/portfolio/static/work_project1-7a2138f8048138fff07ba5f9f7318d16-1ce6e.png 2x,\n/portfolio/static/work_project1-7a2138f8048138fff07ba5f9f7318d16-8d087.png 3x"}},"project2Image":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAACE4AAAhOAFFljFgAAADUklEQVRIx5VVaU8TQRjmF/pBIiZEiBiN+CdMjCdyBDzQ8Ek/iSBQDoMaBSPKHQgJAaRySDgKtLvd3bbb2d328X1nu7Nbbid5OtuZd573nqkAjdU/KXT2LuFD/wq6Y8uEFfnd2bOE3T0LwUgcZPCO1rr7l9EV88Hy7/uWsLahSZkK/vn8bR3VtwZQe2cI124PoYZQWz+Eqrp+zC0kFOHi8iGu3oiRzCDJlFA/iMraXgx+ivuExWIR541CoQDP81AoyVoZIS3teDOP3YTvgecVQgtNS2Br25Du7eyZJVjY3jFh2y6KxQKEEGVKOt7O40nrBPS0rdbYOEk4M7eLh80TaGmfQdvrWbS+mkHzy2k6MEmx0dWBg2QWA8Nx9A2t4lHLOO4+HqP4LUt3V9e0/3HZl9k/zFBCVhD7uIqv3zcw8mNTKugi0pV4KnSZSc+CL3Ou3tDl00iigpwUx3GQzzs0uzIJUQReVIQHaKNQVJs880EmcV1XZZn35H6AEmFgxBkxLEYsxIWGcplL5svIOkbHNmWgA4yO/S0rC023VTKi4DUuMeUyk1XW9lEX9OPK9RiqGHUxXK7pxcLiviJc+n2I6psDco9lWJY751J1DwaH4yFhJitIQxLJlEnfDjIZR84WFbzjFhShEC4ODg0YRg7pEgzTpnMWcjkREjouk5gUXIcC7nLlHYuN315EeLBPshY8l5MVgrtJEWbJQk03VTb9TPuIlhHv67pOpZMniLK5rJdtWyCZ1FSJBOD+jVYBryUS+zBNU+5FwcoVIbP7WjxJELUs+B9Yr2kaGWCXkfHZMkK2LEoWRbDG8WPFpmnBzuWkgqNyEUKX4pjzu+EEwmAwoa6npQFnFrYgAcMwz70g2CojnZaKT7oDylzmuJzm8tEs83yaUt9CCmw2mz1GdpSQXU6lNJkEXuJLoli6MI4RWpYlLRXCOZWQ/6dSSUpK9uwY+jVn0wFP4iRBPzRcNllqOZuynZcwCHyB2LYTWpjPu7In+TVToD426KDjeopwcyst357GZ1NooTenpX0ajc+ncL/xFyamd0LCqdld3Gv4iackyI9T04tpNLRN4kHTOOLrmnpXGGxlABH5Lms9/iOEJ5EvzQGCq/0ij5mM4UUFL/qY/QM8fETXfJjDUQAAAABJRU5ErkJggg==","width":400,"height":567,"src":"/portfolio/static/work_project2-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png","srcSet":"/portfolio/static/work_project2-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png 1x,\n/portfolio/static/work_project2-7a2138f8048138fff07ba5f9f7318d16-91a3d.png 1.5x,\n/portfolio/static/work_project2-7a2138f8048138fff07ba5f9f7318d16-1ce6e.png 2x,\n/portfolio/static/work_project2-7a2138f8048138fff07ba5f9f7318d16-8d087.png 3x"}},"project3Image":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAACE4AAAhOAFFljFgAAADUklEQVRIx5VVaU8TQRjmF/pBIiZEiBiN+CdMjCdyBDzQ8Ek/iSBQDoMaBSPKHQgJAaRySDgKtLvd3bbb2d328X1nu7Nbbid5OtuZd573nqkAjdU/KXT2LuFD/wq6Y8uEFfnd2bOE3T0LwUgcZPCO1rr7l9EV88Hy7/uWsLahSZkK/vn8bR3VtwZQe2cI124PoYZQWz+Eqrp+zC0kFOHi8iGu3oiRzCDJlFA/iMraXgx+ivuExWIR541CoQDP81AoyVoZIS3teDOP3YTvgecVQgtNS2Br25Du7eyZJVjY3jFh2y6KxQKEEGVKOt7O40nrBPS0rdbYOEk4M7eLh80TaGmfQdvrWbS+mkHzy2k6MEmx0dWBg2QWA8Nx9A2t4lHLOO4+HqP4LUt3V9e0/3HZl9k/zFBCVhD7uIqv3zcw8mNTKugi0pV4KnSZSc+CL3Ou3tDl00iigpwUx3GQzzs0uzIJUQReVIQHaKNQVJs880EmcV1XZZn35H6AEmFgxBkxLEYsxIWGcplL5svIOkbHNmWgA4yO/S0rC023VTKi4DUuMeUyk1XW9lEX9OPK9RiqGHUxXK7pxcLiviJc+n2I6psDco9lWJY751J1DwaH4yFhJitIQxLJlEnfDjIZR84WFbzjFhShEC4ODg0YRg7pEgzTpnMWcjkREjouk5gUXIcC7nLlHYuN315EeLBPshY8l5MVgrtJEWbJQk03VTb9TPuIlhHv67pOpZMniLK5rJdtWyCZ1FSJBOD+jVYBryUS+zBNU+5FwcoVIbP7WjxJELUs+B9Yr2kaGWCXkfHZMkK2LEoWRbDG8WPFpmnBzuWkgqNyEUKX4pjzu+EEwmAwoa6npQFnFrYgAcMwz70g2CojnZaKT7oDylzmuJzm8tEs83yaUt9CCmw2mz1GdpSQXU6lNJkEXuJLoli6MI4RWpYlLRXCOZWQ/6dSSUpK9uwY+jVn0wFP4iRBPzRcNllqOZuynZcwCHyB2LYTWpjPu7In+TVToD426KDjeopwcyst357GZ1NooTenpX0ajc+ncL/xFyamd0LCqdld3Gv4iackyI9T04tpNLRN4kHTOOLrmnpXGGxlABH5Lms9/iOEJ5EvzQGCq/0ij5mM4UUFL/qY/QM8fETXfJjDUQAAAABJRU5ErkJggg==","width":400,"height":567,"src":"/portfolio/static/work_project3-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png","srcSet":"/portfolio/static/work_project3-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png 1x,\n/portfolio/static/work_project3-7a2138f8048138fff07ba5f9f7318d16-91a3d.png 1.5x,\n/portfolio/static/work_project3-7a2138f8048138fff07ba5f9f7318d16-1ce6e.png 2x,\n/portfolio/static/work_project3-7a2138f8048138fff07ba5f9f7318d16-8d087.png 3x"}},"project4Image":{"resolutions":{"base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAACE4AAAhOAFFljFgAAADUklEQVRIx5VVaU8TQRjmF/pBIiZEiBiN+CdMjCdyBDzQ8Ek/iSBQDoMaBSPKHQgJAaRySDgKtLvd3bbb2d328X1nu7Nbbid5OtuZd573nqkAjdU/KXT2LuFD/wq6Y8uEFfnd2bOE3T0LwUgcZPCO1rr7l9EV88Hy7/uWsLahSZkK/vn8bR3VtwZQe2cI124PoYZQWz+Eqrp+zC0kFOHi8iGu3oiRzCDJlFA/iMraXgx+ivuExWIR541CoQDP81AoyVoZIS3teDOP3YTvgecVQgtNS2Br25Du7eyZJVjY3jFh2y6KxQKEEGVKOt7O40nrBPS0rdbYOEk4M7eLh80TaGmfQdvrWbS+mkHzy2k6MEmx0dWBg2QWA8Nx9A2t4lHLOO4+HqP4LUt3V9e0/3HZl9k/zFBCVhD7uIqv3zcw8mNTKugi0pV4KnSZSc+CL3Ou3tDl00iigpwUx3GQzzs0uzIJUQReVIQHaKNQVJs880EmcV1XZZn35H6AEmFgxBkxLEYsxIWGcplL5svIOkbHNmWgA4yO/S0rC023VTKi4DUuMeUyk1XW9lEX9OPK9RiqGHUxXK7pxcLiviJc+n2I6psDco9lWJY751J1DwaH4yFhJitIQxLJlEnfDjIZR84WFbzjFhShEC4ODg0YRg7pEgzTpnMWcjkREjouk5gUXIcC7nLlHYuN315EeLBPshY8l5MVgrtJEWbJQk03VTb9TPuIlhHv67pOpZMniLK5rJdtWyCZ1FSJBOD+jVYBryUS+zBNU+5FwcoVIbP7WjxJELUs+B9Yr2kaGWCXkfHZMkK2LEoWRbDG8WPFpmnBzuWkgqNyEUKX4pjzu+EEwmAwoa6npQFnFrYgAcMwz70g2CojnZaKT7oDylzmuJzm8tEs83yaUt9CCmw2mz1GdpSQXU6lNJkEXuJLoli6MI4RWpYlLRXCOZWQ/6dSSUpK9uwY+jVn0wFP4iRBPzRcNllqOZuynZcwCHyB2LYTWpjPu7In+TVToD426KDjeopwcyst357GZ1NooTenpX0ajc+ncL/xFyamd0LCqdld3Gv4iackyI9T04tpNLRN4kHTOOLrmnpXGGxlABH5Lms9/iOEJ5EvzQGCq/0ij5mM4UUFL/qY/QM8fETXfJjDUQAAAABJRU5ErkJggg==","width":400,"height":567,"src":"/portfolio/static/work_project4-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png","srcSet":"/portfolio/static/work_project4-7a2138f8048138fff07ba5f9f7318d16-f6f0c.png 1x,\n/portfolio/static/work_project4-7a2138f8048138fff07ba5f9f7318d16-91a3d.png 1.5x,\n/portfolio/static/work_project4-7a2138f8048138fff07ba5f9f7318d16-1ce6e.png 2x,\n/portfolio/static/work_project4-7a2138f8048138fff07ba5f9f7318d16-8d087.png 3x"}}},"pageContext":{}};
 
 /***/ }),
 
@@ -320,47 +320,47 @@ module.exports = {"layoutContext":{}};
 
 /***/ }),
 
-/***/ "./.cache/json/works-1.json":
-/*!**********************************!*\
-  !*** ./.cache/json/works-1.json ***!
-  \**********************************/
+/***/ "./.cache/json/works-project-1.json":
+/*!******************************************!*\
+  !*** ./.cache/json/works-project-1.json ***!
+  \******************************************/
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"1","title":"案件1","position":"デザイナーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"xd","title":"adobe XD"}],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"project1","title":"案件1","position":"デザイナーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"xd","title":"adobe XD"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
-/***/ "./.cache/json/works-2.json":
-/*!**********************************!*\
-  !*** ./.cache/json/works-2.json ***!
-  \**********************************/
+/***/ "./.cache/json/works-project-2.json":
+/*!******************************************!*\
+  !*** ./.cache/json/works-project-2.json ***!
+  \******************************************/
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"2","title":"案件2","position":"コーダーを担当した","skills":[{"id":"html5","title":"Html 5"},{"id":"css3","title":"Css 3"}],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"project2","title":"案件2","position":"コーダーを担当した","skills":[{"id":"html5","title":"Html 5"},{"id":"css3","title":"Css 3"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
-/***/ "./.cache/json/works-3.json":
-/*!**********************************!*\
-  !*** ./.cache/json/works-3.json ***!
-  \**********************************/
+/***/ "./.cache/json/works-project-3.json":
+/*!******************************************!*\
+  !*** ./.cache/json/works-project-3.json ***!
+  \******************************************/
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"3","title":"案件3","position":"デザイナーを担当した","skills":[{"id":"photoshop","title":"adobe Photoshop"}],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"project3","title":"案件3","position":"デザイナーを担当した","skills":[{"id":"photoshop","title":"adobe Photoshop"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
-/***/ "./.cache/json/works-4.json":
-/*!**********************************!*\
-  !*** ./.cache/json/works-4.json ***!
-  \**********************************/
+/***/ "./.cache/json/works-project-4.json":
+/*!******************************************!*\
+  !*** ./.cache/json/works-project-4.json ***!
+  \******************************************/
 /*! exports provided: pageContext, default */
 /***/ (function(module) {
 
-module.exports = {"pageContext":{"work":{"id":"4","title":"案件4","position":"コーダーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"html5","title":"Html 5"},{"id":"css3","title":"Css 3"}],"ingenuity":"xxを工夫した"}}};
+module.exports = {"pageContext":{"work":{"id":"project4","title":"案件4","position":"コーダーを担当した","skills":[{"id":"sketch","title":"Sketch"},{"id":"html5","title":"Html 5"},{"id":"css3","title":"Css 3"}],"ingenuity":"xxを工夫した"}}};
 
 /***/ }),
 
@@ -397,7 +397,7 @@ var _Users_note109_Workspace_hamutuna_portfolio_cache_json_layout_index_json__WE
 /*! exports provided: 0, 1, 2, 3, 4, default */
 /***/ (function(module) {
 
-module.exports = [{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-1.json","path":"/works/1"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-2.json","path":"/works/2"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-3.json","path":"/works/3"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-4.json","path":"/works/4"},{"componentChunkName":"component---src-pages-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"index.json","path":"/"}];
+module.exports = [{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-project-1.json","path":"/works/project1"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-project-2.json","path":"/works/project2"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-project-3.json","path":"/works/project3"},{"componentChunkName":"component---src-templates-work-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"works-project-4.json","path":"/works/project4"},{"componentChunkName":"component---src-pages-index-jsx","layout":"layout---index","layoutComponentChunkName":"component---src-layouts-index-jsx","jsonName":"index.json","path":"/"}];
 
 /***/ }),
 
@@ -697,8 +697,8 @@ exports.components = {
 };
 exports.json = (_exports$json = {
   "layout-index.json": __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"),
-  "works-1.json": __webpack_require__(/*! ./.cache/json/works-1.json */ "./.cache/json/works-1.json")
-}, _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-2.json"] = __webpack_require__(/*! ./.cache/json/works-2.json */ "./.cache/json/works-2.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-3.json"] = __webpack_require__(/*! ./.cache/json/works-3.json */ "./.cache/json/works-3.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-4.json"] = __webpack_require__(/*! ./.cache/json/works-4.json */ "./.cache/json/works-4.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__(/*! ./.cache/json/index.json */ "./.cache/json/index.json"), _exports$json);
+  "works-project-1.json": __webpack_require__(/*! ./.cache/json/works-project-1.json */ "./.cache/json/works-project-1.json")
+}, _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-project-2.json"] = __webpack_require__(/*! ./.cache/json/works-project-2.json */ "./.cache/json/works-project-2.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-project-3.json"] = __webpack_require__(/*! ./.cache/json/works-project-3.json */ "./.cache/json/works-project-3.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["works-project-4.json"] = __webpack_require__(/*! ./.cache/json/works-project-4.json */ "./.cache/json/works-project-4.json"), _exports$json["layout-index.json"] = __webpack_require__(/*! ./.cache/json/layout-index.json */ "./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__(/*! ./.cache/json/index.json */ "./.cache/json/index.json"), _exports$json);
 
 /***/ }),
 
@@ -31013,17 +31013,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./src/assets/images/avatar.png":
-/*!**************************************!*\
-  !*** ./src/assets/images/avatar.png ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/avatar-eac8a35e816e512a69cfcc95c74bc020.png";
-
-/***/ }),
-
 /***/ "./src/assets/images/contact_fb.png":
 /*!******************************************!*\
   !*** ./src/assets/images/contact_fb.png ***!
@@ -31032,116 +31021,6 @@ module.exports = __webpack_require__.p + "static/avatar-eac8a35e816e512a69cfcc95
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADYCAYAAACJIC3tAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU6SURBVHgB7d3Lq9R1GMfx72+cY6kdKiqjyyKKouhmBNLdkha1yI2IYasMN63aRNmulf4DrUJbRYa0qbZdoMKCCInIpYYaaZr3W+pMbuY7c6BA83ycOTOvFwjPcI5u5M3zMDrn15QBj61+/77ePK80G/pfaZYPfNt0gcl1rDd0S/miN3dK553e/P3H63b05lYBYgQGQc3Ms7C1beBr1xbgYh3pDa1O80SdCxAjMAhqz+u2NtZXjbMQ/qfaTqfp1nfgbTAIEhgEtS+chcsLMHsGmrLBIEhgENS+8OuaAsym2pQNBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZB7QKX6Jab+g/YeWbpHXV++N7Fdb7j9uvqfNP1C+u84Oqpf/0zz57r1Pn0mbN1PnnqXJ2PnThT50NHT9d5/8GTA/PxOm/a+lMZNhsMggQGQU5E/tP9d99c57WrltR56YO31blpyqyYarcG5qvqPL2oP99846JyKZyIMOYEBkFORMrU1Lw6v75maZ1XvnBvnVuzdQtOGBsMggQGQU7ECbVw4B98N7z5fJ0fvf+WwuyxwSBIYBDkRJwgrVb/ncB333iuzs7CHBsMggQGQU7ECfLKiofq/PiS2wt5NhgECQyCnIhjbvEN/Udwv7pySeHKssEgSGAQ5EQcc2teerDO8wc+lsKVYYNBkMAgyIk4hq6a3/9rfXHZXYXhscEgSGAQ5EQcQ48+0P/4yaIF8wvDY4NBkMAgyIk4hh65zyeUR4UNBkECgyAn4hi6584byrD9daT/gLwtn/9S523bd9f5jz/7D8s7dfpsGUc2GAQJDIKciGPo1sXTZRgOHj5V59fWf1rnA4dOlEllg0GQwCDIiTiGphcN5/8ffvDJ9jpP8lk4yAaDIIFBkBNxDC1cMFWG4Yftewoz2WAQJDAIciKOoVbTlGHYd+B4YSYbDIIEBkFORGZNp9stzGSDQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkHNk6s3+WF2Id9uWVu4st778Mc6f/TZz2XYbDAIEhgE+dHZjJVdew6VUWKDQZDAIMiJyFjZuftwGSU2GAQJDIKciMx5p8+cq/O+g8fKKLHBIEhgEOREZM7btbf/zuGoPSbaBoMggUGQE5E577c9R8qossEgSGAQ5ERkztu5d7Q+ojLIBoMggUGQE5E5b9de7yLCRBIYBDkRmfN27RmtTzEPssEgSGAQ5ERkTvr77Pk6/77/aBlVNhgECQyCPF1lDA3rqS5Pvby5MJMNBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBAkMAgSGAS1L/w6PvD6mgJcrtqUDQZBAoOgdumWL+urpqwowGVqvupNNhgECQyC2q1us773otN0lw187doCXKwjvaHVKW/XuQAxAoOg9jdb1/7ae/H0qs1P9OZOq2zsf1v32YHfM11gch3rj83Xvel8Of9Wb/5u67odvdkGgyCBQdA/ogikh9JCmBgAAAAASUVORK5CYII="
-
-/***/ }),
-
-/***/ "./src/assets/images/first_view.png":
-/*!******************************************!*\
-  !*** ./src/assets/images/first_view.png ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/first_view-7a2138f8048138fff07ba5f9f7318d16.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_css3.png":
-/*!******************************************!*\
-  !*** ./src/assets/images/skill_css3.png ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_css3-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_github.png":
-/*!********************************************!*\
-  !*** ./src/assets/images/skill_github.png ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_github-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_html5.png":
-/*!*******************************************!*\
-  !*** ./src/assets/images/skill_html5.png ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_html5-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_illustrator.png":
-/*!*************************************************!*\
-  !*** ./src/assets/images/skill_illustrator.png ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_illustrator-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_photoshop.png":
-/*!***********************************************!*\
-  !*** ./src/assets/images/skill_photoshop.png ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_photoshop-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_sketch.png":
-/*!********************************************!*\
-  !*** ./src/assets/images/skill_sketch.png ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_sketch-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_wordpress.png":
-/*!***********************************************!*\
-  !*** ./src/assets/images/skill_wordpress.png ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_wordpress-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_xd.png":
-/*!****************************************!*\
-  !*** ./src/assets/images/skill_xd.png ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_xd-96802114a12c36070b7475e414376860.png";
-
-/***/ }),
-
-/***/ "./src/assets/images/skill_zeplin.png":
-/*!********************************************!*\
-  !*** ./src/assets/images/skill_zeplin.png ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/skill_zeplin-96802114a12c36070b7475e414376860.png";
 
 /***/ }),
 
@@ -31359,9 +31238,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_FirstView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/FirstView */ "./src/styles/index/FirstView.js");
-/* harmony import */ var _assets_images_first_view_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/images/first_view.png */ "./src/assets/images/first_view.png");
-/* harmony import */ var _assets_images_first_view_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_images_first_view_png__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
@@ -31388,18 +31264,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_common/NaviItem */ "./src/components/_common/NaviItem.jsx");
 /* harmony import */ var _assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/images/contact_fb.png */ "./src/assets/images/contact_fb.png");
 /* harmony import */ var _assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_images_contact_fb_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/images/avatar.png */ "./src/assets/images/avatar.png");
-/* harmony import */ var _assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var image = _ref.image;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Title"], {
     id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_2__["anchors"].profile
   }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["Image"], {
-    src: _assets_images_avatar_png__WEBPACK_IMPORTED_MODULE_4___default.a
+    resolutions: image.resolutions
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["IconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.facebook.com/tunaoisi4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Profile__WEBPACK_IMPORTED_MODULE_1__["FBIcon"], {
@@ -31425,54 +31299,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../styles/index/Skills/Skill */ "./src/styles/index/Skills/Skill.js");
-/* harmony import */ var _assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/images/skill_sketch.png */ "./src/assets/images/skill_sketch.png");
-/* harmony import */ var _assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/images/skill_xd.png */ "./src/assets/images/skill_xd.png");
-/* harmony import */ var _assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../assets/images/skill_photoshop.png */ "./src/assets/images/skill_photoshop.png");
-/* harmony import */ var _assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../assets/images/skill_illustrator.png */ "./src/assets/images/skill_illustrator.png");
-/* harmony import */ var _assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../assets/images/skill_html5.png */ "./src/assets/images/skill_html5.png");
-/* harmony import */ var _assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../assets/images/skill_css3.png */ "./src/assets/images/skill_css3.png");
-/* harmony import */ var _assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../assets/images/skill_zeplin.png */ "./src/assets/images/skill_zeplin.png");
-/* harmony import */ var _assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../assets/images/skill_github.png */ "./src/assets/images/skill_github.png");
-/* harmony import */ var _assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../assets/images/skill_wordpress.png */ "./src/assets/images/skill_wordpress.png");
-/* harmony import */ var _assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10__);
 
 
-
-
-
-
-
-
-
-
-
-var imgMap = {
-  sketch: _assets_images_skill_sketch_png__WEBPACK_IMPORTED_MODULE_2___default.a,
-  xd: _assets_images_skill_xd_png__WEBPACK_IMPORTED_MODULE_3___default.a,
-  photoshop: _assets_images_skill_photoshop_png__WEBPACK_IMPORTED_MODULE_4___default.a,
-  illustrator: _assets_images_skill_illustrator_png__WEBPACK_IMPORTED_MODULE_5___default.a,
-  html5: _assets_images_skill_html5_png__WEBPACK_IMPORTED_MODULE_6___default.a,
-  css3: _assets_images_skill_css3_png__WEBPACK_IMPORTED_MODULE_7___default.a,
-  zeplin: _assets_images_skill_zeplin_png__WEBPACK_IMPORTED_MODULE_8___default.a,
-  github: _assets_images_skill_github_png__WEBPACK_IMPORTED_MODULE_9___default.a,
-  wordpress: _assets_images_skill_wordpress_png__WEBPACK_IMPORTED_MODULE_10___default.a
-};
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var _props$skill = props.skill,
-      id = _props$skill.id,
-      title = _props$skill.title;
+  var image = props.image;
+  var title = props.skill.title;
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     className: props.className
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Image"], {
-    src: imgMap[id],
+    resolutions: image.resolutions,
     alt: title
   }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Skills_Skill__WEBPACK_IMPORTED_MODULE_1__["Description"], null, title));
 });
@@ -31496,7 +31331,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var skills = props.skills;
+  var skills = props.skills,
+      images = props.images;
   var columns = 3;
   var rowChunks = [];
 
@@ -31514,6 +31350,7 @@ __webpack_require__.r(__webpack_exports__);
     }, chunk.map(function (skill, j) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_1__["Skill"], {
         skill: skill,
+        image: images[skill.id],
         key: skill.id,
         index: i * columns + j
       });
@@ -31538,12 +31375,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var id = props.id;
-  var isHalf = id === '2' || id === '3';
+  var id = props.id,
+      image = props.image;
+  var isHalf = id === 'project2' || id === 'project3';
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Works_Work__WEBPACK_IMPORTED_MODULE_1__["Work"], {
     href: "works/" + id,
     isHalf: isHalf
-  }, id);
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_styles_index_Works_Work__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+    resolutions: image.resolutions
+  }));
 });
 
 /***/ }),
@@ -31567,12 +31407,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var works = props.works;
+  var works = props.works,
+      images = props.images;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     id: _common_NaviItem__WEBPACK_IMPORTED_MODULE_3__["anchors"].works
   }, "Works"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["Description"], null, "Description here."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Works_Works__WEBPACK_IMPORTED_MODULE_2__["WorksWrapper"], null, works.map(function (w) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Work__WEBPACK_IMPORTED_MODULE_1__["default"], {
       id: w.id,
+      image: images[w.id],
       key: w.id
     });
   })));
@@ -31657,21 +31499,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var _props$data = props.data,
-      allSkillsJson = _props$data.allSkillsJson,
-      allWorksJson = _props$data.allWorksJson,
-      firstViewImage = _props$data.firstViewImage;
+
+var resolveJson = function resolveJson(data, json) {
+  var entities = json.edges.map(function (edge) {
+    return edge.node;
+  });
+
+  var images = function () {
+    var imgs = {};
+    entities.forEach(function (entity) {
+      imgs[entity.id] = data[entity.id + "Image"];
+    });
+    return imgs;
+  }();
+
+  return [entities, images];
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var data = _ref.data;
+  var allSkillsJson = data.allSkillsJson,
+      allWorksJson = data.allWorksJson,
+      firstViewImage = data.firstViewImage,
+      profileImage = data.profileImage;
+
+  var _resolveJson = resolveJson(data, allSkillsJson),
+      skills = _resolveJson[0],
+      skillImages = _resolveJson[1];
+
+  var _resolveJson2 = resolveJson(data, allWorksJson),
+      works = _resolveJson2[0],
+      workImages = _resolveJson2[1];
+
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_FirstView__WEBPACK_IMPORTED_MODULE_1__["default"], {
     image: firstViewImage
-  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Profile__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    skills: allSkillsJson.edges.map(function (edge) {
-      return edge.node;
-    })
+  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Profile__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: profileImage
+  }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    skills: skills,
+    images: skillImages
   }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_index_Works_Works__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    works: allWorksJson.edges.map(function (edge) {
-      return edge.node;
-    })
+    works: works,
+    images: workImages
   }));
 });
 var query = "** extracted graphql fragment **";
@@ -31744,10 +31613,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/taggedTemplateLiteralLoose.js");
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
-/* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/common */ "./src/styles/common.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/var */ "./src/styles/var.js");
-/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
-/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_4__);
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: 100vw;\n  height: calc(100vh - ", " - ", ");\n  background-color: lightgray;\n"]),
@@ -31756,9 +31624,8 @@ var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteral
 
 
 
-
 var FirstView = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject, _styles_var__WEBPACK_IMPORTED_MODULE_3__["headerHeight"], _styles_var__WEBPACK_IMPORTED_MODULE_3__["underFirstView"]);
-var Image = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby_image__WEBPACK_IMPORTED_MODULE_4___default.a).attrs({
+var Image = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a).attrs({
   style: {
     width: '100vw',
     height: "calc(100vh - " + _styles_var__WEBPACK_IMPORTED_MODULE_3__["headerHeight"] + " - " + _styles_var__WEBPACK_IMPORTED_MODULE_3__["underFirstView"] + ")"
@@ -31861,14 +31728,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/taggedTemplateLiteralLoose.js");
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
-/* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/common */ "./src/styles/common.js");
-/* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/var */ "./src/styles/var.js");
-/* harmony import */ var _components_common_Svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/_common/Svg */ "./src/components/_common/Svg.jsx");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/common */ "./src/styles/common.js");
+/* harmony import */ var _styles_var__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../styles/var */ "./src/styles/var.js");
+/* harmony import */ var _components_common_Svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/_common/Svg */ "./src/components/_common/Svg.jsx");
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n  padding: 0 34px;\n\n  ", " {\n    padding: 0 248px;\n  }\n"]),
     _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 92px;\n"]),
-    _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  background-color lightgray;\n  ", ";\n"]),
+    _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()([""]),
     _templateObject4 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n  margin-top: 42px;\n  width: ", "px;\n  justify-content: space-between;\n"]),
     _templateObject5 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: ", "px;\n  height: ", "px;\n"]),
     _templateObject6 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n\n  ", " {\n    text-align: center;\n    min-width: 330px;\n  }\n"]);
@@ -31877,14 +31746,20 @@ var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteral
 
 
 
-var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_2__["column"], _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
+
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_3__["column"], _styles_var__WEBPACK_IMPORTED_MODULE_4__["pc"]);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1(_templateObject2);
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject3, Object(_styles_common__WEBPACK_IMPORTED_MODULE_2__["circle"])(212));
+var Image = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a).attrs({
+  style: {
+    width: '212px',
+    height: '212px'
+  }
+})(_templateObject3);
 var iconSize = 72;
-var IconWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4, _styles_common__WEBPACK_IMPORTED_MODULE_2__["row"], iconSize * 2 + 15 * 2);
+var IconWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4, _styles_common__WEBPACK_IMPORTED_MODULE_3__["row"], iconSize * 2 + 15 * 2);
 var FBIcon = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject5, iconSize, iconSize);
-var MailIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_components_common_Svg__WEBPACK_IMPORTED_MODULE_4__["default"])(_templateObject5, iconSize, iconSize);
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject6, _styles_var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
+var MailIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_components_common_Svg__WEBPACK_IMPORTED_MODULE_5__["default"])(_templateObject5, iconSize, iconSize);
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject6, _styles_var__WEBPACK_IMPORTED_MODULE_4__["pc"]);
 
 /***/ }),
 
@@ -31903,17 +31778,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/taggedTemplateLiteralLoose.js");
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
-/* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../styles/common */ "./src/styles/common.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../styles/common */ "./src/styles/common.js");
 
 
 var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  ", ";\n"]),
-    _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n"]);
+    _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()([""]),
+    _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  margin-top: 66px;\n"]);
 
 
 
-var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_2__["column"]);
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject, Object(_styles_common__WEBPACK_IMPORTED_MODULE_2__["circle"])(212));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject2);
+
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject, _styles_common__WEBPACK_IMPORTED_MODULE_3__["column"]);
+var Image = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a).attrs({
+  style: {
+    width: '212px',
+    height: '212px'
+  }
+})(_templateObject2);
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject3);
 
 /***/ }),
 
@@ -31966,31 +31850,42 @@ var Skill = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_c
 /*!****************************************!*\
   !*** ./src/styles/index/Works/Work.js ***!
   \****************************************/
-/*! exports provided: Work */
+/*! exports provided: Work, Image */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Work", function() { return Work; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return Image; });
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/taggedTemplateLiteralLoose.js");
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
-/* harmony import */ var _var__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../var */ "./src/styles/var.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _var__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../var */ "./src/styles/var.js");
 
 
-var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  height: 490px;\n  width: calc(100% - 2px);\n  background-color: lightgray;\n  border: 1px solid gray;\n\n  ", ";\n\n  ", " {\n    width: calc(50% - 2px);\n  }\n"]),
+var _templateObject = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  height: ", ";\n  width: calc(100% - 2px);\n  background-color: lightgray;\n  border: 1px solid gray;\n\n  ", ";\n\n  ", " {\n    width: calc(50% - 2px);\n  }\n"]),
     _templateObject2 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n        width: calc(50% - 2px);\n      "]),
     _templateObject3 = /*#__PURE__*/ _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()([""]);
 
 
 
-var Work = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject, function (props) {
+
+var thumbnailHeight = '490px';
+var Work = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject, thumbnailHeight, function (props) {
   if (props.isHalf) {
     return Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject2);
   }
 
   return Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject3);
-}, _var__WEBPACK_IMPORTED_MODULE_2__["pc"]);
+}, _var__WEBPACK_IMPORTED_MODULE_3__["pc"]);
+var Image = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a).attrs({
+  style: {
+    width: '100%',
+    height: thumbnailHeight
+  }
+})(_templateObject3);
 
 /***/ }),
 
@@ -32036,7 +31931,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pc", function() { return pc; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerHeight", function() { return headerHeight; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "underFirstView", function() { return underFirstView; });
-var pc = '@media (min-width: 376px)';
+var pc = '@media (min-width: 415px)';
 var headerHeight = '50px';
 var underFirstView = '64px';
 
