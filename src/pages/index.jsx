@@ -8,49 +8,51 @@ import Works from '../components/index/Works/Works';
 
 import type { Work, Skill, ImageSharp } from '../entities/types';
 
+type JsonEntitiy<T> = {
+  edges: [
+    {
+      node: T,
+    },
+  ],
+};
+
 type Props = {
   data: {
-    allSkillsJson: {
-      edges: [
-        {
-          node: Skill,
-        },
-      ],
-    },
-    allWorksJson: {
-      edges: [
-        {
-          node: Work,
-        },
-      ],
-    },
+    allSkillsJson: JsonEntitiy<Skill>,
+    allWorksJson: JsonEntitiy<Work>,
     firstViewImage: ImageSharp,
     profileImage: ImageSharp,
   },
 };
 
-export default (props: Props) => {
-  const {
-    allSkillsJson,
-    allWorksJson,
-    firstViewImage,
-    profileImage,
-  } = props.data;
-  const skills = allSkillsJson.edges.map((edge) => edge.node);
-  const skillImages = (() => {
+const resolveJson = <T: { id: string }>(
+  data,
+  json: JsonEntitiy<T>,
+): [T[], { [string]: ImageSharp }] => {
+  const entities = json.edges.map((edge) => edge.node);
+  const images = (() => {
     const imgs = {};
-    skills.forEach((skill) => {
-      imgs[skill.id] = props.data[`${skill.id}Image`];
+    entities.forEach((entity) => {
+      imgs[entity.id] = data[`${entity.id}Image`];
     });
     return imgs;
   })();
+
+  return [entities, images];
+};
+
+export default ({ data }: Props) => {
+  const { allSkillsJson, allWorksJson, firstViewImage, profileImage } = data;
+
+  const [skills, skillImages] = resolveJson(data, allSkillsJson);
+  const [works, workImages] = resolveJson(data, allWorksJson);
 
   return (
     <React.Fragment>
       <FirstView image={firstViewImage} />
       <Profile image={profileImage} />
       <Skills skills={skills} images={skillImages} />
-      <Works works={allWorksJson.edges.map((edge) => edge.node)} />
+      <Works works={works} images={workImages} />
     </React.Fragment>
   );
 };
@@ -103,6 +105,18 @@ export const query = graphql`
       ...ImgFragment
     }
     wordpressImage: imageSharp(id: { regex: "/wordpress/" }) {
+      ...ImgFragment
+    }
+    project1Image: imageSharp(id: { regex: "/work_project1/" }) {
+      ...ImgFragment
+    }
+    project2Image: imageSharp(id: { regex: "/work_project2/" }) {
+      ...ImgFragment
+    }
+    project3Image: imageSharp(id: { regex: "/work_project3/" }) {
+      ...ImgFragment
+    }
+    project4Image: imageSharp(id: { regex: "/work_project4/" }) {
       ...ImgFragment
     }
   }
