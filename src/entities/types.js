@@ -13,3 +13,7 @@ export type Work = {
   skills: [Skill],
   ingenuity: string,
 };
+
+export type ImageSharp = {
+  resolutions: {},
+};

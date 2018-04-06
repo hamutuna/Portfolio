@@ -6,7 +6,7 @@ import Profile from '../components/index/Profile';
 import Skills from '../components/index/Skills/Skills';
 import Works from '../components/index/Works/Works';
 
-import type { Work, Skill } from '../entities/types';
+import type { Work, Skill, ImageSharp } from '../entities/types';
 
 type Props = {
   data: {
@@ -24,9 +24,8 @@ type Props = {
         },
       ],
     },
-    firstViewImage: {
-      resolutions: {},
-    },
+    firstViewImage: ImageSharp,
+    profileImage: ImageSharp,
   },
 };
 
