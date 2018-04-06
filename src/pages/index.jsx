@@ -24,8 +24,10 @@ type Props = {
         },
       ],
     },
+    firstViewImage: {
+      resolutions: {},
+    },
   },
-  firstViewImage: {},
 };
 
 export default (props: Props) => {

@@ -1,9 +1,8 @@
 // @flow
-import styled, { css } from 'styled-components';
-
-import { row } from '../../styles/common';
-import { headerHeight, underFirstView } from '../../styles/var';
+import styled from 'styled-components';
 import Img from 'gatsby-image';
+
+import { headerHeight, underFirstView } from '../../styles/var';
 
 export const FirstView = styled.div`
   width: 100vw;
