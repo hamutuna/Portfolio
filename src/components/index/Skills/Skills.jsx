@@ -4,14 +4,17 @@ import React from 'react';
 import * as s from '../../../styles/index/Skills/Skills';
 import { anchors } from '../../_common/NaviItem';
 
-import type { Skill } from '../../../entities/types';
+import type { Skill, ImageSharp } from '../../../entities/types';
 
 type Props = {
   skills: Skill[],
+  images: {
+    [string]: ImageSharp,
+  },
 };
 
 export default (props: Props) => {
-  const { skills } = props;
+  const { skills, images } = props;
 
   const columns = 3;
   const rowChunks = [];
@@ -25,7 +28,12 @@ export default (props: Props) => {
       {rowChunks.map((chunk, i) => (
         <s.SkillsWrapper key={chunk.map((skill) => skill.id).join()}>
           {chunk.map((skill, j) => (
-            <s.Skill skill={skill} key={skill.id} index={i * columns + j} />
+            <s.Skill
+              skill={skill}
+              image={images[skill.id]}
+              key={skill.id}
+              index={i * columns + j}
+            />
           ))}
         </s.SkillsWrapper>
       ))}

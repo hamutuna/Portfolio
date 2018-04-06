@@ -36,12 +36,20 @@ export default (props: Props) => {
     firstViewImage,
     profileImage,
   } = props.data;
+  const skills = allSkillsJson.edges.map((edge) => edge.node);
+  const skillImages = (() => {
+    const imgs = {};
+    skills.forEach((skill) => {
+      imgs[skill.id] = props.data[`${skill.id}Image`];
+    });
+    return imgs;
+  })();
 
   return (
     <React.Fragment>
       <FirstView image={firstViewImage} />
       <Profile image={profileImage} />
-      <Skills skills={allSkillsJson.edges.map((edge) => edge.node)} />
+      <Skills skills={skills} images={skillImages} />
       <Works works={allWorksJson.edges.map((edge) => edge.node)} />
     </React.Fragment>
   );
@@ -65,14 +73,43 @@ export const query = graphql`
       }
     }
     firstViewImage: imageSharp(id: { regex: "/first_view/" }) {
-      resolutions {
-        ...GatsbyImageSharpResolutions
-      }
+      ...ImgFragment
     }
     profileImage: imageSharp(id: { regex: "/avatar/" }) {
-      resolutions {
-        ...GatsbyImageSharpResolutions
-      }
+      ...ImgFragment
+    }
+    sketchImage: imageSharp(id: { regex: "/assets/images/skill_sketch/" }) {
+      ...ImgFragment
+    }
+    xdImage: imageSharp(id: { regex: "/xd/" }) {
+      ...ImgFragment
+    }
+    photoshopImage: imageSharp(id: { regex: "/photoshop/" }) {
+      ...ImgFragment
+    }
+    illustratorImage: imageSharp(id: { regex: "/illustrator/" }) {
+      ...ImgFragment
+    }
+    html5Image: imageSharp(id: { regex: "/html5/" }) {
+      ...ImgFragment
+    }
+    css3Image: imageSharp(id: { regex: "/css3/" }) {
+      ...ImgFragment
+    }
+    zeplinImage: imageSharp(id: { regex: "/zeplin/" }) {
+      ...ImgFragment
+    }
+    githubImage: imageSharp(id: { regex: "/github/" }) {
+      ...ImgFragment
+    }
+    wordpressImage: imageSharp(id: { regex: "/wordpress/" }) {
+      ...ImgFragment
+    }
+  }
+
+  fragment ImgFragment on ImageSharp {
+    resolutions {
+      ...GatsbyImageSharpResolutions
     }
   }
 `;
