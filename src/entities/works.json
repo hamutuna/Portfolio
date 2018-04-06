@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "project1",
     "title": "案件1",
     "position": "デザイナーを担当した",
     "description": "説明",
@@ -8,7 +8,7 @@
     "ingenuity": "xxを工夫した"
   },
   {
-    "id": "2",
+    "id": "project2",
     "title": "案件2",
     "position": "コーダーを担当した",
     "description": "説明",
@@ -16,7 +16,7 @@
     "ingenuity": "xxを工夫した"
   },
   {
-    "id": "3",
+    "id": "project3",
     "title": "案件3",
     "position": "デザイナーを担当した",
     "description": "説明",
@@ -24,7 +24,7 @@
     "ingenuity": "xxを工夫した"
   },
   {
-    "id": "4",
+    "id": "project4",
     "title": "案件4",
     "position": "コーダーを担当した",
     "description": "説明",
