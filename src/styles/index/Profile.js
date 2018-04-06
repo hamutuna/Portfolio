@@ -1,7 +1,8 @@
 // @flow
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
-import { column, row, circle } from '../../styles/common';
+import { column, row } from '../../styles/common';
 import { pc } from '../../styles/var';
 
 import Svg from '../../components/_common/Svg';
@@ -19,10 +20,12 @@ export const Title = styled.h1`
   margin-top: 92px;
 `;
 
-export const Image = styled.img`
-  background-color lightgray;
-  ${circle(212)};
-`;
+export const Image = styled(Img).attrs({
+  style: {
+    width: '212px',
+    height: '212px',
+  },
+})``;
 
 const iconSize = 72;
 

@@ -4,12 +4,17 @@ import React from 'react';
 import * as s from '../../styles/index/Profile';
 import { anchors } from '../_common/NaviItem';
 import fb from '../../assets/images/contact_fb.png';
-import avatar from '../../assets/images/avatar.png';
 
-export default () => (
+import type { ImageSharp } from '../../entities/types';
+
+type Props = {
+  image: ImageSharp,
+};
+
+export default ({ image }: Props) => (
   <s.Section>
     <s.Title id={anchors.profile}>Profile</s.Title>
-    <s.Image src={avatar} />
+    <s.Image resolutions={image.resolutions} />
     <s.IconWrapper>
       <a href="https://www.facebook.com/tunaoisi4">
         <s.FBIcon src={fb} />

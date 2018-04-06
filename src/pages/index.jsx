@@ -30,12 +30,17 @@ type Props = {
 };
 
 export default (props: Props) => {
-  const { allSkillsJson, allWorksJson, firstViewImage } = props.data;
+  const {
+    allSkillsJson,
+    allWorksJson,
+    firstViewImage,
+    profileImage,
+  } = props.data;
 
   return (
     <React.Fragment>
       <FirstView image={firstViewImage} />
-      <Profile />
+      <Profile image={profileImage} />
       <Skills skills={allSkillsJson.edges.map((edge) => edge.node)} />
       <Works works={allWorksJson.edges.map((edge) => edge.node)} />
     </React.Fragment>
@@ -60,6 +65,11 @@ export const query = graphql`
       }
     }
     firstViewImage: imageSharp(id: { regex: "/first_view/" }) {
+      resolutions {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    profileImage: imageSharp(id: { regex: "/avatar/" }) {
       resolutions {
         ...GatsbyImageSharpResolutions
       }
