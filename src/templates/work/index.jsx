@@ -8,15 +8,26 @@ type Props = {
   pageContext: {
     work: Work,
   },
+  data: {},
 };
 
 export default (props: Props) => {
-  const { pageContext } = props;
-  const { title, description, position, skills, ingenuity } = pageContext.work;
+  const { pageContext, data } = props;
+  const {
+    id,
+    title,
+    description,
+    position,
+    skills,
+    ingenuity,
+  } = pageContext.work;
+  const image = data[`${id}Image`];
 
   return (
     <s.Wrapper>
-      <s.FirstView />
+      <s.FirstView image={image}>
+        <s.TopImage resolutions={image.resolutions} />
+      </s.FirstView>
       <h1>{title}</h1>
       <p>{description}</p>
       <h2>担当範囲</h2>
