@@ -13,14 +13,7 @@ type Props = {
 
 export default (props: Props) => {
   const { pageContext, data } = props;
-  const {
-    id,
-    title,
-    description,
-    position,
-    skills,
-    ingenuity,
-  } = pageContext.work;
+  const { id, title, description, position, skills, detail } = pageContext.work;
   const image = data[`${id}Image`];
 
   return (
@@ -30,12 +23,12 @@ export default (props: Props) => {
       </s.FirstView>
       <h1>{title}</h1>
       <p>{description}</p>
-      <h2>担当範囲</h2>
-      <p>{position}</p>
+      <h2>担当工程/役割</h2>
+      <p dangerouslySetInnerHTML={{ __html: position }} />
       <h2>使用skill</h2>
       {skills.map((skill) => <p key={skill.id}>{skill.title}</p>)}
-      <h2>工夫した点</h2>
-      <p>{ingenuity}</p>
+      <h2>詳細</h2>
+      <p dangerouslySetInnerHTML={{ __html: detail }} />
     </s.Wrapper>
   );
 };
