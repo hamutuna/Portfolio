@@ -774,6 +774,17 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/core-js/object/keys.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/babel-runtime/core-js/object/keys.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/keys */ "./node_modules/core-js/library/fn/object/keys.js"), __esModule: true };
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/core-js/object/set-prototype-of.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/babel-runtime/core-js/object/set-prototype-of.js ***!
@@ -1016,6 +1027,19 @@ var $Object = __webpack_require__(/*! ../../modules/_core */ "./node_modules/cor
 module.exports = function create(P, D) {
   return $Object.create(P, D);
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/object/keys.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/library/fn/object/keys.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.keys */ "./node_modules/core-js/library/modules/es6.object.keys.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.keys;
 
 
 /***/ }),
@@ -2032,6 +2056,27 @@ exports.f = {}.propertyIsEnumerable;
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/_object-sap.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/_object-sap.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// most Object methods by ES6 should accept primitives
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
+var core = __webpack_require__(/*! ./_core */ "./node_modules/core-js/library/modules/_core.js");
+var fails = __webpack_require__(/*! ./_fails */ "./node_modules/core-js/library/modules/_fails.js");
+module.exports = function (KEY, exec) {
+  var fn = (core.Object || {})[KEY] || Object[KEY];
+  var exp = {};
+  exp[KEY] = exec(fn);
+  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/_property-desc.js":
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_property-desc.js ***!
@@ -2427,6 +2472,26 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_ob
 var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 $export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ "./node_modules/core-js/library/modules/_object-create.js") });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es6.object.keys.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.object.keys.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 Object.keys(O)
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/library/modules/_to-object.js");
+var $keys = __webpack_require__(/*! ./_object-keys */ "./node_modules/core-js/library/modules/_object-keys.js");
+
+__webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules/_object-sap.js")('keys', function () {
+  return function keys(it) {
+    return $keys(toObject(it));
+  };
+});
 
 
 /***/ }),
@@ -4658,6 +4723,249 @@ Image.propTypes = {
 };
 
 exports.default = Image;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-link/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/gatsby-link/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.navigateTo = undefined;
+
+var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ "./node_modules/babel-runtime/helpers/extends.js");
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _keys = __webpack_require__(/*! babel-runtime/core-js/object/keys */ "./node_modules/babel-runtime/core-js/object/keys.js");
+
+var _keys2 = _interopRequireDefault(_keys);
+
+var _objectWithoutProperties2 = __webpack_require__(/*! babel-runtime/helpers/objectWithoutProperties */ "./node_modules/babel-runtime/helpers/objectWithoutProperties.js");
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ "./node_modules/babel-runtime/helpers/classCallCheck.js");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _possibleConstructorReturn2 = __webpack_require__(/*! babel-runtime/helpers/possibleConstructorReturn */ "./node_modules/babel-runtime/helpers/possibleConstructorReturn.js");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(/*! babel-runtime/helpers/inherits */ "./node_modules/babel-runtime/helpers/inherits.js");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+exports.withPrefix = withPrefix;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _history = __webpack_require__(/*! history */ "./node_modules/history/es/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*global __PREFIX_PATHS__, __PATH_PREFIX__ */
+var pathPrefix = "/";
+if (true) {
+  pathPrefix = "/portfolio";
+}
+
+function withPrefix(path) {
+  return normalizePath(pathPrefix + path);
+}
+
+function normalizePath(path) {
+  return path.replace(/^\/\//g, "/");
+}
+
+function createLocation(path, history) {
+  var location = (0, _history.createLocation)(path, null, null, history.location);
+  location.pathname = withPrefix(location.pathname);
+  return location;
+}
+
+var NavLinkPropTypes = {
+  activeClassName: _propTypes2.default.string,
+  activeStyle: _propTypes2.default.object,
+  exact: _propTypes2.default.bool,
+  strict: _propTypes2.default.bool,
+  isActive: _propTypes2.default.func,
+  location: _propTypes2.default.object
+
+  // Set up IntersectionObserver
+};var handleIntersection = function handleIntersection(el, cb) {
+  var io = new window.IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (el === entry.target) {
+        // Check if element is within viewport, remove listener, destroy observer, and run link callback.
+        // MSEdge doesn't currently support isIntersecting, so also test for  an intersectionRatio > 0
+        if (entry.isIntersecting || entry.intersectionRatio > 0) {
+          io.unobserve(el);
+          io.disconnect();
+          cb();
+        }
+      }
+    });
+  });
+  // Add element to the observer
+  io.observe(el);
+};
+
+var GatsbyLink = function (_React$Component) {
+  (0, _inherits3.default)(GatsbyLink, _React$Component);
+
+  function GatsbyLink(props, context) {
+    (0, _classCallCheck3.default)(this, GatsbyLink);
+
+    // Default to no support for IntersectionObserver
+    var _this = (0, _possibleConstructorReturn3.default)(this, _React$Component.call(this));
+
+    var IOSupported = false;
+    if (typeof window !== "undefined" && window.IntersectionObserver) {
+      IOSupported = true;
+    }
+
+    var history = context.router.history;
+
+    var to = createLocation(props.to, history);
+
+    _this.state = {
+      path: (0, _history.createPath)(to),
+      to: to,
+      IOSupported: IOSupported
+    };
+    _this.handleRef = _this.handleRef.bind(_this);
+    return _this;
+  }
+
+  GatsbyLink.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+    if (this.props.to !== nextProps.to) {
+      var to = createLocation(nextProps.to, history);
+      this.setState({
+        path: (0, _history.createPath)(to),
+        to: to
+      });
+      // Preserve non IO functionality if no support
+      if (!this.state.IOSupported) {
+        ___loader.enqueue(this.state.to.pathname);
+      }
+    }
+  };
+
+  GatsbyLink.prototype.componentDidMount = function componentDidMount() {
+    // Preserve non IO functionality if no support
+    if (!this.state.IOSupported) {
+      ___loader.enqueue(this.state.to.pathname);
+    }
+  };
+
+  GatsbyLink.prototype.handleRef = function handleRef(ref) {
+    var _this2 = this;
+
+    this.props.innerRef && this.props.innerRef(ref);
+
+    if (this.state.IOSupported && ref) {
+      // If IO supported and element reference found, setup Observer functionality
+      handleIntersection(ref, function () {
+        ___loader.enqueue(_this2.state.to.pathname);
+      });
+    }
+  };
+
+  GatsbyLink.prototype.render = function render() {
+    var _this3 = this;
+
+    var _props = this.props,
+        _onClick = _props.onClick,
+        rest = (0, _objectWithoutProperties3.default)(_props, ["onClick"]);
+
+    var El = void 0;
+    if ((0, _keys2.default)(NavLinkPropTypes).some(function (propName) {
+      return _this3.props[propName];
+    })) {
+      El = _reactRouterDom.NavLink;
+    } else {
+      El = _reactRouterDom.Link;
+    }
+
+    return _react2.default.createElement(El, (0, _extends3.default)({
+      onClick: function onClick(e) {
+        // eslint-disable-line
+        _onClick && _onClick(e);
+
+        if (e.button === 0 && // ignore right clicks
+        !_this3.props.target && // let browser handle "target=_blank"
+        !e.defaultPrevented && // onClick prevented default
+        !e.metaKey && // ignore clicks with modifier keys...
+        !e.altKey && !e.ctrlKey && !e.shiftKey) {
+          // Is this link pointing to a hash on the same page? If so,
+          // just scroll there.
+          var pathname = _this3.state.path;
+          if (pathname.split("#").length > 1) {
+            pathname = pathname.split("#").slice(0, -1).join("");
+          }
+          if (pathname === window.location.pathname) {
+            var hashFragment = _this3.state.path.split("#").slice(1).join("#");
+            var element = document.getElementById(hashFragment);
+            if (element !== null) {
+              element.scrollIntoView();
+              return true;
+            } else {
+              // This is just a normal link to the current page so let's emulate default
+              // browser behavior by scrolling now to the top of the page.
+              window.scrollTo(0, 0);
+              return true;
+            }
+          }
+
+          // In production, make sure the necessary scripts are
+          // loaded before continuing.
+          if (true) {
+            e.preventDefault();
+            window.___navigateTo(_this3.state.to);
+          }
+        }
+
+        return true;
+      }
+    }, rest, {
+      to: this.state.to,
+      innerRef: this.handleRef
+    }));
+  };
+
+  return GatsbyLink;
+}(_react2.default.Component);
+
+GatsbyLink.propTypes = (0, _extends3.default)({}, NavLinkPropTypes, {
+  innerRef: _propTypes2.default.func,
+  onClick: _propTypes2.default.func,
+  to: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]).isRequired
+});
+
+GatsbyLink.contextTypes = {
+  router: _propTypes2.default.object
+};
+
+exports.default = GatsbyLink;
+var navigateTo = exports.navigateTo = function navigateTo(to) {
+  window.___navigateTo(to);
+};
 
 /***/ }),
 
@@ -31125,25 +31433,28 @@ var Footer = function Footer(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_index_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/index/Header */ "./src/styles/index/Header.js");
-/* harmony import */ var _hoc_injectNaviItems__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_hoc/injectNaviItems */ "./src/components/_hoc/injectNaviItems.jsx");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_index_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/index/Header */ "./src/styles/index/Header.js");
+/* harmony import */ var _hoc_injectNaviItems__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_hoc/injectNaviItems */ "./src/components/_hoc/injectNaviItems.jsx");
+
 
 
 
 
 var Header = function Header(props) {
   var items = props.items;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Header"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Logo"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["Navi"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItemList"], null, items.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_1__["NaviItem"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_2__["Header"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_2__["Logo"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_2__["Navi"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_2__["NaviItemList"], null, items.map(function (item) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_index_Header__WEBPACK_IMPORTED_MODULE_2__["NaviItem"], {
       targetId: item.id,
       key: item.id
     }, item.text);
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_hoc_injectNaviItems__WEBPACK_IMPORTED_MODULE_2__["default"])(Header));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_hoc_injectNaviItems__WEBPACK_IMPORTED_MODULE_3__["default"])(Header));
 
 /***/ }),
 
