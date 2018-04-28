@@ -5,6 +5,9 @@ export const anchors = {
   profile: 'profile',
   skills: 'skills',
   works: 'works',
+  position: 'position',
+  detail: 'detail',
+  documents: 'documents',
 };
 
 type Anchors = $Keys<typeof anchors>;
