@@ -15,6 +15,11 @@ export const Image = styled(Img).attrs({
   },
 })``;
 
+export const GraphVideo = styled.video`
+  width: 280px;
+  height: 280px;
+`;
+
 export const Description = styled.p`
   margin-top: 66px;
 `;
