@@ -38,17 +38,34 @@ const topNaviItems = [
   },
 ];
 
-type Props = {
+type LocProps = {
   items: NaviItem[],
 };
 
-type LocType = React.ComponentType<Props>;
+type LocType = React.ComponentType<LocProps>;
+
+type State = {
+  location: string,
+};
 
 export default (Loc: LocType) =>
-  class extends React.Component<{}> {
+  class extends React.Component<{}, State> {
+    constructor() {
+      super();
+      this.state = {
+        location: '',
+      };
+    }
+    componentDidMount() {
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({
+        location: window.location.href,
+      });
+    }
+
     render() {
       const items = (() => {
-        if (window.location.href.includes('/works/')) {
+        if (this.state.location.includes('/works/')) {
           return worksNaviItems;
         }
 
