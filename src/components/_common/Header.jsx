@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import Link from 'gatsby-link';
 
 import * as s from '../../styles/index/Header';
 
@@ -16,9 +17,9 @@ const Header = (props: Props) => {
 
   return (
     <s.Header>
-      <a href="/">
+      <Link to="/">
         <s.Logo />
-      </a>
+      </Link>
       <s.Navi>
         <s.NaviItemList>
           {items.map((item) => (
