@@ -3,6 +3,7 @@ module.exports = {
   extends: 'airbnb',
   plugins: ['flowtype'],
   globals: {
+    window: false,
     document: false,
     graphql: false,
     $Keys: false,

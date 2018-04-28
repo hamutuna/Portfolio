@@ -38,11 +38,17 @@ const topNaviItems = [
   },
 ];
 
-export default (Loc) =>
-  class extends React.Component {
+type Props = {
+  items: NaviItem[],
+};
+
+type LocType = React.ComponentType<Props>;
+
+export default (Loc: LocType) =>
+  class extends React.Component<{}> {
     render() {
       const items = (() => {
-        if (location.href.includes('/works/')) {
+        if (window.location.href.includes('/works/')) {
           return worksNaviItems;
         }
 
