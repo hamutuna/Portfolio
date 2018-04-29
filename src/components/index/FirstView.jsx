@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import * as s from '../../styles/index/FirstView';
+import * as s from '../../styles/components/index/FirstView';
 
 type Props = {
   image: {

@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 import type { Work } from '../../entities/types';
-import * as s from '../../styles/works/index';
+import * as s from '../../styles/templates/work/index';
 
 import { anchors } from '../../components/_common/NaviItem';
 

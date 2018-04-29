@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 
-import { pc } from '../../var';
+import { pc } from '../../../var';
 
 const thumbnailHeight = '490px';
 

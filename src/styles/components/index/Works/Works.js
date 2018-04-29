@@ -1,7 +1,7 @@
 // @flow
 import styled from 'styled-components';
 
-import { row, column } from '../../common';
+import { row, column } from '../../../common';
 
 export const Section = styled.section`
   ${column};

@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 
-import * as s from '../../../styles/index/Works/Work';
+import * as s from '../../../styles/components/index/Works/Work';
 import type { ImageSharp } from '../../../entities/types';
 
 type Props = {

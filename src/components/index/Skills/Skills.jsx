@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import * as s from '../../../styles/index/Skills/Skills';
+import * as s from '../../../styles/components/index/Skills/Skills';
 import { anchors } from '../../_common/NaviItem';
 
 import type { Skill, ImageSharp } from '../../../entities/types';

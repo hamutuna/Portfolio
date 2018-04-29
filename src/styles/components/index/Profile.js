@@ -2,10 +2,10 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column, row } from '../../styles/common';
-import { pc } from '../../styles/var';
+import { column, row } from '../../../styles/common';
+import { pc } from '../../../styles/var';
 
-import Svg from '../../components/_common/Svg';
+import Svg from '../../../components/_common/Svg';
 
 export const Section = styled.section`
   ${column};

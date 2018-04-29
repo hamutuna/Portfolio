@@ -1,9 +1,9 @@
 // @flow
 import styled from 'styled-components';
 
-import { row } from '../../styles/common';
+import { row } from '../../../styles/common';
 
-import _NaviItem from '../../components/_common/NaviItem';
+import _NaviItem from '../../../components/_common/NaviItem';
 
 export const Footer = styled.footer`
   width: 100%;

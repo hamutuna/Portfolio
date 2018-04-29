@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { headerHeight, underFirstView } from '../../styles/var';
+import { headerHeight, underFirstView } from '../../../styles/var';
 
 export const FirstView = styled.section`
   width: 100vw;

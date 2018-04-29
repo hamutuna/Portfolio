@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import * as s from '../../styles/index/Header';
+import * as s from '../../styles/components/_common/Header';
 
 import injectNaviItems from '../_hoc/injectNaviItems';
 

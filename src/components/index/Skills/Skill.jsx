@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 
-import * as s from '../../../styles/index/Skills/Skill';
+import * as s from '../../../styles/components/index/Skills/Skill';
 
 import type { Skill as TSkill, ImageSharp } from '../../../entities/types';
 

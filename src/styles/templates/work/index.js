@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column } from '../../styles/common';
-import { pc, headerHeight, underFirstView } from '../../styles/var';
+import { column } from '../../../styles/common';
+import { pc, headerHeight, underFirstView } from '../../../styles/var';
 
 export const Wrapper = styled.div`
   ${column};

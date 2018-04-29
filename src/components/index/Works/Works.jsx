@@ -3,7 +3,7 @@ import React from 'react';
 
 import Work from './Work';
 
-import * as s from '../../../styles/index/Works/Works';
+import * as s from '../../../styles/components/index/Works/Works';
 import { anchors } from '../../_common/NaviItem';
 
 import type { Work as TWork, ImageSharp } from '../../../entities/types';

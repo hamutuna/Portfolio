@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column } from '../../../styles/common';
+import { column } from '../../../../styles/common';
 
 export const Section = styled.section`
   ${column};

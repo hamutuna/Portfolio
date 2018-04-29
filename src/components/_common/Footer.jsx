@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import * as s from '../../styles/index/Footer';
+import * as s from '../../styles/components/_common/Footer';
 
 import injectNaviItems from '../_hoc/injectNaviItems';
 

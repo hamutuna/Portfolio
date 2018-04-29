@@ -1,10 +1,10 @@
 // @flow
 import styled from 'styled-components';
 
-import { row } from '../../styles/common';
-import { pc } from '../../styles/var';
+import { row } from '../../../styles/common';
+import { pc } from '../../../styles/var';
 
-import _NaviItem from '../../components/_common/NaviItem';
+import _NaviItem from '../../../components/_common/NaviItem';
 
 export const Header = styled.header`
   ${row};

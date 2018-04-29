@@ -1,10 +1,10 @@
 // @flow
 import styled, { css } from 'styled-components';
 
-import { column, row } from '../../common';
-import { pc } from '../../../styles/var';
+import { column, row } from '../../../common';
+import { pc } from '../../../../styles/var';
 
-import _Skill from '../../../components/index/Skills/Skill';
+import _Skill from '../../../../components/index/Skills/Skill';
 
 export const Section = styled.section`
   ${column};
