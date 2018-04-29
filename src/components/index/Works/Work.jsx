@@ -11,7 +11,7 @@ type Props = {
 
 export default (props: Props) => {
   const { id, image } = props;
-  const isHalf = id === 'project2' || id === 'project3';
+  const isHalf = false; // id === 'project2' || id === 'project3';
 
   return (
     <s.Work href={`works/${id}`} isHalf={isHalf}>
