@@ -16,6 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
               }
               detail
+              documents
             }
           }
         }

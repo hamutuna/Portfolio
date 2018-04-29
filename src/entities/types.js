@@ -12,6 +12,7 @@ export type Work = {
   position: string,
   skills: [Skill],
   detail: string,
+  documents: string[],
 };
 
 export type ImageSharp = {

@@ -13,10 +13,21 @@ type Props = {
   data: {},
 };
 
+const getDocImages = (documents, json) => documents.map((d) => json[d]);
+
 export default (props: Props) => {
   const { pageContext, data } = props;
-  const { id, title, description, position, skills, detail } = pageContext.work;
+  const {
+    id,
+    title,
+    description,
+    position,
+    skills,
+    detail,
+    documents,
+  } = pageContext.work;
   const image = data[`${id}Image`];
+  const docImages = getDocImages(documents, data);
 
   return (
     <s.Wrapper>
@@ -32,7 +43,13 @@ export default (props: Props) => {
       <h2 id={anchors.detail}>詳細</h2>
       <p dangerouslySetInnerHTML={{ __html: detail }} />
       <h2 id={anchors.documents}>実際の資料</h2>
-      <p>- stay tuned -</p>
+      {docImages.map((d, i) => (
+        <s.DocImage
+          resolutions={d.resolutions}
+          alt={`document${i}`}
+          key={d.resolutions.src}
+        />
+      ))}
     </s.Wrapper>
   );
 };

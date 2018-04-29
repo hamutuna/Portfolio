@@ -100,6 +100,21 @@ export const query = graphql`
     project4Image: imageSharp(id: { regex: "/work_project4/" }) {
       ...ImgFragment
     }
+    project1_doc1: imageSharp(id: { regex: "/project1_doc1/" }) {
+      ...ImgFragment
+    }
+    project1_doc2: imageSharp(id: { regex: "/project1_doc2/" }) {
+      ...ImgFragment
+    }
+    project2_doc1: imageSharp(id: { regex: "/project2_doc1/" }) {
+      ...ImgFragment
+    }
+    project2_doc2: imageSharp(id: { regex: "/project2_doc2/" }) {
+      ...ImgFragment
+    }
+    project2_doc3: imageSharp(id: { regex: "/project2_doc3/" }) {
+      ...ImgFragment
+    }
   }
 
   fragment ImgFragment on ImageSharp {
