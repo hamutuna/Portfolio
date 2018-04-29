@@ -21,7 +21,6 @@ export default (props: Props) => {
   return (
     <s.Section>
       <h1 id={anchors.works}>Works</h1>
-      <s.Description>Description here.</s.Description>
       <s.WorksWrapper>
         {works.map((w) => <Work id={w.id} image={images[w.id]} key={w.id} />)}
       </s.WorksWrapper>

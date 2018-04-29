@@ -7,10 +7,6 @@ export const Section = styled.section`
   ${column};
 `;
 
-export const Description = styled.p`
-  align-self: left;
-`;
-
 export const WorksWrapper = styled.section`
   width: 100%;
   ${row};
