@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 // eslint-disable-next-line no-unused-expressions
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Operator Mono';
     src: url('../fonts/Operator-Mono.ttf');
