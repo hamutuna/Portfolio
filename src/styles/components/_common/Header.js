@@ -1,8 +1,8 @@
 // @flow
 import styled from 'styled-components';
 
-import { row } from '../../../styles/common';
-import { pc } from '../../../styles/var';
+import { row } from '../../common';
+import { pc, colors } from '../../var';
 
 import _NaviItem from '../../../components/_common/NaviItem';
 
@@ -11,21 +11,13 @@ export const Header = styled.header`
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  background-color: darkgray;
-`;
-
-export const Logo = styled.img`
-  background-color: darkgray;
-  width: 24px;
-  height: 24px;
+  background-color: ${colors.firstViewBg};
 `;
 
 export const Navi = styled.nav`
-  display: none;
-
-  ${pc} {
-    display: block;
-  }
+  ${row}
+  width: 100%;
+  justify-content: flex-end;
 `;
 
 export const NaviItemList = styled.ol`
