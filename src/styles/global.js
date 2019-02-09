@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  body.hamburger-opened {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
   ul, ol {
     margin: 0;
     padding: 0;

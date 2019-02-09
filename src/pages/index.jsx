@@ -54,12 +54,13 @@ export default ({ data }: Props) => {
     twitterImage,
     pageTopImage,
     hamburgerImage,
+    closeImage,
   } = data;
 
   const [works, workImages] = resolveJson(data, allWorksJson);
 
   return (
-    <Layout pageTopImage={pageTopImage} hamburgerImage={hamburgerImage}>
+    <Layout pageTopImage={pageTopImage} hamburgerImage={hamburgerImage} closeImage={closeImage}>
       <FirstView image={logoImage} />
       <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={works} images={workImages} />
