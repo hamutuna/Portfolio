@@ -14,4 +14,6 @@ export const Title = styled.h1`
   font-size: 28px;
 `;
 
-export const WorksWrapper = styled.section``;
+export const WorksWrapper = styled.section`
+  width: 100%;
+`;
