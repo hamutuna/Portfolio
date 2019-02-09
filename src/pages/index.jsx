@@ -51,9 +51,8 @@ export default ({ data }: Props) => {
   return (
     <React.Fragment>
       <FirstView image={firstViewImage} />
-      <Profile image={profileImage} />
-      <Skills skills={skills} images={skillImages} />
       <Works works={works} images={workImages} />
+      <Profile image={profileImage} />
     </React.Fragment>
   );
 };
