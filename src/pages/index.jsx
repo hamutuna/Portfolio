@@ -75,6 +75,8 @@ export const query = graphql`
       edges {
         node {
           id
+          title
+          positionAndDate
         }
       }
     }

@@ -5,17 +5,19 @@ import * as s from '../../../styles/components/index/Works/Work';
 import type { ImageSharp } from '../../../entities/types';
 
 type Props = {
+  index: number,
   id: string,
   image: ImageSharp,
 };
 
 export default (props: Props) => {
-  const { id, image } = props;
-  const isHalf = false; // id === 'project2' || id === 'project3';
+  const { index, id, image, title, positionAndDate } = props;
 
   return (
-    <s.Work href={`works/${id}`} isHalf={isHalf}>
+    <s.Work href={`works/${id}`} index={index}>
       <s.Image resolutions={image.resolutions} />
+      <h2>{title}</h2>
+      <p>{positionAndDate}</p>
     </s.Work>
   );
 };

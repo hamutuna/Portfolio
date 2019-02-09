@@ -11,4 +11,6 @@ export const WorksWrapper = styled.section`
   width: 100%;
   ${row};
   flex-wrap: wrap;
+  padding: 0 28px;
+  box-sizing: border-box;
 `;

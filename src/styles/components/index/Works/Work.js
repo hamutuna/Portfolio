@@ -4,22 +4,13 @@ import Img from 'gatsby-image';
 
 import { pc } from '../../../var';
 
-type Props = any;
-
-const thumbnailHeight = '490px';
-
 export const Work = styled.a`
-  height: ${thumbnailHeight};
-  width: calc(100% - 2px);
-  background-color: lightgray;
-  border: 1px solid gray;
-
-  width: ${(props: Props) => {
-    if (props.isHalf) {
-      return 'calc(50% - 2px)';
+  margin-top: ${(props: any) => {
+    if (props.index === 0) {
+      return '24px';
     }
 
-    return '';
+    return '60px';
   }};
 
   ${pc} {
@@ -30,6 +21,6 @@ export const Work = styled.a`
 export const Image = styled(Img).attrs({
   style: {
     width: '100%',
-    height: thumbnailHeight,
+    height: '180px',
   },
 })``;

@@ -22,8 +22,15 @@ export default (props: Props) => {
     <s.Section>
       <h1 id={anchors.works}>Works</h1>
       <s.WorksWrapper>
-        {works.map((w) => (
-          <Work id={w.id} image={images[w.id]} key={w.id} />
+        {works.map((w, i) => (
+          <Work
+            id={w.id}
+            index={i}
+            image={images[w.id]}
+            title={w.title}
+            positionAndDate={w.positionAndDate}
+            key={w.id}
+          />
         ))}
       </s.WorksWrapper>
     </s.Section>
