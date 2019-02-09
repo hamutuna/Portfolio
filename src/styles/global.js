@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './var';
 
 // eslint-disable-next-line no-unused-expressions
 export const GlobalStyle = createGlobalStyle`
@@ -9,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    color: ${colors.black};
   }
 
   body.hamburger-opened {
@@ -30,5 +32,10 @@ export const GlobalStyle = createGlobalStyle`
     appearance: none;
     background: none;
     border: none;
+  }
+
+  p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
   }
 `;
