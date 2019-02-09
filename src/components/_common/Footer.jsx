@@ -10,16 +10,15 @@ import type { NaviItem } from '../_hoc/injectNaviItems';
 import type { ImageSharp } from '../../../entities/types';
 
 type Props = {
-  items: NaviItem[],
   pageTopImage: ImageSharp,
 };
 
 const Footer = (props: Props) => {
-  const { items, pageTopImage } = props;
+  const { pageTopImage } = props;
   return (
     <s.Footer>
       <nav>
-        <button
+        <s.PageTop
           href="#"
           onClick={() => {
             const target = document.querySelector(`#${anchors.firstView}`);
@@ -31,16 +30,10 @@ const Footer = (props: Props) => {
           }}
         >
           <s.PageTopImage resolutions={pageTopImage.resolutions} />
-        </button>
-        <ol>
-          {items.map((item) => (
-            <s.NaviItem targetId={item.id} key={item.id}>
-              {item.text}
-            </s.NaviItem>
-          ))}
-        </ol>
+          <s.PageTopText>PAGE TOP</s.PageTopText>
+        </s.PageTop>
       </nav>
-      <s.Copy>&copy; ️TSUNODA NATSUMI</s.Copy>
+      <s.Copy>&copy;tuna All rights reserved.</s.Copy>
     </s.Footer>
   );
 };

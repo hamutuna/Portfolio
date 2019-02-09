@@ -2,37 +2,38 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { row } from '../../common';
+import { column, row } from '../../common';
 
 import _NaviItem from '../../../components/_common/NaviItem';
 
 export const Footer = styled.footer`
+  ${column}
   width: 100%;
-  height: 140px;
-  margin-top: 180px;
+  margin-top: 32px;
 `;
 
-export const NaviItem = styled(_NaviItem)`
-  ${row};
-  justify-content: left;
-  height: 85px;
-  background-color: lightgray;
-
-  &:not(:last-child) {
-    border-bottom: 1px solid gray;
-  }
-`;
-
-export const Copy = styled.small`
-  ${row};
-  width: 100%;
-  height: 140px;
-  background-color: darkgray;
+export const PageTop = styled.button`
+  ${column}
+  cursor: pointer;
 `;
 
 export const PageTopImage = styled(Img).attrs({
   style: {
-    width: '56px',
-    height: '20px',
+    width: '66px',
+    height: '27px',
   },
 })``;
+
+export const PageTopText = styled.p`
+  color: #c4c4c4;
+  font-size: 12px;
+  margin-top: 4px;
+`;
+
+export const Copy = styled.small`
+  margin-top: 32px;
+  font-size: 12px;
+  align-self: flex-end;
+  margin-right: 28px;
+  margin-bottom: 28px;
+`;
