@@ -15,7 +15,7 @@ const size = {
 
 type Props = {
   id: $Keys<typeof size>,
-  className: string,
+  className?: string,
 };
 
 export default (props: Props) => {
@@ -37,9 +37,6 @@ export default (props: Props) => {
 
 const StyledSvg = styled.svg`
   color: #000;
-  ${(props) =>
-    css`
-      width: ${props.width}px;
-      height: ${props.height}px;
-    `};
+  width: ${(props: any) => `${props.width}px`};
+  height: ${(props: any) => `${props.height}px`};
 `;

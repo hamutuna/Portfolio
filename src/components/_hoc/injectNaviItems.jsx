@@ -2,9 +2,10 @@
 import * as React from 'react';
 
 import { anchors } from '../_common/NaviItem';
+import type { Anchors } from '../_common/NaviItem';
 
 export type NaviItem = {
-  id: string,
+  id: Anchors,
   text: string,
 };
 

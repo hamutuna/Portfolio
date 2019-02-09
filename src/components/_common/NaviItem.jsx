@@ -10,12 +10,12 @@ export const anchors = {
   documents: 'documents',
 };
 
-type Anchors = $Keys<typeof anchors>;
+export type Anchors = $Keys<typeof anchors>;
 
 type Props = {
   children: React.Node,
   targetId: Anchors,
-  className: string,
+  className?: string,
 };
 
 export default (props: Props) => {
