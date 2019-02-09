@@ -4,9 +4,9 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/_common/Layout';
 import FirstView from '../components/index/FirstView';
-import Profile from '../components/index/Profile';
-import Skills from '../components/index/Skills/Skills';
+import Workflow from '../components/index/Workflow';
 import Works from '../components/index/Works/Works';
+import Profile from '../components/index/Profile';
 
 import type { Work, Skill, ImageSharp } from '../entities/types';
 
@@ -27,11 +27,13 @@ type Props = {
   },
 };
 
+const getList = (json) => json.edges.map((edge) => edge.node);
+
 const resolveJson = <T: { id: string }>(
   data,
   json: JsonEntitiy<T>,
 ): [T[], { [string]: ImageSharp }] => {
-  const entities = json.edges.map((edge) => edge.node);
+  const entities = getList(json);
   const images = (() => {
     const imgs = {};
     entities.forEach((entity) => {
@@ -44,14 +46,14 @@ const resolveJson = <T: { id: string }>(
 };
 
 export default ({ data }: Props) => {
-  const { allSkillsJson, allWorksJson, logoImage, profileImage } = data;
+  const { allWorkflowsJson, allWorksJson, logoImage, profileImage } = data;
 
-  const [skills, skillImages] = resolveJson(data, allSkillsJson);
   const [works, workImages] = resolveJson(data, allWorksJson);
 
   return (
     <Layout>
       <FirstView image={logoImage} />
+      <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={works} images={workImages} />
       <Profile image={profileImage} />
     </Layout>
@@ -60,6 +62,15 @@ export default ({ data }: Props) => {
 
 export const query = graphql`
   query GetIndexContents {
+    allWorkflowsJson {
+      edges {
+        node {
+          id
+          title
+          description
+        }
+      }
+    }
     allWorksJson {
       edges {
         node {

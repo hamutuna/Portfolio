@@ -4,6 +4,7 @@ import * as React from 'react';
 export const anchors = {
   profile: 'profile',
   skills: 'skills',
+  workflows: 'workflows',
   works: 'works',
   position: 'position',
   detail: 'detail',
