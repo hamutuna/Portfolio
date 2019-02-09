@@ -14,9 +14,7 @@ export default (props: Props) => {
 
   return (
     <s.FirstView>
-      <s.FloatWrapper>
-        <s.Copy>空気のように、生活に溶け込むデザインを実現する</s.Copy>
-      </s.FloatWrapper>
+      <s.FloatWrapper />
       <s.Image resolutions={image.resolutions} />
     </s.FirstView>
   );

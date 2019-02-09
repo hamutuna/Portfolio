@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 
+import Layout from '../components/_common/Layout';
 import FirstView from '../components/index/FirstView';
 import Profile from '../components/index/Profile';
 import Skills from '../components/index/Skills/Skills';
@@ -43,17 +44,17 @@ const resolveJson = <T: { id: string }>(
 };
 
 export default ({ data }: Props) => {
-  const { allSkillsJson, allWorksJson, firstViewImage, profileImage } = data;
+  const { allSkillsJson, allWorksJson, logoImage, profileImage } = data;
 
   const [skills, skillImages] = resolveJson(data, allSkillsJson);
   const [works, workImages] = resolveJson(data, allWorksJson);
 
   return (
-    <React.Fragment>
-      <FirstView image={firstViewImage} />
+    <Layout>
+      <FirstView image={logoImage} />
       <Works works={works} images={workImages} />
       <Profile image={profileImage} />
-    </React.Fragment>
+    </Layout>
   );
 };
 
@@ -74,7 +75,7 @@ export const query = graphql`
         }
       }
     }
-    firstViewImage: imageSharp(resolutions: { originalName: { eq: "first_view.png" } }) {
+    logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
       ...ImgFragment
     }
     profileImage: imageSharp(resolutions: { originalName: { eq: "avatar.png" } }) {

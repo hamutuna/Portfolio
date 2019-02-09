@@ -2,18 +2,22 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { headerHeight, underFirstView } from '../../../styles/var';
+import { column, row } from '../../common';
+import { headerHeight, underFirstView } from '../../var';
 
 export const FirstView = styled.section`
+  ${column}
   width: 100vw;
   height: calc(100vh - ${headerHeight} - ${underFirstView});
-  background-color: lightgray;
+  background-color: rgba(37, 34, 190, 0.2);
 `;
+
+const size = 184;
 
 export const Image = styled(Img).attrs({
   style: {
-    width: '100vw',
-    height: `calc(100vh - ${headerHeight} - ${underFirstView})`,
+    width: `${size}px`,
+    height: `${size}px`,
   },
   imgStyle: {
     objectFit: 'contain',
@@ -27,5 +31,3 @@ export const FloatWrapper = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
 `;
-
-export const Copy = styled.h1``;
