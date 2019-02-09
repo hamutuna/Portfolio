@@ -10,7 +10,7 @@ import video from '../../../assets/videos/graph.mp4';
 type Props = {
   skill: TSkill,
   image: ImageSharp,
-  className: string,
+  className?: string,
 };
 
 export default (props: Props) => {

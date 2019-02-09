@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import { graphql } from 'gatsby';
 
 import type { Work } from '../../entities/types';
 import * as s from '../../styles/templates/work/index';
@@ -53,3 +54,35 @@ export default (props: Props) => {
     </s.Wrapper>
   );
 };
+
+export const query = graphql`
+  query GetWorkContents {
+    project1Image: imageSharp(resolutions: { originalName: { eq: "work_project1.png" } }) {
+      ...ImgFragment
+    }
+    project2Image: imageSharp(resolutions: { originalName: { eq: "work_project2.png" } }) {
+      ...ImgFragment
+    }
+    project3Image: imageSharp(resolutions: { originalName: { eq: "work_project3.png" } }) {
+      ...ImgFragment
+    }
+    project4Image: imageSharp(resolutions: { originalName: { eq: "work_project4.png" } }) {
+      ...ImgFragment
+    }
+    project1_doc1: imageSharp(resolutions: { originalName: { eq: "project1_doc1.png" } }) {
+      ...ImgFragment
+    }
+    project1_doc2: imageSharp(resolutions: { originalName: { eq: "project1_doc2.png" } }) {
+      ...ImgFragment
+    }
+    project2_doc1: imageSharp(resolutions: { originalName: { eq: "project2_doc1.png" } }) {
+      ...ImgFragment
+    }
+    project2_doc2: imageSharp(resolutions: { originalName: { eq: "project2_doc2.png" } }) {
+      ...ImgFragment
+    }
+    project2_doc3: imageSharp(resolutions: { originalName: { eq: "project2_doc3.png" } }) {
+      ...ImgFragment
+    }
+  }
+`;

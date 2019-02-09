@@ -6,6 +6,8 @@ import { pc } from '../../../../styles/var';
 
 import _Skill from '../../../../components/index/Skills/Skill';
 
+type Props = any;
+
 export const Section = styled.section`
   ${column};
 `;
@@ -24,16 +26,12 @@ export const SkillsWrapper = styled.div`
 `;
 
 export const Skill = styled(_Skill)`
-  ${(props) => {
+  margin-top: ${(props: Props) => {
     if (props.index === 0) {
-      return css`
-        margin-top: 0;
-      `;
+      return '0';
     }
 
-    return css`
-      margin-top: 96px;
-    `;
+    return '96px';
   }};
 
   ${pc} {

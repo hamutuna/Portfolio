@@ -4,6 +4,8 @@ import Img from 'gatsby-image';
 
 import { pc } from '../../../var';
 
+type Props = any;
+
 const thumbnailHeight = '490px';
 
 export const Work = styled.a`
@@ -12,14 +14,12 @@ export const Work = styled.a`
   background-color: lightgray;
   border: 1px solid gray;
 
-  ${(props) => {
+  width: ${(props: Props) => {
     if (props.isHalf) {
-      return css`
-        width: calc(50% - 2px);
-      `;
+      return 'calc(50% - 2px)';
     }
 
-    return css``;
+    return '';
   }};
 
   ${pc} {

@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import { graphql } from 'gatsby';
 
 import FirstView from '../components/index/FirstView';
 import Profile from '../components/index/Profile';
@@ -50,9 +51,79 @@ export default ({ data }: Props) => {
   return (
     <React.Fragment>
       <FirstView image={firstViewImage} />
-      <Profile image={profileImage} />
-      <Skills skills={skills} images={skillImages} />
       <Works works={works} images={workImages} />
+      <Profile image={profileImage} />
     </React.Fragment>
   );
 };
+
+export const query = graphql`
+  query GetIndexContents {
+    allWorksJson {
+      edges {
+        node {
+          id
+        }
+      }
+    }
+    allSkillsJson {
+      edges {
+        node {
+          id
+          title
+        }
+      }
+    }
+    firstViewImage: imageSharp(resolutions: { originalName: { eq: "first_view.png" } }) {
+      ...ImgFragment
+    }
+    profileImage: imageSharp(resolutions: { originalName: { eq: "avatar.png" } }) {
+      ...ImgFragment
+    }
+    sketchImage: imageSharp(resolutions: { originalName: { eq: "skill_sketch.png" } }) {
+      ...ImgFragment
+    }
+    xdImage: imageSharp(resolutions: { originalName: { eq: "xd.png" } }) {
+      ...ImgFragment
+    }
+    photoshopImage: imageSharp(resolutions: { originalName: { eq: "photoshop.png" } }) {
+      ...ImgFragment
+    }
+    illustratorImage: imageSharp(resolutions: { originalName: { eq: "illustrator.png" } }) {
+      ...ImgFragment
+    }
+    html5Image: imageSharp(resolutions: { originalName: { eq: "html5.png" } }) {
+      ...ImgFragment
+    }
+    css3Image: imageSharp(resolutions: { originalName: { eq: "css3.png" } }) {
+      ...ImgFragment
+    }
+    zeplinImage: imageSharp(resolutions: { originalName: { eq: "zeplin.png" } }) {
+      ...ImgFragment
+    }
+    githubImage: imageSharp(resolutions: { originalName: { eq: "github.png" } }) {
+      ...ImgFragment
+    }
+    wordpressImage: imageSharp(resolutions: { originalName: { eq: "wordpress.png" } }) {
+      ...ImgFragment
+    }
+    project1Image: imageSharp(resolutions: { originalName: { eq: "work_project1.png" } }) {
+      ...ImgFragment
+    }
+    project2Image: imageSharp(resolutions: { originalName: { eq: "work_project2.png" } }) {
+      ...ImgFragment
+    }
+    project3Image: imageSharp(resolutions: { originalName: { eq: "work_project3.png" } }) {
+      ...ImgFragment
+    }
+    project4Image: imageSharp(resolutions: { originalName: { eq: "work_project4.png" } }) {
+      ...ImgFragment
+    }
+  }
+
+  fragment ImgFragment on ImageSharp {
+    resolutions {
+      ...GatsbyImageSharpResolutions
+    }
+  }
+`;
