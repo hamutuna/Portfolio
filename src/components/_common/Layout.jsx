@@ -15,6 +15,7 @@ type Props = {
   pageTopImage: ImageSharp,
   hamburgerImage: ImageSharp,
   closeImage: ImageSharp,
+  logoImage: ImageSharp,
 };
 
 export default class Layout extends React.Component<Props> {
@@ -24,13 +25,13 @@ export default class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, pageTopImage, hamburgerImage, closeImage } = this.props;
+    const { children, pageTopImage, hamburgerImage, closeImage, logoImage } = this.props;
 
     return (
       <React.Fragment>
         <GlobalStyle />
         <Sprite />
-        <Header hamburgerImage={hamburgerImage} closeImage={closeImage} />
+        <Header hamburgerImage={hamburgerImage} closeImage={closeImage} logoImage={logoImage} />
         <main>{children}</main>
         <Footer pageTopImage={pageTopImage} />
       </React.Fragment>

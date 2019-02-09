@@ -112,3 +112,25 @@ export const CloseImage = styled(Img).attrs({
   opacity: ${(props) => (props.isShow ? 1 : 0)};
   transition: opacity 0.25s ease-out;
 `;
+
+export const LogoWrapper = styled.button`
+  width: ${size};
+  height: ${size};
+  top: 28px;
+  left: 28px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: all;
+  cursor: pointer;
+  display: ${(props) => (props.isShow ? 'block' : 'none')};
+`;
+
+export const LogoImage = styled(Img).attrs({
+  style: {
+    width: `${size}`,
+    height: `${size}`,
+  },
+})`
+  opacity: ${(props) => (props.isShow ? 1 : 0)};
+  transition: opacity 0.25s ease-out;
+`;

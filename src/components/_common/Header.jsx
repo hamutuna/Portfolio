@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { Link } from 'gatsby';
 
 import * as s from '../../styles/components/_common/Header';
 
@@ -12,6 +13,7 @@ type Props = {
   items: NaviItem[],
   hamburgerImage: ImageSharp,
   closeImage: ImageSharp,
+  logoImage: ImageSharp,
 };
 
 class Header extends React.Component<Props, State> {
@@ -37,7 +39,7 @@ class Header extends React.Component<Props, State> {
   }
 
   render() {
-    const { items, hamburgerImage, closeImage } = this.props;
+    const { items, hamburgerImage, closeImage, logoImage } = this.props;
     const { isShow } = this.state;
 
     return (
@@ -68,6 +70,11 @@ class Header extends React.Component<Props, State> {
               </s.NaviItem>
             ))}
           </s.NaviItemList>
+          <s.LogoWrapper isShow={isShow}>
+            <Link to="/">
+              <s.LogoImage resolutions={logoImage.resolutions} isShow={isShow} />
+            </Link>
+          </s.LogoWrapper>
         </s.Navi>
       </s.Header>
     );
