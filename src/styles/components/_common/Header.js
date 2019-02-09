@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import { row } from '../../common';
 import { pc, colors } from '../../var';
@@ -33,3 +34,10 @@ export const NaviItem = styled(_NaviItem)`
     }
   }
 `;
+
+export const HamburgerImage = styled(Img).attrs({
+  style: {
+    width: '30px',
+    height: '30px',
+  },
+})``;

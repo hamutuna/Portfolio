@@ -13,6 +13,7 @@ import type { ImageSharp } from '../../../entities/types';
 type Props = {
   children: (any) => React.Element<any>,
   pageTopImage: ImageSharp,
+  hamburgerImage: ImageSharp,
 };
 
 export default class Layout extends React.Component<Props> {
@@ -22,13 +23,13 @@ export default class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, pageTopImage } = this.props;
+    const { children, pageTopImage, hamburgerImage } = this.props;
 
     return (
       <React.Fragment>
         <GlobalStyle />
         <Sprite />
-        <Header />
+        <Header hamburgerImage={hamburgerImage} />
         <main>{children}</main>
         <Footer pageTopImage={pageTopImage} />
       </React.Fragment>
