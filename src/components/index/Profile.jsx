@@ -10,10 +10,9 @@ import type { ImageSharp } from '../../entities/types';
 type Props = {
   avatarImage: ImageSharp,
   twitterImage: ImageSharp,
-  pageTopImage: ImageSharp,
 };
 
-export default ({ avatarImage, twitterImage, pageTopImage }: Props) => (
+export default ({ avatarImage, twitterImage }: Props) => (
   <s.Section>
     <hr />
     <s.Title id={anchors.profile} />

@@ -2,6 +2,7 @@
 import * as React from 'react';
 
 export const anchors = {
+  firstView: 'firstView',
   profile: 'profile',
   skills: 'skills',
   workflows: 'workflows',

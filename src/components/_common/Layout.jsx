@@ -8,9 +8,11 @@ import Sprite from './Sprite';
 
 import { GlobalStyle } from '../../styles/global';
 
+import type { ImageSharp } from '../../../entities/types';
+
 type Props = {
   children: (any) => React.Element<any>,
-  data: {},
+  pageTopImage: ImageSharp,
 };
 
 export default class Layout extends React.Component<Props> {
@@ -20,7 +22,7 @@ export default class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, data } = this.props;
+    const { children, pageTopImage } = this.props;
 
     return (
       <React.Fragment>
@@ -28,7 +30,7 @@ export default class Layout extends React.Component<Props> {
         <Sprite />
         <Header />
         <main>{children}</main>
-        <Footer />
+        <Footer pageTopImage={pageTopImage} />
       </React.Fragment>
     );
   }

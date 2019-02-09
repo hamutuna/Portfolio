@@ -2,6 +2,7 @@
 import React from 'react';
 
 import * as s from '../../styles/components/index/FirstView';
+import { anchors } from '../_common/NaviItem';
 
 type Props = {
   image: {
@@ -13,7 +14,7 @@ export default (props: Props) => {
   const { image } = props;
 
   return (
-    <s.FirstView>
+    <s.FirstView id={anchors.firstView}>
       <s.FloatWrapper />
       <s.Image resolutions={image.resolutions} />
     </s.FirstView>

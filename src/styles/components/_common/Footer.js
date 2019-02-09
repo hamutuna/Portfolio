@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import { row } from '../../common';
 
@@ -28,3 +29,10 @@ export const Copy = styled.small`
   height: 140px;
   background-color: darkgray;
 `;
+
+export const PageTopImage = styled(Img).attrs({
+  style: {
+    width: '56px',
+    height: '20px',
+  },
+})``;

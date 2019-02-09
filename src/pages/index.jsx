@@ -58,7 +58,7 @@ export default ({ data }: Props) => {
   const [works, workImages] = resolveJson(data, allWorksJson);
 
   return (
-    <Layout>
+    <Layout pageTopImage={pageTopImage}>
       <FirstView image={logoImage} />
       <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={works} images={workImages} />
