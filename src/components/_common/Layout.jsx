@@ -2,18 +2,18 @@
 import * as React from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 
-import Header from '../components/_common/Header';
-import Footer from '../components/_common/Footer';
-import Sprite from '../components/_common/Sprite';
+import Header from './Header';
+import Footer from './Footer';
+import Sprite from './Sprite';
 
-import '../styles/global';
+import { GlobalStyle } from '../../styles/global';
 
 type Props = {
   children: (any) => React.Element<any>,
   data: {},
 };
 
-export default class Template extends React.Component<Props> {
+export default class Layout extends React.Component<Props> {
   componentDidMount() {
     // windowを触るので、ssr中は実行しないようにここで実行
     smoothscroll.polyfill();
@@ -24,14 +24,10 @@ export default class Template extends React.Component<Props> {
 
     return (
       <React.Fragment>
+        <GlobalStyle />
         <Sprite />
         <Header />
-        <main>
-          {children({
-            ...this.props,
-            data,
-          })}
-        </main>
+        <main>{children}</main>
         <Footer />
       </React.Fragment>
     );
