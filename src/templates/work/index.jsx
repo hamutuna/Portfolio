@@ -32,7 +32,7 @@ export default (props: Props) => {
       logoImage={logoImage}
     >
       <s.Wrapper>
-        <s.FirstView image={image}>
+        <s.FirstView id={anchors.firstView} image={image}>
           <s.TopImage resolutions={image.resolutions} />
         </s.FirstView>
         <h1>{title}</h1>

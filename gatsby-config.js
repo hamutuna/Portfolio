@@ -23,5 +23,6 @@ module.exports = {
   ],
   mapping: {
     'WorksJson.skills': 'SkillsJson',
+    'WorksJson.goodPoints': 'GoodPointsJson',
   },
 };
