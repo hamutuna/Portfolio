@@ -8,25 +8,28 @@ import fb from '../../assets/images/contact_fb.png';
 import type { ImageSharp } from '../../entities/types';
 
 type Props = {
-  image: ImageSharp,
+  avatarImage: ImageSharp,
+  twitterImage: ImageSharp,
+  pageTopImage: ImageSharp,
 };
 
-export default ({ image }: Props) => (
+export default ({ avatarImage, twitterImage, pageTopImage }: Props) => (
   <s.Section>
-    <s.Title id={anchors.profile}>Profile</s.Title>
-    <s.Image resolutions={image.resolutions} />
+    <hr />
+    <s.Title id={anchors.profile} />
+    <s.Avatar resolutions={avatarImage.resolutions} />
     <s.IconWrapper>
-      <a href="https://www.facebook.com/tunaoisi4">
-        <s.FBIcon src={fb} />
-      </a>
-      <a href="mailto:tuna.oisi4@gmail.com">
-        <s.MailIcon id="mail" />
+      <h2>Tuna</h2>
+      <a href="https://www.twitter.com/tunaoisi4">
+        <s.TwitterIcon resolutions={twitterImage.resolutions} />
       </a>
     </s.IconWrapper>
     <s.Description>
-      群馬県みどり市出身。大学卒業後、〜の運用〜webデザイナーを経て、
-      2017年よりUX業務に携わる。
-      常に人間の潜在意識に問いかけるようなデザインを目指している。
+      プロフィール記入。プロフィール記入。プロmmnんフィール記入。プロフィール記入。プロフィール記入。
     </s.Description>
+    <h2>今後の展望</h2>
+    <p>
+      説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります
+    </p>
   </s.Section>
 );

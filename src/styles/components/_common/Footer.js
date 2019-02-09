@@ -1,7 +1,7 @@
 // @flow
 import styled from 'styled-components';
 
-import { row } from '../../../styles/common';
+import { row } from '../../common';
 
 import _NaviItem from '../../../components/_common/NaviItem';
 

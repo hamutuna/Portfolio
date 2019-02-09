@@ -46,7 +46,14 @@ const resolveJson = <T: { id: string }>(
 };
 
 export default ({ data }: Props) => {
-  const { allWorkflowsJson, allWorksJson, logoImage, profileImage } = data;
+  const {
+    allWorkflowsJson,
+    allWorksJson,
+    logoImage,
+    avatarImage,
+    twitterImage,
+    pageTopImage,
+  } = data;
 
   const [works, workImages] = resolveJson(data, allWorksJson);
 
@@ -55,7 +62,7 @@ export default ({ data }: Props) => {
       <FirstView image={logoImage} />
       <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={works} images={workImages} />
-      <Profile image={profileImage} />
+      <Profile avatarImage={avatarImage} twitterImage={twitterImage} pageTopImage={pageTopImage} />
     </Layout>
   );
 };
@@ -91,7 +98,13 @@ export const query = graphql`
     logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
       ...ImgFragment
     }
-    profileImage: imageSharp(resolutions: { originalName: { eq: "avatar.png" } }) {
+    avatarImage: imageSharp(resolutions: { originalName: { eq: "avatar.png" } }) {
+      ...ImgFragment
+    }
+    twitterImage: imageSharp(resolutions: { originalName: { eq: "twitter.png" } }) {
+      ...ImgFragment
+    }
+    pageTopImage: imageSharp(resolutions: { originalName: { eq: "page_top.png" } }) {
       ...ImgFragment
     }
     sketchImage: imageSharp(resolutions: { originalName: { eq: "skill_sketch.png" } }) {

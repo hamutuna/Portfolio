@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column, row } from '../../../styles/common';
-import { pc } from '../../../styles/var';
+import { column, row } from '../../common';
+import { pc } from '../../var';
 
 import Svg from '../../../components/_common/Svg';
 
@@ -20,7 +20,7 @@ export const Title = styled.h1`
   margin-top: 92px;
 `;
 
-export const Image = styled(Img).attrs({
+export const Avatar = styled(Img).attrs({
   style: {
     width: '212px',
     height: '212px',
@@ -36,15 +36,12 @@ export const IconWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const FBIcon = styled.img`
-  width: ${iconSize}px;
-  height: ${iconSize}px;
-`;
-
-export const MailIcon = styled(Svg)`
-  width: ${iconSize}px;
-  height: ${iconSize}px;
-`;
+export const TwitterIcon = styled(Img).attrs({
+  style: {
+    width: '32px',
+    height: '32px',
+  },
+})``;
 
 export const Description = styled.p`
   margin-top: 66px;
