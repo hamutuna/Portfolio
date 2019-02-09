@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import * as s from '../../styles/components/_common/NaviItem';
 
 export const anchors = {
   firstView: 'firstView',
@@ -25,7 +26,7 @@ export default (props: Props) => {
 
   return (
     <li className={className}>
-      <button
+      <s.Item
         href="#"
         onClick={() => {
           const target = document.querySelector(`#${targetId}`);
@@ -37,7 +38,7 @@ export default (props: Props) => {
         }}
       >
         {children}
-      </button>
+      </s.Item>
     </li>
   );
 };

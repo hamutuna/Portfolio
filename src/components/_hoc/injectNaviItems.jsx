@@ -26,16 +26,16 @@ const worksNaviItems = [
 
 const topNaviItems = [
   {
-    id: anchors.profile,
-    text: 'Profile',
-  },
-  {
-    id: anchors.skills,
-    text: 'Skills',
+    id: anchors.workflows,
+    text: 'Workflow',
   },
   {
     id: anchors.works,
     text: 'Works',
+  },
+  {
+    id: anchors.profile,
+    text: 'Profile',
   },
 ];
 
@@ -49,30 +49,30 @@ type State = {
   location: string,
 };
 
-export default (Loc: LocType) =>
-  class extends React.Component<{}, State> {
-    constructor() {
-      super();
-      this.state = {
-        location: '',
-      };
-    }
-    componentDidMount() {
-      // eslint-disable-next-line react/no-did-mount-set-state
-      this.setState({
-        location: window.location.href,
-      });
-    }
+export default (Loc: LocType) => class extends React.Component<{}, State> {
+  constructor() {
+    super();
+    this.state = {
+      location: '',
+    };
+  }
 
-    render() {
-      const items = (() => {
-        if (this.state.location.includes('/works/')) {
-          return worksNaviItems;
-        }
+  componentDidMount() {
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({
+      location: window.location.href,
+    });
+  }
 
-        return topNaviItems;
-      })();
+  render() {
+    const items = (() => {
+      if (this.state.location.includes('/works/')) {
+        return worksNaviItems;
+      }
 
-      return <Loc {...this.props} items={items} />;
-    }
-  };
+      return topNaviItems;
+    })();
+
+    return <Loc {...this.props} items={items} />;
+  }
+};

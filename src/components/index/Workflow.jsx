@@ -13,7 +13,7 @@ type Props = {
 
 export default ({ workflows }: Props) => (
   <s.Section>
-    <s.Title id={anchors.workflow}>Workflow</s.Title>
+    <s.Title id={anchors.workflows}>Workflow</s.Title>
     <s.Wrapper>
       {workflows.map((w, i) => {
         const isLast = i === workflows.length - 1;

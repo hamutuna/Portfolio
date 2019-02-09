@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     appearance: none;
     background: none;
     border: none;
+    margin: 0;
+    padding: 0;
   }
 
   p, h1, h2, h3 {
