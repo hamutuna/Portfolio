@@ -2,9 +2,10 @@
 import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 
-import { pc } from '../../../var';
+import { pc, colors } from '../../../var';
 
 export const Work = styled.a`
+  display: block;
   margin-top: ${(props: any) => {
     if (props.index === 0) {
       return '24px';
@@ -12,10 +13,19 @@ export const Work = styled.a`
 
     return '60px';
   }};
+`;
 
-  ${pc} {
-    width: calc(50% - 2px);
-  }
+export const Title = styled.h2`
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: ${colors.black};
+`;
+
+export const Description = styled.p`
+  margin-top: 8px;
+  font-size: 14px;
+  color: ${colors.black};
 `;
 
 export const Image = styled(Img).attrs({

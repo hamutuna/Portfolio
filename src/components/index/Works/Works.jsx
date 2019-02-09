@@ -20,7 +20,7 @@ export default (props: Props) => {
 
   return (
     <s.Section>
-      <h1 id={anchors.works}>Works</h1>
+      <s.Title id={anchors.works}>Works</s.Title>
       <s.WorksWrapper>
         {works.map((w, i) => (
           <Work
