@@ -3,21 +3,30 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column, row } from '../../common';
-import { pc } from '../../var';
+import { pc, colors } from '../../var';
 
 import Svg from '../../../components/_common/Svg';
 
 export const Section = styled.section`
   ${column};
-  padding: 0 34px;
-
-  ${pc} {
-    padding: 0 248px;
-  }
+  margin: 0 28px;
+  margin-top: 96px;
+  align-items: flex-start;
 `;
 
-export const Title = styled.h1`
-  margin-top: 92px;
+const dashLine = 4;
+const dashSpan = 8;
+
+export const HorizontalLine = styled.div`
+  background-image: linear-gradient(
+    to left,
+    ${colors.black} ${(dashLine / (dashLine + dashSpan)) * 100}%,
+    transparent ${(dashLine / (dashLine + dashSpan)) * 100}%,
+    transparent 100%
+  );
+  background-size: ${dashLine + dashSpan}px ${dashLine + dashSpan}px;
+  height: 1px;
+  width: 100%;
 `;
 
 export const Avatar = styled(Img).attrs({
@@ -25,29 +34,53 @@ export const Avatar = styled(Img).attrs({
     width: '212px',
     height: '212px',
   },
-})``;
-
-const iconSize = 72;
-
-export const IconWrapper = styled.div`
-  ${row};
-  margin-top: 42px;
-  width: ${iconSize * 2 + 15 * 2}px;
-  justify-content: space-between;
+})`
+  margin-top: 28px;
+  align-self: center;
 `;
+
+export const NameAndSocial = styled.div`
+  ${row};
+  margin-top: 8px;
+  width: 100%;
+`;
+
+export const Name = styled.h2`
+  font-size: 28px;
+`;
+
+export const Social = styled.a`
+  ${row}
+  margin-left: auto;
+`;
+
+const iconSize = '32px';
 
 export const TwitterIcon = styled(Img).attrs({
   style: {
-    width: '32px',
-    height: '32px',
+    width: `${iconSize}`,
+    height: `${iconSize}`,
   },
 })``;
 
-export const Description = styled.p`
-  margin-top: 66px;
+export const TwitterName = styled.p`
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: ${colors.black};
+`;
 
-  ${pc} {
-    text-align: center;
-    min-width: 330px;
-  }
+export const Description = styled.p`
+  font-size: 14px;
+  margin-top: 24px;
+`;
+
+export const HopeTitle = styled.h3`
+  font-size: 16px;
+  margin-top: 32px;
+`;
+
+export const HopeDescription = styled.p`
+  font-size: 14px;
+  margin-top: 8px;
 `;

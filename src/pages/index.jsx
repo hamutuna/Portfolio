@@ -103,7 +103,7 @@ export const query = graphql`
     avatarImage: imageSharp(resolutions: { originalName: { eq: "avatar.png" } }) {
       ...ImgFragment
     }
-    twitterImage: imageSharp(resolutions: { originalName: { eq: "twitter.png" } }) {
+    twitterImage: imageSharp(resolutions: { originalName: { eq: "twitter_icon.png" } }) {
       ...ImgFragment
     }
     pageTopImage: imageSharp(resolutions: { originalName: { eq: "page_top.png" } }) {

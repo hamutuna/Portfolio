@@ -14,21 +14,21 @@ type Props = {
 
 export default ({ avatarImage, twitterImage }: Props) => (
   <s.Section>
-    <hr />
-    <s.Title id={anchors.profile} />
+    <s.HorizontalLine id={anchors.profile} />
     <s.Avatar resolutions={avatarImage.resolutions} />
-    <s.IconWrapper>
-      <h2>Tuna</h2>
-      <a href="https://www.twitter.com/tunaoisi4">
+    <s.NameAndSocial>
+      <s.Name>tuna</s.Name>
+      <s.Social href="https://www.twitter.com/tunaoisi4">
         <s.TwitterIcon resolutions={twitterImage.resolutions} />
-      </a>
-    </s.IconWrapper>
+        <s.TwitterName>@tunaoisi4</s.TwitterName>
+      </s.Social>
+    </s.NameAndSocial>
     <s.Description>
       プロフィール記入。プロフィール記入。プロmmnんフィール記入。プロフィール記入。プロフィール記入。
     </s.Description>
-    <h2>今後の展望</h2>
-    <p>
+    <s.HopeTitle>今後の展望</s.HopeTitle>
+    <s.HopeDescription>
       説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります
-    </p>
+    </s.HopeDescription>
   </s.Section>
 );
