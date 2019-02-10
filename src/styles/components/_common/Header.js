@@ -53,7 +53,7 @@ export const NaviItemList = styled.ol`
   ${column}
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 32px;
+  padding-top: 48px;
   padding-left: 32px;
   box-sizing: border-box;
   transform: ${(props: any) => {
@@ -75,7 +75,8 @@ export const NaviItemList = styled.ol`
 `;
 
 export const NaviItem = styled(_NaviItem)`
-  font-size: 24px;
+  font-size: 16px;
+  margin-top: 40px;
 `;
 
 const size = '32px';

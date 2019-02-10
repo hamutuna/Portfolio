@@ -13,4 +13,5 @@ export const Item = styled.button`
   padding: 12px;
   min-width: 112px;
   text-align: left;
+  font-weight: bold;
 `;
