@@ -9,6 +9,7 @@ import Layout from '../../components/_common/Layout';
 import { anchors } from '../../components/_common/NaviItem';
 import Description from '../../components/work/Description';
 import GoodPoints from '../../components/work/GoodPoints';
+import Images from '../../components/work/Images';
 
 type Props = {
   pageContext: {
@@ -34,8 +35,6 @@ export default (props: Props) => {
   const image = data[`${id}Image`];
   const docImages = getDocImages(documents, data);
 
-  console.log(pageContext.work);
-
   return (
     <Layout
       pageTopImage={pageTopImage}
@@ -53,10 +52,7 @@ export default (props: Props) => {
         <s.PositionAndDate>{positionAndDate}</s.PositionAndDate>
         <Description text={description} />
         <GoodPoints goodPoints={goodPoints} />
-        <div id={anchors.documents} />
-        {docImages.map((d, i) => (
-          <s.DocImage resolutions={d.resolutions} alt={`document${i}`} key={d.resolutions.src} />
-        ))}
+        <Images images={docImages} />
         <h2 id={anchors.members}>Project members</h2>
       </s.Article>
     </Layout>
