@@ -3,7 +3,6 @@ import React from 'react';
 
 import * as s from '../../styles/components/index/Profile';
 import { anchors } from '../_common/NaviItem';
-import fb from '../../assets/images/contact_fb.png';
 
 import type { ImageSharp } from '../../entities/types';
 

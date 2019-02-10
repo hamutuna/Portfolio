@@ -2,10 +2,8 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column, row } from '../../common';
-import { pc, colors } from '../../var';
-
-import Svg from '../../../components/_common/Svg';
+import { column, row, dashedLine } from '../../common';
+import { colors } from '../../var';
 
 export const Section = styled.section`
   ${column};
@@ -14,19 +12,8 @@ export const Section = styled.section`
   align-items: flex-start;
 `;
 
-const dashLine = 4;
-const dashSpan = 8;
-
 export const HorizontalLine = styled.div`
-  background-image: linear-gradient(
-    to left,
-    ${colors.black} ${(dashLine / (dashLine + dashSpan)) * 100}%,
-    transparent ${(dashLine / (dashLine + dashSpan)) * 100}%,
-    transparent 100%
-  );
-  background-size: ${dashLine + dashSpan}px ${dashLine + dashSpan}px;
-  height: 1px;
-  width: 100%;
+  ${dashedLine}
 `;
 
 export const Avatar = styled(Img).attrs({

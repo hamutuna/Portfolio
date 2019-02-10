@@ -11,6 +11,12 @@ export type Skill = {
   title: string,
 };
 
+export type GoodPoints = {
+  id: string,
+  title: string,
+  description: string,
+};
+
 export type Work = {
   id: string,
   title: string,
@@ -19,12 +25,8 @@ export type Work = {
   skills: [Skill],
   detail: string,
   documents: string[],
-};
-
-export type GoodPoints = {
-  id: string,
-  title: string,
-  description: string,
+  goodPoints: [GoodPoints],
+  members: string,
 };
 
 export type ImageSharp = {

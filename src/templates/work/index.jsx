@@ -10,6 +10,7 @@ import { anchors } from '../../components/_common/NaviItem';
 import Description from '../../components/work/Description';
 import GoodPoints from '../../components/work/GoodPoints';
 import Images from '../../components/work/Images';
+import Members from '../../components/work/Members';
 
 type Props = {
   pageContext: {
@@ -30,6 +31,7 @@ export default (props: Props) => {
     description,
     goodPoints,
     documents,
+    members,
   } = pageContext.work;
   const { pageTopImage, hamburgerImage, closeImage, logoImage } = data;
   const image = data[`${id}Image`];
@@ -42,7 +44,7 @@ export default (props: Props) => {
       closeImage={closeImage}
       logoImage={logoImage}
     >
-      <s.FirstView image={image}>
+      <s.FirstView id={anchors.firstView} image={image}>
         <s.TopImage resolutions={image.resolutions} />
       </s.FirstView>
 
@@ -53,7 +55,7 @@ export default (props: Props) => {
         <Description text={description} />
         <GoodPoints goodPoints={goodPoints} />
         <Images images={docImages} />
-        <h2 id={anchors.members}>Project members</h2>
+        <Members text={members} />
       </s.Article>
     </Layout>
   );

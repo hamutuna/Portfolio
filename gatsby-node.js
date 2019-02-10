@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => new Promise((resolve, reject) =>
                 title
                 description
               }
+              members
             }
           }
         }
