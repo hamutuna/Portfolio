@@ -11,16 +11,20 @@ export type NaviItem = {
 
 const worksNaviItems = [
   {
-    id: anchors.position,
-    text: 'Position',
+    id: anchors.title,
+    text: 'Title',
   },
   {
-    id: anchors.detail,
-    text: 'Detail',
+    id: anchors.goodPoints,
+    text: 'Ideas',
   },
   {
     id: anchors.documents,
-    text: 'Documents',
+    text: 'Images',
+  },
+  {
+    id: anchors.members,
+    text: 'Members',
   },
 ];
 
@@ -35,7 +39,7 @@ const topNaviItems = [
   },
   {
     id: anchors.profile,
-    text: 'Profile',
+    text: 'About',
   },
 ];
 

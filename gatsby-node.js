@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, actions }) => new Promise((resolve, reject) =>
               id
               title
               position
+              positionAndDate
               description
               skills {
                 id
@@ -18,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => new Promise((resolve, reject) =>
               documents
               goodPoints {
                 id
+                title
                 description
               }
             }

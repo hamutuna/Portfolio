@@ -2,18 +2,8 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column } from '../../../styles/common';
-import { pc, headerHeight, underFirstView } from '../../../styles/var';
-
-export const Wrapper = styled.div`
-  ${column};
-  margin: 0 16px;
-
-  ${pc} {
-    margin: 0 128px;
-    text-align: center;
-  }
-`;
+import { column } from '../../common';
+import { pc, headerHeight, underFirstView } from '../../var';
 
 export const FirstView = styled.div`
   height: calc(100vh - ${headerHeight} - ${underFirstView});
@@ -27,6 +17,29 @@ export const TopImage = styled(Img).attrs({
     height: `calc(100vh - ${headerHeight} - ${underFirstView})`,
   },
 })``;
+
+export const Article = styled.section`
+  ${column};
+  align-items: flex-start;
+  padding: 0 28px;
+`;
+
+export const Title = styled.h1`
+  font-size: 28px;
+  margin-top: 28px;
+`;
+
+export const Position = styled.h2`
+  font-size: 16px;
+  margin-top: 24px;
+  font-weight: bold;
+`;
+
+export const PositionAndDate = styled.h2`
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: normal;
+`;
 
 export const DocImage = styled(Img).attrs({
   style: {

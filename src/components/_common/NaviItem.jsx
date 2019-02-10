@@ -11,6 +11,9 @@ export const anchors = {
   position: 'position',
   detail: 'detail',
   documents: 'documents',
+  members: 'members',
+  goodPoints: 'goodPoints',
+  title: 'title',
 };
 
 export type Anchors = $Keys<typeof anchors>;

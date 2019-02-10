@@ -7,6 +7,8 @@ import * as s from '../../styles/templates/work/index';
 
 import Layout from '../../components/_common/Layout';
 import { anchors } from '../../components/_common/NaviItem';
+import Description from '../../components/work/Description';
+import GoodPoints from '../../components/work/GoodPoints';
 
 type Props = {
   pageContext: {
@@ -19,10 +21,20 @@ const getDocImages = (documents, json) => documents.map((d) => json[d]);
 
 export default (props: Props) => {
   const { pageContext, data } = props;
-  const { id, title, description, position, skills, detail, documents } = pageContext.work;
+  const {
+    id,
+    title,
+    position,
+    positionAndDate,
+    description,
+    goodPoints,
+    documents,
+  } = pageContext.work;
   const { pageTopImage, hamburgerImage, closeImage, logoImage } = data;
   const image = data[`${id}Image`];
   const docImages = getDocImages(documents, data);
+
+  console.log(pageContext.work);
 
   return (
     <Layout
@@ -31,33 +43,22 @@ export default (props: Props) => {
       closeImage={closeImage}
       logoImage={logoImage}
     >
-      <s.Wrapper>
-        <s.FirstView id={anchors.firstView} image={image}>
-          <s.TopImage resolutions={image.resolutions} />
-        </s.FirstView>
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <h2 id={anchors.position}>担当工程/役割</h2>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: position,
-          }}
-        />
-        <h2>使用skill</h2>
-        {skills.map((skill) => (
-          <p key={skill.id}>{skill.title}</p>
-        ))}
-        <h2 id={anchors.detail}>詳細</h2>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: detail,
-          }}
-        />
-        <h2 id={anchors.documents}>実際の資料</h2>
+      <s.FirstView image={image}>
+        <s.TopImage resolutions={image.resolutions} />
+      </s.FirstView>
+
+      <s.Article>
+        <s.Title id={anchors.title}>{title}</s.Title>
+        <s.Position>{position}</s.Position>
+        <s.PositionAndDate>{positionAndDate}</s.PositionAndDate>
+        <Description text={description} />
+        <GoodPoints goodPoints={goodPoints} />
+        <div id={anchors.documents} />
         {docImages.map((d, i) => (
           <s.DocImage resolutions={d.resolutions} alt={`document${i}`} key={d.resolutions.src} />
         ))}
-      </s.Wrapper>
+        <h2 id={anchors.members}>Project members</h2>
+      </s.Article>
     </Layout>
   );
 };

@@ -21,6 +21,12 @@ export type Work = {
   documents: string[],
 };
 
+export type GoodPoints = {
+  id: string,
+  title: string,
+  description: string,
+};
+
 export type ImageSharp = {
   resolutions: {},
 };
