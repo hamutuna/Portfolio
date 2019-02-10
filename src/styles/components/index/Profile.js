@@ -71,3 +71,13 @@ export const HopeDescription = styled.p`
   font-size: 14px;
   margin-top: 8px;
 `;
+
+export const SkillTitle = styled.h3`
+  font-size: 16px;
+  margin-top: 32px;
+`;
+
+export const SkillDescription = styled.p`
+  font-size: 14px;
+  margin-top: 8px;
+`;

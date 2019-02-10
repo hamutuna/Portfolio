@@ -29,5 +29,13 @@ export default ({ avatarImage, twitterImage }: Props) => (
     <s.HopeDescription>
       説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります
     </s.HopeDescription>
+    <s.SkillTitle>スキル</s.SkillTitle>
+    <s.SkillDescription>
+      ・ figma, Adobe XD︎, sketch
+      <br />
+      ・︎ Abstract, zeplin
+      <br />
+      ・︎ Adobe Photoshop CC, Illustrator CC
+    </s.SkillDescription>
   </s.Section>
 );
