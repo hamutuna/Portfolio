@@ -3,12 +3,8 @@ import { colors } from './var';
 
 // eslint-disable-next-line no-unused-expressions
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Operator Mono';
-    src: url('../fonts/Operator-Mono.ttf');
-  }
-
   body {
+    font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
     color: ${colors.black};
   }
