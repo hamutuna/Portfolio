@@ -71,7 +71,14 @@ class Header extends React.Component<Props, State> {
             ))}
           </s.NaviItemList>
           <s.LogoWrapper isShow={isShow}>
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                if (isShow) {
+                  this.toggleIsShowState.bind(this)();
+                }
+              }}
+            >
               <s.LogoImage resolutions={logoImage.resolutions} isShow={isShow} />
             </Link>
           </s.LogoWrapper>
