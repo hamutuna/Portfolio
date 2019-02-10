@@ -16,8 +16,10 @@ export default (props: Props) => {
   return (
     <s.Work href={`works/${id}`} index={index}>
       <s.Image resolutions={image.resolutions} />
-      <s.Title>{title}</s.Title>
-      <s.Description>{positionAndDate}</s.Description>
+      <s.Captions>
+        <s.Title>{title}</s.Title>
+        <s.Description>{positionAndDate}</s.Description>
+      </s.Captions>
     </s.Work>
   );
 };
