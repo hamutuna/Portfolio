@@ -14,7 +14,7 @@ export default (props: Props) => {
   const { index, id, image, title, positionAndDate } = props;
 
   return (
-    <s.Work href={`works/${id}`} index={index}>
+    <s.Work to={`/works/${id}`} index={index}>
       <s.Image resolutions={image.resolutions} />
       <s.Captions>
         <s.Title>{title}</s.Title>

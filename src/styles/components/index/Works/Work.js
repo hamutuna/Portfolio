@@ -1,10 +1,11 @@
 // @flow
 import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
 import { pc, colors } from '../../../var';
 
-export const Work = styled.a`
+export const Work = styled(Link)`
   display: block;
   margin-top: ${(props: any) => {
     if (props.index === 0) {
