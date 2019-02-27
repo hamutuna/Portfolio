@@ -15,8 +15,8 @@ export default (props: Props) => {
 
   return (
     <s.FirstView id={anchors.firstView}>
-      <s.FloatWrapper />
-      <s.Image resolutions={image.resolutions} />
+      <s.BgImage resolutions={image.resolutions} />
+      <s.FloatText>想いや課題へ真摯に向き合い、しっかりとあなたに届けたい</s.FloatText>
     </s.FirstView>
   );
 };

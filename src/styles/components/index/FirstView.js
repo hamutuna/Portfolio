@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { column, row } from '../../common';
+import { column } from '../../common';
 import { headerHeight, underFirstView, colors } from '../../var';
 
 export const FirstView = styled.section`
@@ -12,22 +12,23 @@ export const FirstView = styled.section`
   background-color: ${colors.firstViewBg};
 `;
 
-const size = 184;
-
-export const Image = styled(Img).attrs({
+export const BgImage = styled(Img).attrs({
   style: {
-    width: `${size}px`,
-    height: `${size}px`,
-  },
-  imgStyle: {
-    objectFit: 'contain',
+    width: '100%',
+    height: '100%',
   },
 })``;
 
-export const FloatWrapper = styled.div`
+const textMargin = 30;
+
+export const FloatText = styled.div`
   position: absolute;
   z-index: 1;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 282px;
+  transform: translate(-50%, 0);
+  color: #6b4320;
+  font-size: 28px;
+  width: calc(100vw - ${textMargin * 2}px);
+  max-width: 800px;
 `;
