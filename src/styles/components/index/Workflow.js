@@ -30,9 +30,11 @@ export const ItemTitleWrapper = styled.div`
   align-items: flex-start;
 `;
 
-const markSize = 24;
+const markSize = 32;
 
 export const ItemTitleMark = styled.div`
+  ${row}
+  align-items: center;
   width: ${markSize}px;
   height: ${markSize}px;
   background-color: #c4c4c4;
@@ -43,6 +45,13 @@ export const ItemTitleMark = styled.div`
 export const ItemTitle = styled.h2`
   font-size: 16px;
 `;
+
+export const Icon = styled(Img).attrs({
+  style: {
+    width: '24px',
+    height: '24px',
+  },
+})``;
 
 export const ItemDescriptionWrapper = styled.div`
   ${row}

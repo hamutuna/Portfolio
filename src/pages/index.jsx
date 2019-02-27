@@ -58,6 +58,9 @@ export default ({ data }: Props) => {
   } = data;
 
   const [works, workImages] = resolveJson(data, allWorksJson);
+  const [workflows, workflowImages] = resolveJson(data, allWorkflowsJson);
+
+  console.log(workflowImages);
 
   return (
     <Layout
@@ -67,7 +70,7 @@ export default ({ data }: Props) => {
       logoImage={logoImage}
     >
       <FirstView image={logoImage} />
-      <Workflow workflows={getList(allWorkflowsJson)} />
+      <Workflow workflows={workflows} images={workflowImages} />
       <Works works={works} images={workImages} />
       <Profile avatarImage={avatarImage} twitterImage={twitterImage} pageTopImage={pageTopImage} />
     </Layout>
@@ -157,6 +160,18 @@ export const query = graphql`
       ...ImgFragment
     }
     project4Image: imageSharp(resolutions: { originalName: { eq: "work_project4.png" } }) {
+      ...ImgFragment
+    }
+    workflow1Image: imageSharp(resolutions: { originalName: { eq: "workflow1.png" } }) {
+      ...ImgFragment
+    }
+    workflow2Image: imageSharp(resolutions: { originalName: { eq: "workflow2.png" } }) {
+      ...ImgFragment
+    }
+    workflow3Image: imageSharp(resolutions: { originalName: { eq: "workflow3.png" } }) {
+      ...ImgFragment
+    }
+    workflow4Image: imageSharp(resolutions: { originalName: { eq: "workflow4.png" } }) {
       ...ImgFragment
     }
   }

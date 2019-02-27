@@ -3,15 +3,17 @@ import React from 'react';
 
 import * as s from '../../styles/components/index/Workflow';
 import { anchors } from '../_common/NaviItem';
-import fb from '../../assets/images/contact_fb.png';
 
-import type { Workflow } from '../../entities/types';
+import type { Workflow, ImageSharp } from '../../entities/types';
 
 type Props = {
   workflows: [Workflow],
+  images: {
+    [string]: ImageSharp,
+  },
 };
 
-export default ({ workflows }: Props) => (
+export default ({ workflows, images }: Props) => (
   <s.Section>
     <s.Title id={anchors.workflows}>Workflow</s.Title>
     <s.Wrapper>
@@ -20,7 +22,9 @@ export default ({ workflows }: Props) => (
         return (
           <s.ListItem key={w.id} index={i}>
             <s.ItemTitleWrapper>
-              <s.ItemTitleMark />
+              <s.ItemTitleMark>
+                <s.Icon resolutions={images[w.id].resolutions} />
+              </s.ItemTitleMark>
               <s.ItemTitle>{w.title}</s.ItemTitle>
             </s.ItemTitleWrapper>
             <s.ItemDescriptionWrapper>
