@@ -23,7 +23,7 @@ const textMargin = 30;
 
 export const FloatText = styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
