@@ -35,6 +35,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve('./src/templates/work/index.jsx'),
       context: {
         work: node,
+        firstViewImage: `/work_${node.id}\\.png/`,
       },
     });
   });

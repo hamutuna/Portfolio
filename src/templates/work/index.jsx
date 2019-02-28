@@ -24,7 +24,6 @@ const getDocImages = (documents, json) => documents.map((d) => json[d]);
 export default (props: Props) => {
   const { pageContext, data } = props;
   const {
-    id,
     title,
     position,
     positionAndDate,
@@ -33,8 +32,7 @@ export default (props: Props) => {
     documents,
     members,
   } = pageContext.work;
-  const { pageTopImage, hamburgerImage, closeImage, logoImage } = data;
-  const image = data[`${id}Image`];
+  const { pageTopImage, hamburgerImage, closeImage, logoImage, firstViewImage } = data;
   const docImages = getDocImages(documents, data);
 
   return (
@@ -44,8 +42,8 @@ export default (props: Props) => {
       closeImage={closeImage}
       logoImage={logoImage}
     >
-      <s.FirstView id={anchors.firstView} image={image}>
-        <s.TopImage resolutions={image.resolutions} />
+      <s.FirstView id={anchors.firstView}>
+        <s.FirstViewImage resolutions={firstViewImage.resolutions} />
       </s.FirstView>
 
       <s.Article>
@@ -62,7 +60,7 @@ export default (props: Props) => {
 };
 
 export const query = graphql`
-  query GetWorkContents {
+  query GetWorkContents($firstViewImage: String) {
     logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
       ...ImgFragment
     }
@@ -73,6 +71,9 @@ export const query = graphql`
       ...ImgFragment
     }
     closeImage: imageSharp(resolutions: { originalName: { eq: "close.png" } }) {
+      ...ImgFragment
+    }
+    firstViewImage: imageSharp(resolutions: { originalName: { regex: $firstViewImage } }) {
       ...ImgFragment
     }
     project1Image: imageSharp(resolutions: { originalName: { eq: "work_project1.png" } }) {

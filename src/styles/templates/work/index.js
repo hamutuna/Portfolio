@@ -11,7 +11,7 @@ export const FirstView = styled.div`
   background-color: lightgray;
 `;
 
-export const TopImage = styled(Img).attrs({
+export const FirstViewImage = styled(Img).attrs({
   style: {
     width: '100vw',
     height: `calc(100vh - ${headerHeight} - ${underFirstView})`,
