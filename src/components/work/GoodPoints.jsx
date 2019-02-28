@@ -13,6 +13,7 @@ type Props = {
 export default ({ goodPoints }: Props) => (
   <React.Fragment>
     <s.AnchorPoint id={anchors.goodPoints} />
+    <s.GoodPointsTitle>工夫点</s.GoodPointsTitle>
     {goodPoints.map((g, i) => (
       <s.Section key={g.id} index={i}>
         <s.Title>

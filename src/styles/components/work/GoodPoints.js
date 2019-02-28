@@ -6,10 +6,15 @@ export const AnchorPoint = styled.div`
 `;
 
 export const Section = styled.section`
-  margin-top: ${(props: any) => (props.index === 0 ? 0 : '16px')};
+  margin-top: 8px;
 `;
 
-export const Title = styled.h2`
+export const GoodPointsTitle = styled.h2`
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+export const Title = styled.h3`
   font-size: 14px;
   font-weight: bold;
 `;
