@@ -162,18 +162,6 @@ export const query = graphql`
         }
       }
     }
-    project1Image: imageSharp(resolutions: { originalName: { eq: "work_project1.png" } }) {
-      ...ImgFragment
-    }
-    project2Image: imageSharp(resolutions: { originalName: { eq: "work_project2.png" } }) {
-      ...ImgFragment
-    }
-    project3Image: imageSharp(resolutions: { originalName: { eq: "work_project3.png" } }) {
-      ...ImgFragment
-    }
-    project4Image: imageSharp(resolutions: { originalName: { eq: "work_project4.png" } }) {
-      ...ImgFragment
-    }
     workflow1Image: imageSharp(resolutions: { originalName: { eq: "workflow1.png" } }) {
       ...ImgFragment
     }
