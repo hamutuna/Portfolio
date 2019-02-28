@@ -49,6 +49,7 @@ export default ({ data }: Props) => {
   const {
     allWorkflowsJson,
     allWorksJson,
+    projectThumbnails,
     logoImage,
     firstViewImage,
     avatarImage,
@@ -58,7 +59,6 @@ export default ({ data }: Props) => {
     closeImage,
   } = data;
 
-  const [works, workImages] = resolveJson(data, allWorksJson);
   const [workflows, workflowImages] = resolveJson(data, allWorkflowsJson);
 
   return (
@@ -70,7 +70,7 @@ export default ({ data }: Props) => {
     >
       <FirstView image={firstViewImage} />
       <Workflow workflows={workflows} images={workflowImages} />
-      <Works works={works} images={workImages} />
+      <Works works={getList(allWorksJson)} images={getList(projectThumbnails)} />
       <Profile avatarImage={avatarImage} twitterImage={twitterImage} pageTopImage={pageTopImage} />
     </Layout>
   );
@@ -151,6 +151,16 @@ export const query = graphql`
     }
     wordpressImage: imageSharp(resolutions: { originalName: { eq: "wordpress.png" } }) {
       ...ImgFragment
+    }
+    projectThumbnails: allImageSharp(
+      filter: { resolutions: { originalName: { regex: "/work_project.+_thumbnail\\.png/" } } }
+      sort: { fields: resolutions___originalName }
+    ) {
+      edges {
+        node {
+          ...ImgFragment
+        }
+      }
     }
     project1Image: imageSharp(resolutions: { originalName: { eq: "work_project1.png" } }) {
       ...ImgFragment

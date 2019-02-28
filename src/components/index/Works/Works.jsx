@@ -26,7 +26,7 @@ export default (props: Props) => {
           <Work
             id={w.id}
             index={i}
-            image={images[w.id]}
+            image={images[i]}
             title={w.title}
             positionAndDate={w.positionAndDate}
             key={w.id}
