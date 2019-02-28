@@ -22,7 +22,6 @@ module.exports = {
     'gatsby-plugin-sharp',
   ],
   mapping: {
-    'WorksJson.skills': 'SkillsJson',
     'WorksJson.goodPoints': 'GoodPointsJson',
   },
 };

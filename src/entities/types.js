@@ -22,9 +22,6 @@ export type Work = {
   title: string,
   description: string,
   position: string,
-  skills: [Skill],
-  detail: string,
-  documents: string[],
   goodPoints: [GoodPoints],
   members: string,
 };

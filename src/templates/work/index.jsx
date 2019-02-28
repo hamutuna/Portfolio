@@ -19,21 +19,17 @@ type Props = {
   data: {},
 };
 
-const getDocImages = (documents, json) => documents.map((d) => json[d]);
-
 export default (props: Props) => {
   const { pageContext, data } = props;
+  const { title, position, positionAndDate, description, goodPoints, members } = pageContext.work;
   const {
-    title,
-    position,
-    positionAndDate,
-    description,
-    goodPoints,
-    documents,
-    members,
-  } = pageContext.work;
-  const { pageTopImage, hamburgerImage, closeImage, logoImage, firstViewImage } = data;
-  const docImages = getDocImages(documents, data);
+    pageTopImage,
+    hamburgerImage,
+    closeImage,
+    logoImage,
+    firstViewImage,
+    projectImages,
+  } = data;
 
   return (
     <Layout
@@ -52,7 +48,7 @@ export default (props: Props) => {
         <s.PositionAndDate>{positionAndDate}</s.PositionAndDate>
         <Description text={description} />
         <GoodPoints goodPoints={goodPoints} />
-        <Images images={docImages} />
+        <Images images={projectImages.edges.map((e) => e.node)} />
         <Members text={members} />
       </s.Article>
     </Layout>
@@ -60,7 +56,7 @@ export default (props: Props) => {
 };
 
 export const query = graphql`
-  query GetWorkContents($firstViewImage: String) {
+  query GetWorkContents($firstViewImage: String, $workImages: String) {
     logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
       ...ImgFragment
     }
@@ -76,32 +72,15 @@ export const query = graphql`
     firstViewImage: imageSharp(resolutions: { originalName: { regex: $firstViewImage } }) {
       ...ImgFragment
     }
-    project1Image: imageSharp(resolutions: { originalName: { eq: "work_project1.png" } }) {
-      ...ImgFragment
-    }
-    project2Image: imageSharp(resolutions: { originalName: { eq: "work_project2.png" } }) {
-      ...ImgFragment
-    }
-    project3Image: imageSharp(resolutions: { originalName: { eq: "work_project3.png" } }) {
-      ...ImgFragment
-    }
-    project4Image: imageSharp(resolutions: { originalName: { eq: "work_project4.png" } }) {
-      ...ImgFragment
-    }
-    project1_doc1: imageSharp(resolutions: { originalName: { eq: "project1_doc1.png" } }) {
-      ...ImgFragment
-    }
-    project1_doc2: imageSharp(resolutions: { originalName: { eq: "project1_doc2.png" } }) {
-      ...ImgFragment
-    }
-    project2_doc1: imageSharp(resolutions: { originalName: { eq: "project2_doc1.png" } }) {
-      ...ImgFragment
-    }
-    project2_doc2: imageSharp(resolutions: { originalName: { eq: "project2_doc2.png" } }) {
-      ...ImgFragment
-    }
-    project2_doc3: imageSharp(resolutions: { originalName: { eq: "project2_doc3.png" } }) {
-      ...ImgFragment
+    projectImages: allImageSharp(
+      filter: { resolutions: { originalName: { regex: $workImages } } }
+      sort: { fields: resolutions___originalName }
+    ) {
+      edges {
+        node {
+          ...ImgFragment
+        }
+      }
     }
   }
 `;

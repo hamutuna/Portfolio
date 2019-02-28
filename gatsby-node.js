@@ -11,12 +11,6 @@ exports.createPages = async ({ graphql, actions }) => {
             position
             positionAndDate
             description
-            skills {
-              id
-              title
-            }
-            detail
-            documents
             goodPoints {
               id
               title
@@ -36,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         work: node,
         firstViewImage: `/work_${node.id}\\.png/`,
+        workImages: `/${node.id}_doc.\\.png/`,
       },
     });
   });
