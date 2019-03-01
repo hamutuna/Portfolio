@@ -2,7 +2,8 @@
 import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 
-import { row, column } from '../../common';
+import { Link } from 'gatsby';
+import { row, column, dashedLine } from '../../common';
 import { pc, colors, headerHeight, hexTo, rgba } from '../../var';
 
 import _NaviItem from '../../../components/_common/NaviItem';
@@ -77,6 +78,29 @@ export const NaviItemList = styled.ol`
 export const NaviItem = styled(_NaviItem)`
   font-size: 16px;
   margin-top: 40px;
+`;
+
+export const NaviItemFooter = styled.li`
+  margin-top: auto;
+  width: 100%;
+`;
+
+export const HorizontalLine = styled.div`
+  ${dashedLine}
+  width: calc(100% - 26px);
+`;
+
+export const FooterLink = styled(Link)`
+  margin: 28px 0;
+  display: block;
+`;
+
+export const FooterButton = styled.button`
+  color: ${colors.black};
+  padding: 12px;
+  font-size: 16px;
+  width: 112px;
+  text-align: left;
 `;
 
 const size = '32px';

@@ -69,6 +69,12 @@ class Header extends React.Component<Props, State> {
                 {item.text}
               </s.NaviItem>
             ))}
+            <s.NaviItemFooter>
+              <s.HorizontalLine />
+              <s.FooterLink to="/">
+                <s.FooterButton>Top</s.FooterButton>
+              </s.FooterLink>
+            </s.NaviItemFooter>
           </s.NaviItemList>
           <s.LogoWrapper isShow={isShow}>
             <Link
