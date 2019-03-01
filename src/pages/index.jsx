@@ -8,7 +8,7 @@ import Workflow from '../components/index/Workflow';
 import Works from '../components/index/Works/Works';
 import Profile from '../components/index/Profile';
 
-import type { Work, Skill, ImageSharp } from '../entities/types';
+import type { Work, ImageSharp } from '../entities/types';
 
 type JsonEntitiy<T> = {
   edges: [
@@ -20,7 +20,6 @@ type JsonEntitiy<T> = {
 
 type Props = {
   data: {
-    allSkillsJson: JsonEntitiy<Skill>,
     allWorksJson: JsonEntitiy<Work>,
     firstViewImage: ImageSharp,
     profileImage: ImageSharp,
@@ -106,14 +105,6 @@ export const query = graphql`
         }
       }
     }
-    allSkillsJson {
-      edges {
-        node {
-          id
-          title
-        }
-      }
-    }
     firstViewImage: imageSharp(resolutions: { originalName: { eq: "first_view.png" } }) {
       ...ImgFragment
     }
@@ -133,33 +124,6 @@ export const query = graphql`
       ...ImgFragment
     }
     closeImage: imageSharp(resolutions: { originalName: { eq: "close.png" } }) {
-      ...ImgFragment
-    }
-    sketchImage: imageSharp(resolutions: { originalName: { eq: "skill_sketch.png" } }) {
-      ...ImgFragment
-    }
-    xdImage: imageSharp(resolutions: { originalName: { eq: "xd.png" } }) {
-      ...ImgFragment
-    }
-    photoshopImage: imageSharp(resolutions: { originalName: { eq: "photoshop.png" } }) {
-      ...ImgFragment
-    }
-    illustratorImage: imageSharp(resolutions: { originalName: { eq: "illustrator.png" } }) {
-      ...ImgFragment
-    }
-    html5Image: imageSharp(resolutions: { originalName: { eq: "html5.png" } }) {
-      ...ImgFragment
-    }
-    css3Image: imageSharp(resolutions: { originalName: { eq: "css3.png" } }) {
-      ...ImgFragment
-    }
-    zeplinImage: imageSharp(resolutions: { originalName: { eq: "zeplin.png" } }) {
-      ...ImgFragment
-    }
-    githubImage: imageSharp(resolutions: { originalName: { eq: "github.png" } }) {
-      ...ImgFragment
-    }
-    wordpressImage: imageSharp(resolutions: { originalName: { eq: "wordpress.png" } }) {
       ...ImgFragment
     }
     workflow1Image: imageSharp(resolutions: { originalName: { eq: "workflow1.png" } }) {

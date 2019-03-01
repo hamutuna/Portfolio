@@ -6,11 +6,6 @@ export type Workflow = {
   description: string,
 };
 
-export type Skill = {
-  id: string,
-  title: string,
-};
-
 export type GoodPoints = {
   id: string,
   title: string,
