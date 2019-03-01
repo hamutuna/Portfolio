@@ -87,12 +87,22 @@ export const query = graphql`
         }
       }
     }
-    allWorksJson(filter: {id: {regex: "/2|4/"}}) {
+    allWorksJson(filter: { id: { regex: "/2|4/" } }) {
       edges {
         node {
           id
           title
           positionAndDate
+        }
+      }
+    }
+    projectThumbnails: allImageSharp(
+      filter: { resolutions: { originalName: { regex: "/work_project(2|4)_thumbnail\\.png/" } } }
+      sort: { fields: resolutions___originalName }
+    ) {
+      edges {
+        node {
+          ...ImgFragment
         }
       }
     }
@@ -151,16 +161,6 @@ export const query = graphql`
     }
     wordpressImage: imageSharp(resolutions: { originalName: { eq: "wordpress.png" } }) {
       ...ImgFragment
-    }
-    projectThumbnails: allImageSharp(
-      filter: { resolutions: { originalName: { regex: "/work_project(2|4)_thumbnail\\.png/" } } }
-      sort: { fields: resolutions___originalName }
-    ) {
-      edges {
-        node {
-          ...ImgFragment
-        }
-      }
     }
     workflow1Image: imageSharp(resolutions: { originalName: { eq: "workflow1.png" } }) {
       ...ImgFragment
