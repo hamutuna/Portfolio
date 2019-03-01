@@ -87,7 +87,7 @@ export const query = graphql`
         }
       }
     }
-    allWorksJson {
+    allWorksJson(filter: {id: {regex: "/2|4/"}}) {
       edges {
         node {
           id
@@ -153,7 +153,7 @@ export const query = graphql`
       ...ImgFragment
     }
     projectThumbnails: allImageSharp(
-      filter: { resolutions: { originalName: { regex: "/work_project.+_thumbnail\\.png/" } } }
+      filter: { resolutions: { originalName: { regex: "/work_project(2|4)_thumbnail\\.png/" } } }
       sort: { fields: resolutions___originalName }
     ) {
       edges {
