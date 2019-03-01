@@ -138,9 +138,11 @@ export const CloseImage = styled(Img).attrs({
   transition: opacity 0.25s ease-out;
 `;
 
+const logoSize = '60px';
+
 export const LogoWrapper = styled.button`
-  width: ${size};
-  height: ${size};
+  width: ${logoSize};
+  height: ${logoSize};
   top: 28px;
   left: 28px;
   position: absolute;
@@ -152,8 +154,8 @@ export const LogoWrapper = styled.button`
 
 export const LogoImage = styled(Img).attrs({
   style: {
-    width: `${size}`,
-    height: `${size}`,
+    width: `${logoSize}`,
+    height: `${logoSize}`,
   },
 })`
   opacity: ${(props) => (props.isShow ? 1 : 0)};
