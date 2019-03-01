@@ -147,9 +147,8 @@ export const LogoWrapper = styled.button`
   left: 28px;
   position: absolute;
   z-index: 1;
-  pointer-events: all;
+  pointer-events: ${(props) => (props.isShow ? 'all' : 'none')};
   cursor: pointer;
-  display: ${(props) => (props.isShow ? 'block' : 'none')};
 `;
 
 export const LogoImage = styled(Img).attrs({
