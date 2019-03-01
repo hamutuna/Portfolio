@@ -27,7 +27,7 @@ export default ({ avatarImage, twitterImage }: Props) => (
     </s.Description>
     <s.HopeTitle>今後の展望</s.HopeTitle>
     <s.HopeDescription>
-      今後はスキル向上はいうまでもなく、自分でもそういう活動をしている人達のことを発信していきたいと思っています。
+      ものづくりをしている人達（作り手）の支援をしつつ、何らかの方法で、作り手の技術を発信していきたいと思っています。
     </s.HopeDescription>
     <s.SkillTitle>スキル</s.SkillTitle>
     <s.SkillDescription>
