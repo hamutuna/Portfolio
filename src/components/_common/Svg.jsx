@@ -1,42 +1,19 @@
 // @flow
 import React from 'react';
-import styled, { css } from 'styled-components';
-
-const size = {
-  jumpToTop: {
-    width: 48,
-    height: 54,
-  },
-  mail: {
-    width: 68,
-    height: 54,
-  },
-};
+import { withPrefix } from 'gatsby';
+import { className } from 'postcss-selector-parser';
 
 type Props = {
-  id: $Keys<typeof size>,
-  className?: string,
+  id: string,
+  className: String,
 };
 
 export default (props: Props) => {
-  const { id, className } = props;
-  const { width, height } = size[id];
+  const { className, id } = props;
 
   return (
-    <StyledSvg
-      preserveAspectRatio="xMidYMid meet"
-      viewBox={`0 0 ${width} ${height}`}
-      width={width}
-      height={height}
-      className={className}
-    >
-      <use xlinkHref={`#${id}`} />
-    </StyledSvg>
+    <svg className={className}>
+      <use xlinkHref={withPrefix(`/svg/symbol-defs.svg#icon-${id}`)} />
+    </svg>
   );
 };
-
-const StyledSvg = styled.svg`
-  color: #000;
-  width: ${(props: any) => `${props.width}px`};
-  height: ${(props: any) => `${props.height}px`};
-`;

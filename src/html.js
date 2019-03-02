@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withPrefix } from 'gatsby';
 
 export default function HTML(props) {
   return (
@@ -26,6 +27,7 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500&amp;subset=japanese"
           rel="stylesheet"
         />
+        <link href={withPrefix('/svg/style.css')} rel="stylesheet" />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
