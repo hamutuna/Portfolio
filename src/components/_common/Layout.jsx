@@ -4,7 +4,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 import Header from './Header';
 import Footer from './Footer';
-import Sprite from './Sprite';
 
 import { GlobalStyle } from '../../styles/global';
 
@@ -30,7 +29,6 @@ export default class Layout extends React.Component<Props> {
     return (
       <React.Fragment>
         <GlobalStyle />
-        <Sprite />
         <Header hamburgerImage={hamburgerImage} closeImage={closeImage} logoImage={logoImage} />
         <main>{children}</main>
         <Footer pageTopImage={pageTopImage} />
