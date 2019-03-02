@@ -8,12 +8,9 @@ import type { Workflow, ImageSharp } from '../../entities/types';
 
 type Props = {
   workflows: [Workflow],
-  images: {
-    [string]: ImageSharp,
-  },
 };
 
-export default ({ workflows, images }: Props) => (
+export default ({ workflows }: Props) => (
   <s.Section>
     <s.Title id={anchors.workflows}>Workflow</s.Title>
     <s.Wrapper>
@@ -23,7 +20,7 @@ export default ({ workflows, images }: Props) => (
           <s.ListItem key={w.id} index={i}>
             <s.ItemTitleWrapper>
               <s.ItemTitleMark>
-                <s.Icon resolutions={images[w.id].resolutions} />
+                <s.SvgIcon id={`workflow${i + 1}`} />
               </s.ItemTitleMark>
               <s.ItemTitle>{w.title}</s.ItemTitle>
             </s.ItemTitleWrapper>

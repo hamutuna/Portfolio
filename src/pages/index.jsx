@@ -28,22 +28,6 @@ type Props = {
 
 const getList = (json) => json.edges.map((edge) => edge.node);
 
-const resolveJson = <T: { id: string }>(
-  data,
-  json: JsonEntitiy<T>,
-): [T[], { [string]: ImageSharp }] => {
-  const entities = getList(json);
-  const images = (() => {
-    const imgs = {};
-    entities.forEach((entity) => {
-      imgs[entity.id] = data[`${entity.id}Image`];
-    });
-    return imgs;
-  })();
-
-  return [entities, images];
-};
-
 export default ({ data }: Props) => {
   const {
     allWorkflowsJson,
@@ -58,8 +42,6 @@ export default ({ data }: Props) => {
     closeImage,
   } = data;
 
-  const [workflows, workflowImages] = resolveJson(data, allWorkflowsJson);
-
   return (
     <Layout
       pageTopImage={pageTopImage}
@@ -68,7 +50,7 @@ export default ({ data }: Props) => {
       logoImage={logoImage}
     >
       <FirstView image={firstViewImage} />
-      <Workflow workflows={workflows} images={workflowImages} />
+      <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={getList(allWorksJson)} images={getList(projectThumbnails)} />
       <Profile avatarImage={avatarImage} twitterImage={twitterImage} pageTopImage={pageTopImage} />
     </Layout>
@@ -124,18 +106,6 @@ export const query = graphql`
       ...ImgFragment
     }
     closeImage: imageSharp(resolutions: { originalName: { eq: "close.png" } }) {
-      ...ImgFragment
-    }
-    workflow1Image: imageSharp(resolutions: { originalName: { eq: "workflow1.png" } }) {
-      ...ImgFragment
-    }
-    workflow2Image: imageSharp(resolutions: { originalName: { eq: "workflow2.png" } }) {
-      ...ImgFragment
-    }
-    workflow3Image: imageSharp(resolutions: { originalName: { eq: "workflow3.png" } }) {
-      ...ImgFragment
-    }
-    workflow4Image: imageSharp(resolutions: { originalName: { eq: "workflow4.png" } }) {
       ...ImgFragment
     }
   }

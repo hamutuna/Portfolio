@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import { column, row } from '../../common';
 import { colors } from '../../var';
+import Svg from '../../../components/_common/Svg';
 
 export const Section = styled.section`
   ${column}
@@ -44,6 +45,11 @@ export const ItemTitleMark = styled.div`
 
 export const ItemTitle = styled.h2`
   font-size: 16px;
+`;
+
+export const SvgIcon = styled(Svg)`
+  width: 18px;
+  height: 18px;
 `;
 
 export const Icon = styled(Img).attrs({
