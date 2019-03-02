@@ -15,10 +15,26 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icon-workflow1 {
+  width: 0.6845703125em;
+}
+
+.icon-workflow3 {
+  width: 1.2666015625em;
+}
+
+.icon-workflow4 {
+  width: 0.7998046875em;
+}
+
 .icon-twitter {
   width: 1.111328125em;
 }
 
-.icon-workflow1 {
-  width: 0.6845703125em;
+.icon-topArrow {
+  width: 2.400390625em;
+}
+
+.icon-hamburger {
+  width: 1.5em;
 }
