@@ -1,10 +1,10 @@
 // @flow
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 
 import { column, row } from '../../common';
 
 import _NaviItem from '../../../components/_common/NaviItem';
+import Svg from '../../../components/_common/Svg';
 
 export const Footer = styled.footer`
   ${column}
@@ -17,12 +17,10 @@ export const PageTop = styled.button`
   cursor: pointer;
 `;
 
-export const PageTopImage = styled(Img).attrs({
-  style: {
-    width: '66px',
-    height: '27px',
-  },
-})``;
+export const PageTopIcon = styled(Svg)`
+  width: 66px;
+  height: 27px;
+`;
 
 export const PageTopText = styled.p`
   color: #c4c4c4;

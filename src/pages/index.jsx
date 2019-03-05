@@ -37,22 +37,14 @@ export default ({ data }: Props) => {
     firstViewImage,
     avatarImage,
     twitterImage,
-    pageTopImage,
-    hamburgerImage,
-    closeImage,
   } = data;
 
   return (
-    <Layout
-      pageTopImage={pageTopImage}
-      hamburgerImage={hamburgerImage}
-      closeImage={closeImage}
-      logoImage={logoImage}
-    >
+    <Layout logoImage={logoImage}>
       <FirstView image={firstViewImage} />
       <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={getList(allWorksJson)} images={getList(projectThumbnails)} />
-      <Profile avatarImage={avatarImage} twitterImage={twitterImage} pageTopImage={pageTopImage} />
+      <Profile avatarImage={avatarImage} twitterImage={twitterImage} />
     </Layout>
   );
 };
@@ -97,9 +89,6 @@ export const query = graphql`
       ...ImgFragment
     }
     twitterImage: imageSharp(resolutions: { originalName: { eq: "twitter_icon.png" } }) {
-      ...ImgFragment
-    }
-    pageTopImage: imageSharp(resolutions: { originalName: { eq: "page_top.png" } }) {
       ...ImgFragment
     }
   }

@@ -11,9 +11,6 @@ import type { ImageSharp } from '../../../entities/types';
 
 type Props = {
   children: (any) => React.Element<any>,
-  pageTopImage: ImageSharp,
-  hamburgerImage: ImageSharp,
-  closeImage: ImageSharp,
   logoImage: ImageSharp,
 };
 
@@ -24,14 +21,14 @@ export default class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, pageTopImage, hamburgerImage, closeImage, logoImage } = this.props;
+    const { children, logoImage } = this.props;
 
     return (
       <React.Fragment>
         <GlobalStyle />
-        <Header hamburgerImage={hamburgerImage} closeImage={closeImage} logoImage={logoImage} />
+        <Header logoImage={logoImage} />
         <main>{children}</main>
-        <Footer pageTopImage={pageTopImage} />
+        <Footer />
       </React.Fragment>
     );
   }

@@ -22,22 +22,10 @@ type Props = {
 export default (props: Props) => {
   const { pageContext, data } = props;
   const { title, position, positionAndDate, description, goodPoints, members } = pageContext.work;
-  const {
-    pageTopImage,
-    hamburgerImage,
-    closeImage,
-    logoImage,
-    firstViewImage,
-    projectImages,
-  } = data;
+  const { logoImage, firstViewImage, projectImages } = data;
 
   return (
-    <Layout
-      pageTopImage={pageTopImage}
-      hamburgerImage={hamburgerImage}
-      closeImage={closeImage}
-      logoImage={logoImage}
-    >
+    <Layout logoImage={logoImage}>
       <s.FirstView id={anchors.firstView}>
         <s.FirstViewImage resolutions={firstViewImage.resolutions} />
       </s.FirstView>
@@ -58,9 +46,6 @@ export default (props: Props) => {
 export const query = graphql`
   query GetWorkContents($firstViewImage: String, $workImages: String) {
     logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
-      ...ImgFragment
-    }
-    pageTopImage: imageSharp(resolutions: { originalName: { eq: "page_top.png" } }) {
       ...ImgFragment
     }
     firstViewImage: imageSharp(resolutions: { originalName: { regex: $firstViewImage } }) {
