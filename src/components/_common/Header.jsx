@@ -93,7 +93,7 @@ class Header extends React.Component<Props, State> {
 
           <s.NaviItemList isShow={isShow}>
             <NaviLink to="/" isCurrentPage={this.isCurrentPage('top')}>
-              <s.NaviButton onTouchStart={()=>{}}>Top</s.NaviButton>
+              <s.NaviButton onTouchStart={() => {}}>Top</s.NaviButton>
             </NaviLink>
             <s.TitleWrapper>
               <s.NaviTitle>Works</s.NaviTitle>
@@ -105,7 +105,7 @@ class Header extends React.Component<Props, State> {
                 key={work.id}
                 isCurrentPage={this.isCurrentPage(work.id)}
               >
-                <s.NaviButton onTouchStart={()=>{}}>{work.title}</s.NaviButton>
+                <s.NaviButton onTouchStart={() => {}}>{work.title}</s.NaviButton>
               </NaviLink>
             ))}
           </s.NaviItemList>
