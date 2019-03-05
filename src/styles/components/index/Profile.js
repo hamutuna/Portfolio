@@ -64,6 +64,7 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   margin-top: 24px;
+  line-height: 23px;
 `;
 
 export const HopeTitle = styled.h3`
@@ -75,6 +76,7 @@ export const HopeDescription = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   margin-top: 8px;
+  line-height: 23px;
 `;
 
 export const SkillTitle = styled.h3`
@@ -86,4 +88,5 @@ export const SkillDescription = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   margin-top: 8px;
+  line-height: 23px;
 `;

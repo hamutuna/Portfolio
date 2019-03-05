@@ -6,4 +6,5 @@ export const Text = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   margin-top: 16px;
+  line-height: 26px;
 `;

@@ -23,4 +23,5 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   margin-top: 8px;
+  line-height: 26px;
 `;

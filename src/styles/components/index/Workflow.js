@@ -80,4 +80,5 @@ export const ItemDescription = styled.p`
   font-weight: ${weights.regular};
   margin-left: 28px;
   margin-bottom: ${(props: any) => (props.isLast ? 0 : '24px')};
+  line-height: 23px;
 `;
