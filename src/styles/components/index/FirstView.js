@@ -25,7 +25,7 @@ export const FloatText = styled.div`
   position: absolute;
   z-index: 0;
   left: 50%;
-  top: 50%;
+  top: calc(50% + 40px);
   transform: translate(-50%, -50%);
   color: #6b4320;
   font-size: 28px;
