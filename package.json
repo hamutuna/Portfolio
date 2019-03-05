@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop --host=0.0.0.0",
-    "build": "rm -r ./public && gatsby build --prefix-paths && cp public/index.html",
+    "build": "rm -r ./public && gatsby build --prefix-paths",
     "lint": "eslint ./src --ext=.js --ext=.jsx || flow ./src"
   },
   "dependencies": {
