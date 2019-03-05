@@ -960,12 +960,6 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
 
-ampifyjs@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/ampifyjs/-/ampifyjs-0.0.3.tgz#e2d34a61b65025f99ac1ce52af3003fdc35adff1"
-  dependencies:
-    cheerio "^1.0.0-rc.2"
-
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -1908,17 +1902,6 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
-cheerio@^1.0.0-rc.2:
-  version "1.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.2.tgz#4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db"
-  dependencies:
-    css-select "~1.2.0"
-    dom-serializer "~0.1.0"
-    entities "~1.1.1"
-    htmlparser2 "^3.9.1"
-    lodash "^4.15.0"
-    parse5 "^3.0.1"
-
 chokidar@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -2443,7 +2426,7 @@ css-select-base-adapter@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/css-select-base-adapter/-/css-select-base-adapter-0.1.1.tgz#3b2ff4972cc362ab88561507a95408a1432135d7"
 
-css-select@^1.1.0, css-select@~1.2.0:
+css-select@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
   dependencies:
@@ -2916,7 +2899,7 @@ dom-helpers@^3.2.1:
   dependencies:
     "@babel/runtime" "^7.1.2"
 
-dom-serializer@0, dom-serializer@~0.1.0:
+dom-serializer@0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.0.tgz#073c697546ce0780ce23be4a28e293e40bc30c82"
   dependencies:
@@ -2931,7 +2914,7 @@ domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
 
-domelementtype@1, domelementtype@^1.3.0:
+domelementtype@1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
 
@@ -2942,12 +2925,6 @@ domelementtype@~1.1.1:
 domhandler@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.1.0.tgz#d2646f5e57f6c3bab11cf6cb05d3c0acf7412594"
-  dependencies:
-    domelementtype "1"
-
-domhandler@^2.3.0:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.4.2.tgz#8805097e933d65e85546f726d60f5eb88b44f803"
   dependencies:
     domelementtype "1"
 
@@ -2968,7 +2945,7 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
-domutils@^1.5.1, domutils@^1.7.0:
+domutils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
   dependencies:
@@ -3135,7 +3112,7 @@ enhanced-resolve@^4.1.0:
     memory-fs "^0.4.0"
     tapable "^1.0.0"
 
-entities@^1.1.1, entities@~1.1.1:
+entities@~1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
 
@@ -4819,17 +4796,6 @@ html-entities@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
-htmlparser2@^3.9.1:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.10.0.tgz#5f5e422dcf6119c0d983ed36260ce9ded0bee464"
-  dependencies:
-    domelementtype "^1.3.0"
-    domhandler "^2.3.0"
-    domutils "^1.5.1"
-    entities "^1.1.1"
-    inherits "^2.0.1"
-    readable-stream "^3.0.6"
-
 htmlparser2@~3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.3.0.tgz#cc70d05a59f6542e43f0e685c982e14c924a9efe"
@@ -5879,7 +5845,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
+lodash@^4.11.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -6941,12 +6907,6 @@ parse-json@^4.0.0:
 parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
-
-parse5@^3.0.1:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
-  dependencies:
-    "@types/node" "*"
 
 parseqs@0.0.5:
   version "0.0.5"
