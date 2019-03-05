@@ -59,10 +59,13 @@ class Header extends React.Component<Props, State> {
           </s.HamburgerWrapper>
 
           <s.NaviItemList isShow={isShow}>
-            <s.TopLink to="/">
-              <s.TopButton>Top</s.TopButton>
-            </s.TopLink>
-            <s.NaviTitle>Works</s.NaviTitle>
+            <s.NaviLink to="/">
+              <s.NaviButton>Top</s.NaviButton>
+            </s.NaviLink>
+            <s.TitleWrapper>
+              <s.NaviTitle>Works</s.NaviTitle>
+              <s.HorizontalLine />
+            </s.TitleWrapper>
             {works.map((work) => (
               <s.NaviLink to={`/works/${work.id}`} key={work.id}>
                 <s.NaviButton>{work.title}</s.NaviButton>

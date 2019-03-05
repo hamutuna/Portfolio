@@ -54,8 +54,8 @@ export const NaviItemList = styled.ol`
   ${column}
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 48px;
-  padding-left: 32px;
+  padding-top: 0;
+  padding-left: 16px;
   box-sizing: border-box;
   transform: ${(props: any) => {
     if (props.isShow) {
@@ -75,13 +75,11 @@ export const NaviItemList = styled.ol`
   pointer-events: all;
 `;
 
-export const NaviTitle = styled.h2`
-  font-size: 14px;
-`;
-
 export const NaviLink = styled(Link)`
-  font-size: 16px;
-  margin-top: 40px;
+  margin-top: 16px;
+  &:first-child {
+    margin-top: 102px;
+  }
 `;
 
 export const NaviButton = styled.button`
@@ -92,17 +90,20 @@ export const NaviButton = styled.button`
   text-align: left;
 `;
 
-export const TopLink = styled(Link)`
-  margin: 28px 0;
-  display: block;
+export const TitleWrapper = styled.div`
+  margin-top: 16px;
+  margin-left: 12px;
+  width: 100%;
 `;
 
-export const TopButton = styled.button`
-  color: ${colors.black};
-  padding: 12px;
-  font-size: 16px;
-  width: 112px;
-  text-align: left;
+export const NaviTitle = styled.h2`
+  font-size: 10px;
+`;
+
+export const HorizontalLine = styled.div`
+  ${dashedLine}
+  margin-top: 4px;
+  margin-left: -8px;
 `;
 
 const hamburgerSize = '56px';
