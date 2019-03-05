@@ -1,5 +1,5 @@
-HASH=$(git log --format=%H origin/master .github/)
-git cherry-pick -n $HASH
+git fetch origin master
+HASH=$(git log --format=%H origin master .github/)
 
 read -p "Commit & Push ? (y/n)" CAN_PUSH
 if [ "${CAN_PUSH}" != "y" ]; then
@@ -7,5 +7,9 @@ if [ "${CAN_PUSH}" != "y" ]; then
   exit 1
 fi
 
-git commit -m "update .github"
+LAST=$(echo ${HASH:0:40})
+FIRST=${HASH: -40}
+PARAM=$FIRST..$LAST
+
+git cherry-pick $PARAM
 git push origin
