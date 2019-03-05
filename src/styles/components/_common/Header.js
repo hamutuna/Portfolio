@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import { Link } from 'gatsby';
 import { row, column, dashedLine } from '../../common';
-import { pc, colors, headerHeight, hexTo, rgba } from '../../var';
+import { pc, colors, headerHeight, hexTo, rgba, weights } from '../../var';
 
 import Svg from '../../../components/_common/Svg';
 
@@ -103,6 +103,7 @@ export const TitleWrapper = styled.div`
 
 export const NaviTitle = styled.h2`
   font-size: 10px;
+  font-weight: ${weights.regular};
 `;
 
 export const HorizontalLine = styled.div`

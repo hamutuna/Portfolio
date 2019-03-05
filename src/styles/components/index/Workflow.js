@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column, row } from '../../common';
-import { colors } from '../../var';
+import { colors, weights } from '../../var';
 import Svg from '../../../components/_common/Svg';
 
 export const Section = styled.section`
@@ -77,6 +77,7 @@ export const VerticalLine = styled.div`
 
 export const ItemDescription = styled.p`
   font-size: 14px;
+  font-weight: ${weights.regular};
   margin-left: 28px;
   margin-bottom: ${(props: any) => (props.isLast ? 0 : '24px')};
 `;

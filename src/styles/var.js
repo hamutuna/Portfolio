@@ -7,6 +7,11 @@ export const colors = {
   wood: '#BEA992',
   firstViewBg: 'rgba(37, 34, 190, 0.2)',
 };
+export const weights = {
+  regular: 400,
+  medium: 500,
+  bold: 700,
+};
 
 const hexToRgb = (hex) => {
   // http://stackoverflow.com/a/5624139

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
-import { pc, colors } from '../../../var';
+import { pc, colors, weights } from '../../../var';
 
 export const Work = styled(Link)`
   display: block;
@@ -36,12 +36,12 @@ export const Captions = styled.section`
 
 export const Title = styled.h2`
   font-size: 16px;
-  font-weight: bold;
   color: ${colors.black};
 `;
 
 export const Description = styled.p`
   margin-top: 8px;
   font-size: 14px;
+  font-weight: ${weights.regular};
   color: ${colors.black};
 `;

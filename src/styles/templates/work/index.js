@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column } from '../../common';
-import { pc, headerHeight, underFirstView } from '../../var';
+import { pc, headerHeight, underFirstView, weights } from '../../var';
 
 export const FirstView = styled.div`
   height: calc(100vh - ${headerHeight} - ${underFirstView});
@@ -32,11 +32,11 @@ export const Title = styled.h1`
 export const Position = styled.h2`
   font-size: 16px;
   margin-top: 24px;
-  font-weight: bold;
 `;
 
 export const PositionAndDate = styled.h2`
   font-size: 14px;
+  font-weight: ${weights.regular};
   margin-top: 8px;
   font-weight: normal;
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column, row, dashedLine } from '../../common';
-import { colors } from '../../var';
+import { colors, weights } from '../../var';
 
 export const Section = styled.section`
   ${column};
@@ -57,12 +57,12 @@ export const TwitterIcon = styled(Img).attrs({
 export const TwitterName = styled.p`
   margin-left: 8px;
   font-size: 14px;
-  font-weight: bold;
   color: ${colors.black};
 `;
 
 export const Description = styled.p`
   font-size: 14px;
+  font-weight: ${weights.regular};
   margin-top: 24px;
 `;
 
@@ -73,6 +73,7 @@ export const HopeTitle = styled.h3`
 
 export const HopeDescription = styled.p`
   font-size: 14px;
+  font-weight: ${weights.regular};
   margin-top: 8px;
 `;
 
@@ -83,5 +84,6 @@ export const SkillTitle = styled.h3`
 
 export const SkillDescription = styled.p`
   font-size: 14px;
+  font-weight: ${weights.regular};
   margin-top: 8px;
 `;

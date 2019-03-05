@@ -1,8 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from './var';
+import { colors, weights } from './var';
 
 // eslint-disable-next-line no-unused-expressions
 export const GlobalStyle = createGlobalStyle`
+  *{
+    font-weight: ${weights.medium};
+  }
+
   body {
     font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
