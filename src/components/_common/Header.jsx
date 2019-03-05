@@ -4,14 +4,11 @@ import { Link } from 'gatsby';
 
 import * as s from '../../styles/components/_common/Header';
 
-import injectNaviItems from '../_hoc/injectNaviItems';
-
-import type { NaviItem } from '../_hoc/injectNaviItems';
-import type { ImageSharp } from '../../../entities/types';
+import type { ImageSharp, Work } from '../../../entities/types';
 
 type Props = {
-  items: NaviItem[],
   logoImage: ImageSharp,
+  works: [Work],
 };
 
 class Header extends React.Component<Props, State> {
@@ -37,7 +34,7 @@ class Header extends React.Component<Props, State> {
   }
 
   render() {
-    const { items, logoImage } = this.props;
+    const { logoImage, works } = this.props;
     const { isShow } = this.state;
 
     return (
@@ -62,17 +59,15 @@ class Header extends React.Component<Props, State> {
           </s.HamburgerWrapper>
 
           <s.NaviItemList isShow={isShow}>
-            {items.map((item) => (
-              <s.NaviItem targetId={item.id} key={item.id}>
-                {item.text}
-              </s.NaviItem>
+            <s.TopLink to="/">
+              <s.TopButton>Top</s.TopButton>
+            </s.TopLink>
+            <s.NaviTitle>Works</s.NaviTitle>
+            {works.map((work) => (
+              <s.NaviLink to={`/works/${work.id}`} key={work.id}>
+                <s.NaviButton>{work.title}</s.NaviButton>
+              </s.NaviLink>
             ))}
-            <s.NaviItemFooter>
-              <s.HorizontalLine />
-              <s.FooterLink to="/">
-                <s.FooterButton>Top</s.FooterButton>
-              </s.FooterLink>
-            </s.NaviItemFooter>
           </s.NaviItemList>
           <s.LogoWrapper isShow={isShow}>
             <Link
@@ -92,4 +87,4 @@ class Header extends React.Component<Props, State> {
   }
 }
 
-export default injectNaviItems(Header);
+export default Header;

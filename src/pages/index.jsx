@@ -40,7 +40,7 @@ export default ({ data }: Props) => {
   } = data;
 
   return (
-    <Layout logoImage={logoImage}>
+    <Layout works={getList(allWorksJson)} logoImage={logoImage}>
       <FirstView image={firstViewImage} />
       <Workflow workflows={getList(allWorkflowsJson)} />
       <Works works={getList(allWorksJson)} images={getList(projectThumbnails)} />

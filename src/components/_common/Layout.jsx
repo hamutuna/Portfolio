@@ -7,11 +7,12 @@ import Footer from './Footer';
 
 import { GlobalStyle } from '../../styles/global';
 
-import type { ImageSharp } from '../../../entities/types';
+import type { ImageSharp, Work } from '../../../entities/types';
 
 type Props = {
   children: (any) => React.Element<any>,
   logoImage: ImageSharp,
+  works: [Work],
 };
 
 export default class Layout extends React.Component<Props> {
@@ -21,12 +22,12 @@ export default class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, logoImage } = this.props;
+    const { children, logoImage, works } = this.props;
 
     return (
       <React.Fragment>
         <GlobalStyle />
-        <Header logoImage={logoImage} />
+        <Header works={works} logoImage={logoImage} />
         <main>{children}</main>
         <Footer />
       </React.Fragment>

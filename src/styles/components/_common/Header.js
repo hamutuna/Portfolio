@@ -6,7 +6,6 @@ import { Link } from 'gatsby';
 import { row, column, dashedLine } from '../../common';
 import { pc, colors, headerHeight, hexTo, rgba } from '../../var';
 
-import _NaviItem from '../../../components/_common/NaviItem';
 import Svg from '../../../components/_common/Svg';
 
 export const Header = styled.header`
@@ -76,27 +75,29 @@ export const NaviItemList = styled.ol`
   pointer-events: all;
 `;
 
-export const NaviItem = styled(_NaviItem)`
+export const NaviTitle = styled.h2`
+  font-size: 14px;
+`;
+
+export const NaviLink = styled(Link)`
   font-size: 16px;
   margin-top: 40px;
 `;
 
-export const NaviItemFooter = styled.li`
-  margin-top: auto;
-  width: 100%;
+export const NaviButton = styled.button`
+  color: ${colors.black};
+  padding: 12px;
+  font-size: 16px;
+  width: 134px;
+  text-align: left;
 `;
 
-export const HorizontalLine = styled.div`
-  ${dashedLine}
-  width: calc(100% - 26px);
-`;
-
-export const FooterLink = styled(Link)`
+export const TopLink = styled(Link)`
   margin: 28px 0;
   display: block;
 `;
 
-export const FooterButton = styled.button`
+export const TopButton = styled.button`
   color: ${colors.black};
   padding: 12px;
   font-size: 16px;

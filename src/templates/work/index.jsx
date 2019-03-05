@@ -19,13 +19,15 @@ type Props = {
   data: {},
 };
 
+const getList = (json) => json.edges.map((edge) => edge.node);
+
 export default (props: Props) => {
   const { pageContext, data } = props;
   const { title, position, positionAndDate, description, goodPoints, members } = pageContext.work;
-  const { logoImage, firstViewImage, projectImages } = data;
+  const { logoImage, firstViewImage, projectImages, allWorksJson } = data;
 
   return (
-    <Layout logoImage={logoImage}>
+    <Layout works={getList(allWorksJson)} logoImage={logoImage}>
       <s.FirstView id={anchors.firstView}>
         <s.FirstViewImage resolutions={firstViewImage.resolutions} />
       </s.FirstView>
@@ -45,6 +47,14 @@ export default (props: Props) => {
 
 export const query = graphql`
   query GetWorkContents($firstViewImage: String, $workImages: String) {
+    allWorksJson(filter: { id: { regex: "/2|4/" } }) {
+      edges {
+        node {
+          id
+          title
+        }
+      }
+    }
     logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
       ...ImgFragment
     }
