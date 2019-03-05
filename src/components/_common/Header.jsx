@@ -11,12 +11,25 @@ type Props = {
   works: [Work],
 };
 
+type State = {
+  isShow: boolean,
+  location: string,
+};
+
 class Header extends React.Component<Props, State> {
   constructor() {
     super();
     this.state = {
       isShow: false,
+      location: '',
     };
+  }
+
+  componentDidMount() {
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({
+      location: window.location.pathname,
+    });
   }
 
   toggleIsShowState() {
@@ -31,6 +44,16 @@ class Header extends React.Component<Props, State> {
     this.setState({
       isShow: nextIsShowState,
     });
+  }
+
+  isCurrentPage(pageName) {
+    const { location } = this.state;
+
+    if (pageName === 'top') {
+      return location === '/' || location === '/portfolio/'; // ローカル用と本番環境用
+    }
+
+    return location.includes(`/${pageName}`);
   }
 
   render() {
@@ -59,7 +82,7 @@ class Header extends React.Component<Props, State> {
           </s.HamburgerWrapper>
 
           <s.NaviItemList isShow={isShow}>
-            <s.NaviLink to="/">
+            <s.NaviLink to="/" isCurrentPage={this.isCurrentPage('top')}>
               <s.NaviButton>Top</s.NaviButton>
             </s.NaviLink>
             <s.TitleWrapper>
@@ -67,7 +90,11 @@ class Header extends React.Component<Props, State> {
               <s.HorizontalLine />
             </s.TitleWrapper>
             {works.map((work) => (
-              <s.NaviLink to={`/works/${work.id}`} key={work.id}>
+              <s.NaviLink
+                to={`/works/${work.id}`}
+                key={work.id}
+                isCurrentPage={this.isCurrentPage(work.id)}
+              >
                 <s.NaviButton>{work.title}</s.NaviButton>
               </s.NaviLink>
             ))}

@@ -80,6 +80,8 @@ export const NaviLink = styled(Link)`
   &:first-child {
     margin-top: 102px;
   }
+  opacity: ${(props: any) => (props.isCurrentPage ? 0.2 : 1)};
+  pointer-events: ${(props: any) => (props.isCurrentPage ? 'none' : 'all')};
 `;
 
 export const NaviButton = styled.button`
