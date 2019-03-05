@@ -11,8 +11,6 @@ import type { ImageSharp } from '../../../entities/types';
 
 type Props = {
   items: NaviItem[],
-  hamburgerImage: ImageSharp,
-  closeImage: ImageSharp,
   logoImage: ImageSharp,
 };
 
@@ -39,7 +37,7 @@ class Header extends React.Component<Props, State> {
   }
 
   render() {
-    const { items, hamburgerImage, closeImage, logoImage } = this.props;
+    const { items, logoImage } = this.props;
     const { isShow } = this.state;
 
     return (
@@ -57,10 +55,10 @@ class Header extends React.Component<Props, State> {
           }}
         >
           <s.HamburgerWrapper isShow={isShow} href="#" onClick={this.toggleIsShowState.bind(this)}>
-            <s.HamburgerImage resolutions={hamburgerImage.resolutions} isShow={isShow} />
+            <s.HamburgerIcon id="hamburger" isShow={isShow} />
           </s.HamburgerWrapper>
           <s.HamburgerWrapper isShow={isShow} href="#" onClick={this.toggleIsShowState.bind(this)}>
-            <s.CloseImage resolutions={closeImage.resolutions} isShow={isShow} />
+            <s.CloseIcon id="cross" isShow={isShow} />
           </s.HamburgerWrapper>
 
           <s.NaviItemList isShow={isShow}>

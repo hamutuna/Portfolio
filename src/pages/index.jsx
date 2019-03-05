@@ -102,12 +102,6 @@ export const query = graphql`
     pageTopImage: imageSharp(resolutions: { originalName: { eq: "page_top.png" } }) {
       ...ImgFragment
     }
-    hamburgerImage: imageSharp(resolutions: { originalName: { eq: "hamburger.png" } }) {
-      ...ImgFragment
-    }
-    closeImage: imageSharp(resolutions: { originalName: { eq: "close.png" } }) {
-      ...ImgFragment
-    }
   }
 
   fragment ImgFragment on ImageSharp {

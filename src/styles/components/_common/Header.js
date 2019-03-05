@@ -7,6 +7,7 @@ import { row, column, dashedLine } from '../../common';
 import { pc, colors, headerHeight, hexTo, rgba } from '../../var';
 
 import _NaviItem from '../../../components/_common/NaviItem';
+import Svg from '../../../components/_common/Svg';
 
 export const Header = styled.header`
   ${row};
@@ -103,11 +104,11 @@ export const FooterButton = styled.button`
   text-align: left;
 `;
 
-const size = '32px';
+const hamburgerSize = '56px';
 
 export const HamburgerWrapper = styled.button`
-  width: ${size};
-  height: ${size};
+  width: ${hamburgerSize};
+  height: ${hamburgerSize};
   padding: 0;
   align-self: flex-start;
   top: 28px;
@@ -118,22 +119,18 @@ export const HamburgerWrapper = styled.button`
   cursor: pointer;
 `;
 
-export const HamburgerImage = styled(Img).attrs({
-  style: {
-    width: `${size}`,
-    height: `${size}`,
-  },
-})`
+export const HamburgerIcon = styled(Svg)`
+  width: ${hamburgerSize};
+  height: ${hamburgerSize};
   opacity: ${(props) => (props.isShow ? 0 : 1)};
   transition: opacity 0.25s ease-out;
 `;
 
-export const CloseImage = styled(Img).attrs({
-  style: {
-    width: `${size}`,
-    height: `${size}`,
-  },
-})`
+const closeSize = '32px';
+
+export const CloseIcon = styled(Svg)`
+  width: ${closeSize};
+  height: ${closeSize};
   opacity: ${(props) => (props.isShow ? 1 : 0)};
   transition: opacity 0.25s ease-out;
 `;
