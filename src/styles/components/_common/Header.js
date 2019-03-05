@@ -124,6 +124,7 @@ export const HamburgerIcon = styled(Svg)`
   height: ${hamburgerSize};
   opacity: ${(props) => (props.isShow ? 0 : 1)};
   transition: opacity 0.25s ease-out;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.25));
 `;
 
 const closeSize = '32px';
