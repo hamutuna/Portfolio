@@ -39,6 +39,10 @@ export const Name = styled.h2`
 export const Social = styled.a`
   ${row}
   margin-left: auto;
+  color: ${colors.black};
+  &:active {
+    text-decoration: underline;
+  }
 `;
 
 const iconSize = '32px';

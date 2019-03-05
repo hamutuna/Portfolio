@@ -90,6 +90,9 @@ export const NaviButton = styled.button`
   font-size: 16px;
   width: 134px;
   text-align: left;
+  &:active {
+    text-decoration: underline;
+  }
 `;
 
 export const TitleWrapper = styled.div`
