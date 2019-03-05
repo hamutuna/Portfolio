@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import styled from 'styled-components';
 import * as s from '../../styles/components/_common/Header';
 
 import type { ImageSharp, Work } from '../../../entities/types';
@@ -15,6 +16,15 @@ type State = {
   isShow: boolean,
   location: string,
 };
+
+export const NaviLink = styled(({ isCurrentPage, ...rest }) => <Link {...rest} />)`
+  margin-top: 16px;
+  &:first-child {
+    margin-top: 102px;
+  }
+  opacity: ${(props: any) => (props.isCurrentPage ? 0.2 : 1)};
+  pointer-events: ${(props: any) => (props.isCurrentPage ? 'none' : 'all')};
+`;
 
 class Header extends React.Component<Props, State> {
   constructor() {
@@ -82,21 +92,21 @@ class Header extends React.Component<Props, State> {
           </s.HamburgerWrapper>
 
           <s.NaviItemList isShow={isShow}>
-            <s.NaviLink to="/" isCurrentPage={this.isCurrentPage('top')}>
+            <NaviLink to="/" isCurrentPage={this.isCurrentPage('top')}>
               <s.NaviButton>Top</s.NaviButton>
-            </s.NaviLink>
+            </NaviLink>
             <s.TitleWrapper>
               <s.NaviTitle>Works</s.NaviTitle>
               <s.HorizontalLine />
             </s.TitleWrapper>
             {works.map((work) => (
-              <s.NaviLink
+              <NaviLink
                 to={`/works/${work.id}`}
                 key={work.id}
                 isCurrentPage={this.isCurrentPage(work.id)}
               >
                 <s.NaviButton>{work.title}</s.NaviButton>
-              </s.NaviLink>
+              </NaviLink>
             ))}
           </s.NaviItemList>
           <s.LogoWrapper isShow={isShow}>
