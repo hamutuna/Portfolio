@@ -38,7 +38,7 @@ export const ItemTitleMark = styled.div`
   align-items: center;
   width: ${markSize}px;
   height: ${markSize}px;
-  background-color: #c4c4c4;
+  background-color: ${colors.wood};
   border-radius: 50%;
   margin-right: 16px;
 `;
@@ -65,11 +65,13 @@ export const ItemDescriptionWrapper = styled.div`
   margin-top: 8px;
 `;
 
+const lineWidth = '4px';
+
 export const VerticalLine = styled.div`
-  margin-left: ${markSize / 2}px;
-  background-color: ${colors.black};
-  width: ${(props: any) => (props.isLast ? 0 : '1px')};
-  min-width: ${(props: any) => (props.isLast ? 0 : '1px')};
+  margin-left: calc(${markSize / 2}px - ${lineWidth} / 2);
+  background-color: ${colors.wood};
+  width: ${(props: any) => (props.isLast ? 0 : lineWidth)};
+  min-width: ${(props: any) => (props.isLast ? 0 : lineWidth)};
   align-self: stretch;
 `;
 
