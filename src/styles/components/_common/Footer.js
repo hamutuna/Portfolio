@@ -5,6 +5,7 @@ import { column, row } from '../../common';
 
 import _NaviItem from '../../../components/_common/NaviItem';
 import Svg from '../../../components/_common/Svg';
+import { colors } from '../../var';
 
 export const Footer = styled.footer`
   ${column}
@@ -23,7 +24,7 @@ export const PageTopIcon = styled(Svg)`
 `;
 
 export const PageTopText = styled.p`
-  color: #c4c4c4;
+  color: ${colors.wood};
   font-size: 12px;
   margin-top: 4px;
 `;

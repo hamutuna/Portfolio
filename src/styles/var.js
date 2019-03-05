@@ -4,6 +4,7 @@ export const headerHeight = '64px';
 export const underFirstView = '64px';
 export const colors = {
   black: '#212121',
+  wood: '#BEA992',
   firstViewBg: 'rgba(37, 34, 190, 0.2)',
 };
 
