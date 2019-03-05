@@ -7,7 +7,7 @@ export const AnchorPoint = styled.div`
 `;
 
 export const Section = styled.section`
-  margin-top: 8px;
+  margin-top: 16px;
 `;
 
 export const GoodPointsTitle = styled.h2`
