@@ -17,7 +17,7 @@ export default ({ avatarImage, twitterImage }: Props) => (
     <s.Avatar resolutions={avatarImage.resolutions} />
     <s.NameAndSocial>
       <s.Name>tuna</s.Name>
-      <s.Social href="https://www.twitter.com/tunaoisi4">
+      <s.Social href="https://www.twitter.com/tunaoisi4" onTouchStart="">
         <s.TwitterIcon resolutions={twitterImage.resolutions} />
         <s.TwitterName>@tunaoisi4</s.TwitterName>
       </s.Social>
