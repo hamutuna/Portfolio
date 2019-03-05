@@ -16,6 +16,10 @@ export const Work = styled(Link)`
   }};
   border-radius: 8px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.25s ease-out;
+  &:active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  }
 `;
 
 export const Image = styled(Img).attrs({
