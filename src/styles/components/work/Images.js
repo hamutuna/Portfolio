@@ -8,8 +8,8 @@ export const AnchorPoint = styled.div`
 
 export const Image = styled(Img).attrs({
   style: {
-    width: '100%',
-    height: '180px',
+    width: 'calc(100vw - 28px * 2)',
+    height: 'calc((100vw - 28px * 2) * 0.574)',
   },
 })`
   margin-top: ${(props: any) => (props.index === 0 ? 0 : '16px')};
