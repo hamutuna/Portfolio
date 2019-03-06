@@ -7,12 +7,12 @@ import Footer from './Footer';
 
 import { GlobalStyle } from '../../styles/global';
 
-import type { ImageSharp, Work } from '../../../entities/types';
+import type { ImageSharp, PageLink } from '../../../entities/types';
 
 type Props = {
   children: (any) => React.Element<any>,
   logoImage: ImageSharp,
-  works: [Work],
+  links: [PageLink],
 };
 
 export default class Layout extends React.Component<Props> {
@@ -22,12 +22,12 @@ export default class Layout extends React.Component<Props> {
   }
 
   render() {
-    const { children, logoImage, works } = this.props;
+    const { children, logoImage, links } = this.props;
 
     return (
       <React.Fragment>
         <GlobalStyle />
-        <Header works={works} logoImage={logoImage} />
+        <Header links={links} logoImage={logoImage} />
         <main>{children}</main>
         <Footer />
       </React.Fragment>

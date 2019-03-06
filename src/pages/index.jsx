@@ -5,10 +5,10 @@ import { graphql } from 'gatsby';
 import Layout from '../components/_common/Layout';
 import FirstView from '../components/index/FirstView';
 import Workflow from '../components/index/Workflow';
-import Works from '../components/index/Works/Works';
+import PageLinks from '../components/index/PageLinks/PageLinks';
 import Profile from '../components/index/Profile';
 
-import type { Work, ImageSharp } from '../entities/types';
+import type { WorkLink, ImageSharp } from '../entities/types';
 
 type JsonEntitiy<T> = {
   edges: [
@@ -20,7 +20,7 @@ type JsonEntitiy<T> = {
 
 type Props = {
   data: {
-    allWorksJson: JsonEntitiy<Work>,
+    allPageLinksJson: JsonEntitiy<WorkLink>,
     firstViewImage: ImageSharp,
     profileImage: ImageSharp,
   },
@@ -31,8 +31,8 @@ const getList = (json) => json.edges.map((edge) => edge.node);
 export default ({ data }: Props) => {
   const {
     allWorkflowsJson,
-    allWorksJson,
-    projectThumbnails,
+    allPageLinksJson,
+    pageLinkImages,
     logoImage,
     firstViewImage,
     avatarImage,
@@ -40,10 +40,10 @@ export default ({ data }: Props) => {
   } = data;
 
   return (
-    <Layout works={getList(allWorksJson)} logoImage={logoImage}>
+    <Layout links={getList(allPageLinksJson)} logoImage={logoImage}>
       <FirstView image={firstViewImage} />
       <Workflow workflows={getList(allWorkflowsJson)} />
-      <Works works={getList(allWorksJson)} images={getList(projectThumbnails)} />
+      <PageLinks links={getList(allPageLinksJson)} images={getList(pageLinkImages)} />
       <Profile avatarImage={avatarImage} twitterImage={twitterImage} />
     </Layout>
   );
@@ -60,17 +60,18 @@ export const query = graphql`
         }
       }
     }
-    allWorksJson(filter: { id: { regex: "/2|4/" } }) {
+    allPageLinksJson {
       edges {
         node {
           id
+          url
           title
           positionAndDate
         }
       }
     }
-    projectThumbnails: allImageSharp(
-      filter: { resolutions: { originalName: { regex: "/work_project(2|4)_thumbnail\\.png/" } } }
+    pageLinkImages: allImageSharp(
+      filter: { resolutions: { originalName: { regex: "/page_link.*\\.png/" } } }
       sort: { fields: resolutions___originalName }
     ) {
       edges {

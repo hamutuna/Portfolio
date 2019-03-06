@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 
-import type { Work } from '../../entities/types';
+import type { PageLink, Work } from '../../entities/types';
 import * as s from '../../styles/templates/work/index';
 
 import Layout from '../../components/_common/Layout';
@@ -14,6 +14,7 @@ import Members from '../../components/work/Members';
 
 type Props = {
   pageContext: {
+    link: PageLink,
     work: Work,
   },
   data: {},
@@ -23,11 +24,12 @@ const getList = (json) => json.edges.map((edge) => edge.node);
 
 export default (props: Props) => {
   const { pageContext, data } = props;
-  const { title, position, positionAndDate, description, goodPoints, members } = pageContext.work;
-  const { logoImage, firstViewImage, projectImages, allWorksJson } = data;
+  const { title, positionAndDate } = pageContext.link;
+  const { position, description, goodPoints, members } = pageContext.work;
+  const { logoImage, firstViewImage, projectImages, allPageLinksJson } = data;
 
   return (
-    <Layout works={getList(allWorksJson)} logoImage={logoImage}>
+    <Layout links={getList(allPageLinksJson)} logoImage={logoImage}>
       <s.FirstView id={anchors.firstView}>
         <s.FirstViewImage resolutions={firstViewImage.resolutions} />
       </s.FirstView>
@@ -47,11 +49,13 @@ export default (props: Props) => {
 
 export const query = graphql`
   query GetWorkContents($firstViewImage: String, $workImages: String) {
-    allWorksJson(filter: { id: { regex: "/2|4/" } }) {
+    allPageLinksJson {
       edges {
         node {
           id
+          url
           title
+          positionAndDate
         }
       }
     }

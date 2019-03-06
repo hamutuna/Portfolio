@@ -1,21 +1,15 @@
 [
   {
     "id": "project1",
-    "title": "スポーツ動画配信サービス(prototype)",
-    "positionAndDate": "BI, UI, UX, 2018",
     "position": "Planing/ 計画/ 情報設計/  Design",
     "description": "プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。<br/><br/>プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。<br/><br/>プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。",
-    "documents": ["project1_doc1", "project1_doc2"],
     "goodPoints": ["project1_goodpoint1", "project1_goodpoint2"],
     "members": "ディレクター 1名<br/>UI/UXデザイナー 1名<br/>シニアエンジニア 1名<br/>フロントエンドエンジニア 1名"
   },
   {
     "id": "project2",
-    "title": "Portfolio site",
-    "positionAndDate": "VI, BI, UI, UX, 2019",
     "position": "問題定義/ 企画/ 情報設計/ 付加価値",
     "description": "今までは作品をパワーポイントで全作品羅列しているだけだったが、それでは自分がどんなデザイナーなのか分かりにくいと思い、それを明確に伝えたくて、作成しました。<br/><br/>このサイトのコンセプトは「親しみ」「暖かい」「キレイ」としました。「親しみ」「暖かい」は「各作品へ向き合う考え方への共感」や「私の人格」を感じて欲しくて、決定しました。また「キレイ」は「依頼した時の不安を払拭したい」という想いから、決定しました。",
-    "documents": ["project2_doc1", "project2_doc2"],
     "goodPoints": [
       "project2_goodpoint1",
       "project2_goodpoint2",
@@ -26,11 +20,8 @@
   },
   {
     "id": "project3",
-    "title": "捨てられる名刺を制作した理由(note)",
-    "positionAndDate": "VI, BI, 2019",
     "position": "Planing/ 計画/ 情報設計/  Design",
     "description": "プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。<br/><br/>プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。<br/><br/>プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。",
-    "documents": ["project2_doc1", "project2_doc2", "project2_doc3"],
     "goodPoints": [
       "project2_goodpoint1",
       "project2_goodpoint2",
@@ -40,26 +31,15 @@
   },
   {
     "id": "project4",
-    "title": "セルフロゴ",
-    "positionAndDate": "VI, BI , 2018",
     "position": "問題定義/ 企画/ 情報設計/ 付加価値",
     "description": "web上での自分の分身を作るために、自分の決意を忘れないような、ロゴにしました。<br/><br/>ロゴの中央に「名前の略文字」を記載しました。背景は自分のスキルを今後生かしたいと想ったきっかけの寄木細工のコースターをモチーフにしました。",
-    "documents": [
-      "project4_doc1",
-      "project4_doc2",
-      "project4_doc3",
-      "project4_doc4"
-    ],
     "goodPoints": ["project4_goodpoint1", "project4_goodpoint2"],
     "members": "デザイナー 1名"
   },
   {
     "id": "project5",
-    "title": "IOSアプリデザイン",
-    "positionAndDate": "BI, UI, UX, 2018",
     "position": "Planing/ 計画/ 情報設計/  Design",
     "description": "プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。<br/><br/>プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。<br/><br/>プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。プロジェクト内容概要を書きます。",
-    "documents": ["project2_doc1", "project2_doc2", "project2_doc3"],
     "goodPoints": [
       "project2_goodpoint1",
       "project2_goodpoint2",

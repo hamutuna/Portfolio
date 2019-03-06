@@ -1,0 +1,23 @@
+[
+  {
+    "id": "externallink1",
+    "url": "/works/project2",
+    "title": "Portfolio site",
+    "positionAndDate": "VI, BI, UI, UX, 2019",
+    "work": "project2"
+  },
+  {
+    "id": "externallink2",
+    "url": "https://github.com/hamutuna/portfolio",
+    "title": "捨てられる名刺を制作した理由(note)",
+    "positionAndDate": "VI, BI, 2019",
+    "work": ""
+  },
+  {
+    "id": "externallink3",
+    "url": "/works/project4",
+    "title": "セルフロゴ",
+    "positionAndDate": "VI, BI , 2018",
+    "work": "project4"
+  }
+]

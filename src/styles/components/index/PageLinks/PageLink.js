@@ -5,6 +5,23 @@ import { Link } from 'gatsby';
 
 import { pc, colors, weights } from '../../../var';
 
+export const WorkExternal = styled.a`
+  display: block;
+  margin-top: ${(props: any) => {
+    if (props.index === 0) {
+      return '24px';
+    }
+
+    return '60px';
+  }};
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.25s ease-out;
+  &:active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  }
+`;
+
 export const Work = styled(Link)`
   display: block;
   margin-top: ${(props: any) => {

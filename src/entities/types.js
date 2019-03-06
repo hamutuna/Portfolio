@@ -21,6 +21,14 @@ export type Work = {
   members: string,
 };
 
+export type PageLink = {
+  id: string,
+  url: string,
+  title: string,
+  positionAndDate: string,
+  work: Work,
+};
+
 export type ImageSharp = {
   resolutions: {},
 };

@@ -75,7 +75,7 @@ export const NaviItemList = styled.ol`
   pointer-events: all;
 `;
 
-export const NaviLink = styled(Link)`
+export const NaviLinkExternal = styled.a`
   margin-top: 16px;
   &:first-child {
     margin-top: 102px;

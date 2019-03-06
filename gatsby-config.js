@@ -23,5 +23,6 @@ module.exports = {
   ],
   mapping: {
     'WorksJson.goodPoints': 'GoodPointsJson',
+    'PageLinksJson.work': 'WorksJson',
   },
 };

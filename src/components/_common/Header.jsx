@@ -5,11 +5,11 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import * as s from '../../styles/components/_common/Header';
 
-import type { ImageSharp, Work } from '../../../entities/types';
+import type { ImageSharp, PageLink } from '../../../entities/types';
 
 type Props = {
   logoImage: ImageSharp,
-  works: [Work],
+  links: [PageLink],
 };
 
 type State = {
@@ -25,6 +25,24 @@ export const NaviLink = styled(({ isCurrentPage, ...rest }) => <Link {...rest} /
   opacity: ${(props: any) => (props.isCurrentPage ? 0.2 : 1)};
   pointer-events: ${(props: any) => (props.isCurrentPage ? 'none' : 'all')};
 `;
+
+const LinkItem = (props: { isCurrentPage: boolean, link: PageLink }) => {
+  const { link, isCurrentPage } = props;
+
+  if (/^http(s):\/\//.test(link.url)) {
+    return (
+      <s.NaviLinkExternal href={link.url} isCurrentPage={isCurrentPage}>
+        <s.NaviButton onTouchStart={() => {}}>{link.title}</s.NaviButton>
+      </s.NaviLinkExternal>
+    );
+  }
+
+  return (
+    <NaviLink to={link.url} isCurrentPage={isCurrentPage}>
+      <s.NaviButton onTouchStart={() => {}}>{link.title}</s.NaviButton>
+    </NaviLink>
+  );
+};
 
 class Header extends React.Component<Props, State> {
   constructor() {
@@ -56,18 +74,18 @@ class Header extends React.Component<Props, State> {
     });
   }
 
-  isCurrentPage(pageName) {
+  isCurrentPage(pageUrl) {
     const { location } = this.state;
 
-    if (pageName === 'top') {
+    if (pageUrl === '/') {
       return location === '/' || location === '/portfolio/'; // ローカル用と本番環境用
     }
 
-    return location.includes(`/${pageName}`);
+    return location.includes(pageUrl);
   }
 
   render() {
-    const { logoImage, works } = this.props;
+    const { logoImage, links } = this.props;
     const { isShow } = this.state;
 
     return (
@@ -92,21 +110,15 @@ class Header extends React.Component<Props, State> {
           </s.HamburgerWrapper>
 
           <s.NaviItemList isShow={isShow}>
-            <NaviLink to="/" isCurrentPage={this.isCurrentPage('top')}>
+            <NaviLink to="/" isCurrentPage={this.isCurrentPage('/')}>
               <s.NaviButton onTouchStart={() => {}}>Top</s.NaviButton>
             </NaviLink>
             <s.TitleWrapper>
               <s.NaviTitle>Works</s.NaviTitle>
               <s.HorizontalLine />
             </s.TitleWrapper>
-            {works.map((work) => (
-              <NaviLink
-                to={`/works/${work.id}`}
-                key={work.id}
-                isCurrentPage={this.isCurrentPage(work.id)}
-              >
-                <s.NaviButton onTouchStart={() => {}}>{work.title}</s.NaviButton>
-              </NaviLink>
+            {links.map((link) => (
+              <LinkItem link={link} isCurrentPage={this.isCurrentPage(link.url)} key={link.id} />
             ))}
           </s.NaviItemList>
           <s.LogoWrapper isShow={isShow}>

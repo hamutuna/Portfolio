@@ -3,34 +3,43 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
-      allWorksJson {
+      allPageLinksJson {
         edges {
           node {
             id
+            url
             title
-            position
             positionAndDate
-            description
-            goodPoints {
+            work {
               id
-              title
+              position
               description
+              goodPoints {
+                id
+                title
+                description
+              }
+              members
             }
-            members
           }
         }
       }
     }
   `);
   const { createPage } = actions;
-  result.data.allWorksJson.edges.forEach(({ node }) => {
+  const { allPageLinksJson } = result.data;
+  allPageLinksJson.edges.forEach(({ node: link }) => {
+    if (/^http(s):\/\//.test(link.url)) {
+      return;
+    }
     createPage({
-      path: `works/${node.id}`,
+      path: link.url,
       component: path.resolve('./src/templates/work/index.jsx'),
       context: {
-        work: node,
-        firstViewImage: `/work_${node.id}\\.png/`,
-        workImages: `/${node.id}_doc.\\.png/`,
+        link,
+        work: link.work,
+        firstViewImage: `/work_${link.work.id}\\.png/`,
+        workImages: `/${link.work.id}_doc.\\.png/`,
       },
     });
   });
