@@ -47,7 +47,7 @@ export const Image = styled(Img).attrs({
   },
 })`
   border-top-left-radius: 8px;
-  border-right-left-radius: 8px;
+  border-top-right-radius: 8px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 `;
