@@ -30,13 +30,16 @@ const LinkItem = (props: { index: Number, link: PageLink, children: React.Node }
 
 export default (props: Props) => {
   const { index, pageLink, image } = props;
-  const { title, positionAndDate } = pageLink;
+  const { url, title, positionAndDate } = pageLink;
 
   return (
     <LinkItem link={pageLink} index={index} onTouchStart={() => {}}>
       <s.Image resolutions={image.resolutions} />
       <s.Captions>
-        <s.Title>{title}</s.Title>
+        <s.Title>
+          {title}
+          {/^http(s):\/\//.test(url) ? <s.ExternalIcon id="externalLink" /> : null}
+        </s.Title>
         <s.Description>{positionAndDate}</s.Description>
       </s.Captions>
     </LinkItem>

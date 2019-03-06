@@ -32,7 +32,10 @@ const LinkItem = (props: { isCurrentPage: boolean, link: PageLink }) => {
   if (/^http(s):\/\//.test(link.url)) {
     return (
       <s.NaviLinkExternal href={link.url} isCurrentPage={isCurrentPage}>
-        <s.NaviButton onTouchStart={() => {}}>{link.title}</s.NaviButton>
+        <s.NaviButton onTouchStart={() => {}}>
+          {link.title}
+          <s.ExternalIcon id="externalLink" />
+        </s.NaviButton>
       </s.NaviLinkExternal>
     );
   }

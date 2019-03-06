@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
 import { pc, colors, weights } from '../../../var';
+import Svg from '../../../../components/_common/Svg';
 
 export const WorkExternal = styled.a`
   display: block;
@@ -65,4 +66,13 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   color: ${colors.black};
+`;
+
+const size = '18px';
+
+export const ExternalIcon = styled(Svg)`
+  width: ${size};
+  height: ${size};
+  margin-left: 8px;
+  margin-bottom: -4px;
 `;

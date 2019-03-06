@@ -88,11 +88,20 @@ export const NaviButton = styled.button`
   color: ${colors.black};
   padding: 12px;
   font-size: 16px;
-  width: 134px;
+  width: 230px;
   text-align: left;
   &:active {
     text-decoration: underline;
   }
+`;
+
+const size = '18px';
+
+export const ExternalIcon = styled(Svg)`
+  width: ${size};
+  height: ${size};
+  margin-left: 8px;
+  margin-bottom: -4px;
 `;
 
 export const TitleWrapper = styled.div`
