@@ -23,11 +23,11 @@ export default ({ avatarImage, twitterImage }: Props) => (
       </s.Social>
     </s.NameAndSocial>
     <s.Description>
-      1992年生まれ。木のぬくもりが好きで、寄木細工から伝統工芸品や和雑貨に興味をもち、そういう活動を自分のスキルを使って応援したいと模索中です。
+      1992年生まれ。木のぬくもりが好きで、寄木細工から伝統工芸品や和雑貨に興味をもち、そういった活動を自分のスキルを使って応援したいと模索中です。
     </s.Description>
     <s.HopeTitle>今後の展望</s.HopeTitle>
     <s.HopeDescription>
-      ものづくりをしている人達（作り手）の支援をしつつ、何らかの方法で、作り手の技術を発信していきたいと思っています。
+      ものづくりをしている人達（作り手）の支援をしつつ、何らかの方法で作り手の技術を発信していきたいと思っています。
     </s.HopeDescription>
     <s.SkillTitle>スキル</s.SkillTitle>
     <s.SkillDescription>
