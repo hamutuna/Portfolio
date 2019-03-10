@@ -54,7 +54,6 @@ class Header extends React.Component<Props, State> {
       isShow: false,
       location: '',
     };
-    document.body.classList.remove('hamburger-opened');
   }
 
   componentDidMount() {
@@ -62,6 +61,7 @@ class Header extends React.Component<Props, State> {
     this.setState({
       location: window.location.pathname,
     });
+    document.body.classList.remove('hamburger-opened');
   }
 
   toggleIsShowState() {
