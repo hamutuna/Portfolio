@@ -54,6 +54,7 @@ class Header extends React.Component<Props, State> {
       isShow: false,
       location: '',
     };
+    document.body.classList.remove('hamburger-opened');
   }
 
   componentDidMount() {
