@@ -7,7 +7,7 @@ export const AnchorPoint = styled.div`
 `;
 
 export const Section = styled.section`
-  margin-top: 16px;
+  margin-top: ${(props) => (props.index === 0 ? '16px' : '28px')};
 `;
 
 export const GoodPointsTitle = styled.h2`

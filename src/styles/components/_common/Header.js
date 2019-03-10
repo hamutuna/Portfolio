@@ -95,13 +95,11 @@ export const NaviButton = styled.button`
   }
 `;
 
-const size = '18px';
-
 export const ExternalIcon = styled(Svg)`
-  width: ${size};
-  height: ${size};
-  margin-left: 8px;
-  margin-bottom: -4px;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  margin-bottom: 2px;
 `;
 
 export const TitleWrapper = styled.div`
