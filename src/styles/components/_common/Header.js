@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import { Link } from 'gatsby';
 import { row, column, dashedLine } from '../../common';
-import { pc, colors, headerHeight, hexTo, rgba, weights } from '../../var';
+import { wide, colors, headerHeight, hexTo, rgba, weights } from '../../var';
 
 import Svg from '../../../components/_common/Svg';
 
@@ -133,7 +133,7 @@ export const HamburgerWrapper = styled.button`
   pointer-events: all;
   cursor: pointer;
 
-  ${pc} {
+  ${wide} {
     display: none;
   }
 `;

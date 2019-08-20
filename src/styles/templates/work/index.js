@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column } from '../../common';
-import { pc, headerHeight, underFirstView, weights } from '../../var';
+import { headerHeight, underFirstView, weights } from '../../var';
 
 export const FirstView = styled.div`
   height: calc(100vh - ${headerHeight} - ${underFirstView});

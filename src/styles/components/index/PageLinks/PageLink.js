@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
-import { pc, colors, weights } from '../../../var';
+import { colors, weights } from '../../../var';
 import Svg from '../../../../components/_common/Svg';
 
 export const WorkExternal = styled.a`

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 
 import { row, column } from '../../common';
-import { pc, colors, headerHeight, hexTo, rgba } from '../../var';
+import { colors, headerHeight, hexTo, rgba } from '../../var';
 
 import _NaviItem from '../../../components/_common/NaviItem';
 

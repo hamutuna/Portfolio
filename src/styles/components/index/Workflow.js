@@ -3,13 +3,17 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column, row } from '../../common';
-import { colors, weights } from '../../var';
+import { wide, colors, weights } from '../../var';
 import Svg from '../../../components/_common/Svg';
 
 export const Section = styled.section`
   ${column}
   align-items: flex-start;
   margin: 28px;
+
+  ${wide} {
+    margin: 221px 160px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -18,17 +22,35 @@ export const Title = styled.h1`
 
 export const Wrapper = styled.ul`
   margin-top: 24px;
+
+  ${wide} {
+    ${row}
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+  }
 `;
 
 export const ListItem = styled.li`
   ${column}
   align-items: flex-start;
   margin-top: ${(props: any) => (props.index === 0 ? 0 : '8px')};
+
+  ${wide} {
+    max-width: 226px;
+    min-width: 226px;
+  }
 `;
 
 export const ItemTitleWrapper = styled.div`
   ${row}
   align-items: flex-start;
+
+  ${wide} {
+    ${column}
+    align-items: flex-start;
+  }
 `;
 
 const markSize = 32;
@@ -73,6 +95,10 @@ export const VerticalLine = styled.div`
   width: ${(props: any) => (props.isLast ? 0 : lineWidth)};
   min-width: ${(props: any) => (props.isLast ? 0 : lineWidth)};
   align-self: stretch;
+
+  ${wide} {
+    display: none;
+  }
 `;
 
 export const ItemDescription = styled.p`
@@ -81,4 +107,8 @@ export const ItemDescription = styled.p`
   margin-left: 28px;
   margin-bottom: ${(props: any) => (props.isLast ? 0 : '24px')};
   line-height: 23px;
+
+  ${wide} {
+    margin-left: 0;
+  }
 `;
