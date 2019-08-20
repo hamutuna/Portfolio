@@ -18,6 +18,7 @@
     "gh-pages": "^2.0.1",
     "react": "^16.3.0",
     "react-dom": "^16.8.1",
+    "react-media": "^1.9.2",
     "recursive-readdir": "^2.2.2",
     "smoothscroll-polyfill": "^0.4.3",
     "styled-components": "^4.1.3"
