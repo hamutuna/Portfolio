@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import { renderWithMQ } from '../../utils/withMediaQuery';
 
 import type { PageLink, Work } from '../../entities/types';
 import * as s from '../../styles/templates/work/index';
@@ -26,12 +27,20 @@ export default (props: Props) => {
   const { pageContext, data } = props;
   const { title, positionAndDate } = pageContext.link;
   const { position, description, goodPoints, members } = pageContext.work;
-  const { logoImage, firstViewImage, projectImages, allPageLinksJson } = data;
+  const { logoImage, firstViewImage, firstViewWideImage, projectImages, allPageLinksJson } = data;
 
   return (
     <Layout links={getList(allPageLinksJson)} logoImage={logoImage}>
       <s.FirstView id={anchors.firstView}>
-        <s.FirstViewImage resolutions={firstViewImage.resolutions} />
+        {renderWithMQ(
+          s.FirstViewImage,
+          {
+            resolutions: firstViewImage.resolutions,
+          },
+          {
+            resolutions: firstViewWideImage.resolutions,
+          },
+        )}
       </s.FirstView>
 
       <s.Article>
@@ -48,7 +57,7 @@ export default (props: Props) => {
 };
 
 export const query = graphql`
-  query GetWorkContents($firstViewImage: String, $workImages: String) {
+  query GetWorkContents($firstViewImage: String, $firstViewWideImage: String, $workImages: String) {
     allPageLinksJson {
       edges {
         node {
@@ -63,6 +72,9 @@ export const query = graphql`
       ...ImgFragment
     }
     firstViewImage: imageSharp(resolutions: { originalName: { regex: $firstViewImage } }) {
+      ...ImgFragment
+    }
+    firstViewWideImage: imageSharp(resolutions: { originalName: { regex: $firstViewWideImage } }) {
       ...ImgFragment
     }
     projectImages: allImageSharp(

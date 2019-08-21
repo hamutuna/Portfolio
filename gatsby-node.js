@@ -39,6 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
         link,
         work: link.work,
         firstViewImage: `/work_${link.work.id}\\.png/`,
+        firstViewWideImage: `/work_${link.work.id}_wide\\.png/`,
         workImages: `/${link.work.id}_doc.\\.png/`,
       },
     });
