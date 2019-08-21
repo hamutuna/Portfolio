@@ -1,5 +1,6 @@
 // @flow
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import { weights } from '../../var';
 
 export const AnchorPoint = styled.div`
@@ -25,3 +26,10 @@ export const Description = styled.p`
   margin-top: 8px;
   line-height: 26px;
 `;
+
+export const Image = styled(Img).attrs({
+  style: {
+    width: '480px',
+    height: '480px',
+  },
+})``;

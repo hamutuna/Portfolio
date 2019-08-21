@@ -4,13 +4,14 @@ import React from 'react';
 import * as s from '../../styles/components/work/GoodPoints';
 import { anchors } from '../_common/NaviItem';
 
-import type { GoodPoints } from '../../entities/types';
+import type { GoodPoints, ImageSharp } from '../../entities/types';
 
 type Props = {
   goodPoints: GoodPoints,
+  images: [ImageSharp],
 };
 
-export default ({ goodPoints }: Props) => (
+export default ({ goodPoints, images }: Props) => (
   <React.Fragment>
     <s.AnchorPoint id={anchors.goodPoints} />
     <s.GoodPointsTitle>工夫点</s.GoodPointsTitle>
@@ -21,6 +22,7 @@ export default ({ goodPoints }: Props) => (
           {g.title}
         </s.Title>
         <s.Description>{g.description}</s.Description>
+        <s.Image resolutions={images[i].resolutions} />
       </s.Section>
     ))}
   </React.Fragment>

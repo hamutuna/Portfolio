@@ -27,8 +27,16 @@ export default (props: Props) => {
   const { pageContext, data } = props;
   const { title, positionAndDate } = pageContext.link;
   const { position, description, goodPoints, members } = pageContext.work;
-  const { logoImage, firstViewImage, firstViewWideImage, projectImages, allPageLinksJson } = data;
+  const {
+    logoImage,
+    firstViewImage,
+    firstViewWideImage,
+    projectImages,
+    goodpointWideImages,
+    allPageLinksJson,
+  } = data;
 
+  console.log(goodpointWideImages.edges.map((e) => e.node));
   return (
     <Layout links={getList(allPageLinksJson)} logoImage={logoImage}>
       <s.FirstView id={anchors.firstView}>
@@ -48,7 +56,7 @@ export default (props: Props) => {
         <s.Position>{position}</s.Position>
         <s.PositionAndDate>{positionAndDate}</s.PositionAndDate>
         <Description text={description} />
-        <GoodPoints goodPoints={goodPoints} />
+        <GoodPoints goodPoints={goodPoints} images={goodpointWideImages.edges.map((e) => e.node)} />
         <Images images={projectImages.edges.map((e) => e.node)} />
         <Members text={members} />
       </s.Article>
@@ -57,7 +65,12 @@ export default (props: Props) => {
 };
 
 export const query = graphql`
-  query GetWorkContents($firstViewImage: String, $firstViewWideImage: String, $workImages: String) {
+  query GetWorkContents(
+    $firstViewImage: String
+    $firstViewWideImage: String
+    $workImages: String
+    $goodpointWideImages: String
+  ) {
     allPageLinksJson {
       edges {
         node {
@@ -79,6 +92,16 @@ export const query = graphql`
     }
     projectImages: allImageSharp(
       filter: { resolutions: { originalName: { regex: $workImages } } }
+      sort: { fields: resolutions___originalName }
+    ) {
+      edges {
+        node {
+          ...ImgFragment
+        }
+      }
+    }
+    goodpointWideImages: allImageSharp(
+      filter: { resolutions: { originalName: { regex: $goodpointWideImages } } }
       sort: { fields: resolutions___originalName }
     ) {
       edges {

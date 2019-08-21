@@ -32,6 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (/^http(s):\/\//.test(link.url)) {
       return;
     }
+    console.log(`/${link.work.id}_goodpoint[0-9]_wide\\.png/`);
     createPage({
       path: link.url,
       component: path.resolve('./src/templates/work/index.jsx'),
@@ -41,6 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
         firstViewImage: `/work_${link.work.id}\\.png/`,
         firstViewWideImage: `/work_${link.work.id}_wide\\.png/`,
         workImages: `/${link.work.id}_doc.\\.png/`,
+        goodpointWideImages: `/${link.work.id}_goodpoint[0-9]_wide\\.png/`,
       },
     });
   });
