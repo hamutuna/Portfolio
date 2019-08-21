@@ -7,6 +7,8 @@ import { wide, colors, weights } from '../../../var';
 import { row } from '../../../common';
 import Svg from '../../../../components/_common/Svg';
 
+const imgWideHeight = 480;
+
 const wrapperStyle = css`
   display: block;
   margin-top: ${(props: any) => {
@@ -27,6 +29,7 @@ const wrapperStyle = css`
     box-shadow: none;
     ${row};
     justify-content: space-between;
+    min-height: ${imgWideHeight}px;
 
     ${(props: any) => {
     if (props.index % 2 === 0) {
@@ -72,7 +75,7 @@ export const Image = styled(Img).attrs({
 export const WideImage = styled(Img).attrs({
   style: {
     width: '480px',
-    height: '480px',
+    height: `${imgWideHeight}px`,
   },
 })``;
 
