@@ -14,7 +14,7 @@ const wrapperStyle = css`
       return '24px';
     }
 
-    return '140px';
+    return '60px';
   }};
   border-radius: 8px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -34,6 +34,13 @@ const wrapperStyle = css`
           flex-flow: row-reverse;
         `;
     }
+  }};
+    margin-top: ${(props: any) => {
+    if (props.index === 0) {
+      return '140px';
+    }
+
+    return '140px';
   }};
 
     &:hover {

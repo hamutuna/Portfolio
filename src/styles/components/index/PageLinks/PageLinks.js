@@ -2,13 +2,17 @@
 import styled from 'styled-components';
 
 import { column } from '../../../common';
-import { marginHorizontal } from '../../../var';
+import { wide, marginHorizontal } from '../../../var';
 
 export const Section = styled.section`
   ${column};
-  margin: 0 ${marginHorizontal.wide}px;
+  margin: 0 28px;
   margin-top: 96px;
   align-items: flex-start;
+
+  ${wide} {
+    margin: 0 ${marginHorizontal.wide}px;
+  }
 `;
 
 export const Title = styled.h1`
