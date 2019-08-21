@@ -12,6 +12,7 @@ export const Section = styled.section`
   margin-top: ${(props) => (props.index === 0 ? '16px' : '28px')};
 
   ${wide} {
+    margin-top: ${(props) => (props.index === 0 ? '72px' : '140px')};
     ${row};
     align-items: flex-start;
     width: 100%;
