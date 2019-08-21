@@ -17,12 +17,16 @@ export default ({ goodPoints, images }: Props) => (
     <s.GoodPointsTitle>工夫点</s.GoodPointsTitle>
     {goodPoints.map((g, i) => (
       <s.Section key={g.id} index={i}>
-        <s.Title>
-          ♦︎
-          {g.title}
-        </s.Title>
-        <s.Description>{g.description}</s.Description>
-        <s.Image resolutions={images[i].resolutions} />
+        <s.Images>
+          <s.Image resolutions={images[i].resolutions} />
+        </s.Images>
+        <s.Scripts>
+          <s.Title>
+            ♦︎
+            {g.title}
+          </s.Title>
+          <s.Description>{g.description}</s.Description>
+        </s.Scripts>
       </s.Section>
     ))}
   </React.Fragment>

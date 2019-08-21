@@ -32,7 +32,6 @@ exports.createPages = async ({ graphql, actions }) => {
     if (/^http(s):\/\//.test(link.url)) {
       return;
     }
-    console.log(`/${link.work.id}_goodpoint[0-9]_wide\\.png/`);
     createPage({
       path: link.url,
       component: path.resolve('./src/templates/work/index.jsx'),

@@ -36,7 +36,6 @@ export default (props: Props) => {
     allPageLinksJson,
   } = data;
 
-  console.log(goodpointWideImages.edges.map((e) => e.node));
   return (
     <Layout links={getList(allPageLinksJson)} logoImage={logoImage}>
       <s.FirstView id={anchors.firstView}>
