@@ -27,7 +27,13 @@ export const HorizontalLine = styled.div`
 `;
 
 export const Images = styled.div`
-  flex: 1;
+  width: 100%;
+  ${column};
+  align-items: center;
+
+  ${wide} {
+    flex: 1;
+  }
 `;
 
 export const Avatar = styled(Img).attrs({
@@ -41,7 +47,9 @@ export const Avatar = styled(Img).attrs({
 `;
 
 export const Scripts = styled.div`
-  flex: 1;
+  ${wide} {
+    flex: 1;
+  }
 `;
 
 export const NameAndSocial = styled.div`
