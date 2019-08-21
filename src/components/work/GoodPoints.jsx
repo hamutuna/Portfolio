@@ -17,7 +17,7 @@ export default ({ goodPoints, images }: Props) => (
     <s.GoodPointsTitle>工夫点</s.GoodPointsTitle>
     {goodPoints.map((g, i) => (
       <s.Section key={g.id} index={i}>
-        <s.Images>
+        <s.Images index={i}>
           <s.Image resolutions={images[i].resolutions} />
         </s.Images>
         <s.Scripts>

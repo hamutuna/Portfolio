@@ -53,7 +53,8 @@ export const Images = styled.div`
   display: none;
 
   ${wide} {
-    display: block;
+    ${row};
+    justify-content: ${(props: any) => (props.index % 2 !== 0 ? 'flex-end' : 'flex-start')};
     flex: 1;
   }
 `;
