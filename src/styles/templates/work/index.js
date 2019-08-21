@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column } from '../../common';
-import { headerHeight, underFirstView, weights } from '../../var';
+import { wide, headerHeight, underFirstView, weights, marginHorizontal } from '../../var';
 
 export const FirstView = styled.div`
   height: calc(100vh - ${headerHeight} - ${underFirstView});
@@ -22,6 +22,10 @@ export const Article = styled.section`
   ${column};
   align-items: flex-start;
   padding: 0 28px;
+
+  ${wide} {
+    padding: 0 ${marginHorizontal.wide}px;
+  }
 `;
 
 export const Title = styled.h1`
