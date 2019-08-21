@@ -6,6 +6,10 @@ import { wide, weights } from '../../var';
 
 export const AnchorPoint = styled.div`
   margin-top: 60px;
+
+  ${wide} {
+    margin-top: 88px;
+  }
 `;
 
 export const Section = styled.section`
@@ -29,6 +33,10 @@ export const Section = styled.section`
 
 export const GoodPointsTitle = styled.h2`
   font-size: 16px;
+
+  ${wide} {
+    font-size: 28px;
+  }
 `;
 
 export const Scripts = styled.div`
@@ -41,6 +49,9 @@ export const Title = styled.h3`
 
   ${wide} {
     margin-top: 36px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
   }
 `;
 
@@ -49,6 +60,13 @@ export const Description = styled.p`
   font-weight: ${weights.regular};
   margin-top: 8px;
   line-height: 26px;
+
+  ${wide} {
+    margin-top: 28px;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+  }
 `;
 
 export const Images = styled.div`

@@ -31,11 +31,21 @@ export const Article = styled.section`
 export const Title = styled.h1`
   font-size: 28px;
   margin-top: 28px;
+
+  ${wide} {
+    font-size: 40px;
+    margin-top: 48px;
+  }
 `;
 
 export const Position = styled.h2`
   font-size: 16px;
   margin-top: 24px;
+
+  ${wide} {
+    font-size: 28px;
+    margin-top: 48px;
+  }
 `;
 
 export const PositionAndDate = styled.h2`
@@ -43,6 +53,12 @@ export const PositionAndDate = styled.h2`
   font-weight: ${weights.regular};
   margin-top: 8px;
   font-weight: normal;
+
+  ${wide} {
+    font-weight: ${weights.medium};
+    font-size: 20px;
+    margin-top: 16px;
+  }
 `;
 
 export const DocImage = styled(Img).attrs({
