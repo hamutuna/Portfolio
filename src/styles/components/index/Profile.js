@@ -3,17 +3,31 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column, row, dashedLine } from '../../common';
-import { colors, weights } from '../../var';
+import { wide, colors, weights, marginHorizontal } from '../../var';
 
 export const Section = styled.section`
   ${column};
   margin: 0 28px;
   margin-top: 96px;
   align-items: flex-start;
+
+  ${wide} {
+    ${row};
+    margin: 0 ${marginHorizontal.wide}px;
+    margin-top: 242px;
+  }
 `;
 
 export const HorizontalLine = styled.div`
   ${dashedLine}
+
+  ${wide} {
+    display: none;
+  }
+`;
+
+export const Images = styled.div`
+  flex: 1;
 `;
 
 export const Avatar = styled(Img).attrs({
@@ -24,6 +38,10 @@ export const Avatar = styled(Img).attrs({
 })`
   margin-top: 28px;
   align-self: center;
+`;
+
+export const Scripts = styled.div`
+  flex: 1;
 `;
 
 export const NameAndSocial = styled.div`
