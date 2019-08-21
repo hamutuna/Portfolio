@@ -56,10 +56,18 @@ export const NameAndSocial = styled.div`
   ${row};
   margin-top: 8px;
   width: 100%;
+
+  ${wide} {
+    margin-top: 0;
+  }
 `;
 
 export const Name = styled.h2`
   font-size: 28px;
+
+  ${wide} {
+    font-size: 36px;
+  }
 `;
 
 export const Social = styled.a`
@@ -91,11 +99,21 @@ export const Description = styled.p`
   font-weight: ${weights.regular};
   margin-top: 24px;
   line-height: 23px;
+
+  ${wide} {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 25px;
+  }
 `;
 
 export const HopeTitle = styled.h3`
   font-size: 16px;
   margin-top: 32px;
+
+  ${wide} {
+    font-size: 24px;
+  }
 `;
 
 export const HopeDescription = styled.p`
@@ -103,11 +121,20 @@ export const HopeDescription = styled.p`
   font-weight: ${weights.regular};
   margin-top: 8px;
   line-height: 23px;
+
+  ${wide} {
+    font-size: 16px;
+    line-height: 25px;
+  }
 `;
 
 export const SkillTitle = styled.h3`
   font-size: 16px;
   margin-top: 32px;
+
+  ${wide} {
+    font-size: 24px;
+  }
 `;
 
 export const SkillDescription = styled.p`
@@ -115,4 +142,9 @@ export const SkillDescription = styled.p`
   font-weight: ${weights.regular};
   margin-top: 8px;
   line-height: 23px;
+
+  ${wide} {
+    font-size: 16px;
+    line-height: 25px;
+  }
 `;

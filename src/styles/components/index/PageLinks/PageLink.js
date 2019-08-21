@@ -83,6 +83,10 @@ export const Captions = styled.section`
 export const Title = styled.h2`
   font-size: 16px;
   color: ${colors.black};
+
+  ${wide} {
+    font-size: 28px;
+  }
 `;
 
 export const Description = styled.p`
@@ -90,6 +94,10 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: ${weights.regular};
   color: ${colors.black};
+
+  ${wide} {
+    font-weight: ${weights.medium};
+  }
 `;
 
 export const ExternalIcon = styled(Svg)`

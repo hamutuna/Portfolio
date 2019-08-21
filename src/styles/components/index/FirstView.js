@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column } from '../../common';
-import { headerHeight, underFirstView, colors } from '../../var';
+import { wide, headerHeight, underFirstView, colors } from '../../var';
 
 export const FirstView = styled.section`
   ${column}
@@ -31,4 +31,9 @@ export const FloatText = styled.div`
   font-size: 28px;
   width: calc(100vw - ${textMargin * 2}px);
   max-width: 800px;
+
+  ${wide} {
+    font-size: 36px;
+    max-width: 980px;
+  }
 `;

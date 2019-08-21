@@ -12,7 +12,7 @@ export const Section = styled.section`
   margin: 28px;
 
   ${wide} {
-    margin: 221px ${marginHorizontal.wide}px;
+    margin: 268px ${marginHorizontal.wide}px;
   }
 `;
 
@@ -68,6 +68,11 @@ export const ItemTitleMark = styled.div`
 
 export const ItemTitle = styled.h2`
   font-size: 16px;
+
+  ${wide} {
+    font-size: 24px;
+    margin-top: 36px;
+  }
 `;
 
 export const SvgIcon = styled(Svg)`
@@ -111,5 +116,8 @@ export const ItemDescription = styled.p`
 
   ${wide} {
     margin-left: 0;
+    font-size: 16px;
+    line-height: 162.8%;
+    letter-spacing: 0.01em;
   }
 `;
