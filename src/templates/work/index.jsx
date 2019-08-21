@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { renderWithMQ } from '../../utils/withMediaQuery';
+import { renderWithMQ, render } from '../../utils/withMediaQuery';
 
 import type { PageLink, Work } from '../../entities/types';
 import * as s from '../../styles/templates/work/index';
@@ -56,7 +56,7 @@ export default (props: Props) => {
         <s.PositionAndDate>{positionAndDate}</s.PositionAndDate>
         <Description text={description} />
         <GoodPoints goodPoints={goodPoints} images={goodpointWideImages.edges.map((e) => e.node)} />
-        <Images images={projectImages.edges.map((e) => e.node)} />
+        {render(<Images images={projectImages.edges.map((e) => e.node)} />, null)}
         <Members text={members} />
       </s.Article>
     </Layout>

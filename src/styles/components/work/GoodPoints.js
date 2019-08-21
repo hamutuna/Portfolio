@@ -50,7 +50,12 @@ export const Description = styled.p`
 `;
 
 export const Images = styled.div`
-  flex: 1;
+  display: none;
+
+  ${wide} {
+    display: block;
+    flex: 1;
+  }
 `;
 
 export const Image = styled(Img).attrs({

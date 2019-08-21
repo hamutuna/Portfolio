@@ -15,3 +15,7 @@ export const componentWithMQ = (BaseComponent, WideComponent) => (props) => (
     {(matches) => (matches ? <BaseComponent {...props} /> : <WideComponent {...props} />)}
   </Media>
 );
+
+export const render = (baseRendered, wideRendered) => (
+  <Media query={query}>{(matches) => (matches ? baseRendered : wideRendered)}</Media>
+);
