@@ -34,6 +34,7 @@ export default ({ data }: Props) => {
     allWorkflowsJson,
     allPageLinksJson,
     pageLinkImages,
+    pageLinkWideImages,
     logoImage,
     firstViewImage,
     firstViewWideImage,
@@ -53,7 +54,17 @@ export default ({ data }: Props) => {
         },
       )}
       <Workflow workflows={getList(allWorkflowsJson)} />
-      <PageLinks links={getList(allPageLinksJson)} images={getList(pageLinkImages)} />
+      {renderWithMQ(
+        PageLinks,
+        {
+          links: getList(allPageLinksJson),
+          images: getList(pageLinkImages),
+        },
+        {
+          links: getList(allPageLinksJson),
+          images: getList(pageLinkWideImages),
+        },
+      )}
       <Profile avatarImage={avatarImage} twitterImage={twitterImage} />
     </Layout>
   );
@@ -81,7 +92,17 @@ export const query = graphql`
       }
     }
     pageLinkImages: allImageSharp(
-      filter: { resolutions: { originalName: { regex: "/page_link.*\\.png/" } } }
+      filter: { resolutions: { originalName: { regex: "/page_link[0-9]\\.png/" } } }
+      sort: { fields: resolutions___originalName }
+    ) {
+      edges {
+        node {
+          ...ImgFragment
+        }
+      }
+    }
+    pageLinkWideImages: allImageSharp(
+      filter: { resolutions: { originalName: { regex: "/page_link[0-9]\\_wide.png/" } } }
       sort: { fields: resolutions___originalName }
     ) {
       edges {

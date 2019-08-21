@@ -3,41 +3,51 @@ import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
-import { colors, weights } from '../../../var';
+import { wide, colors, weights } from '../../../var';
+import { row } from '../../../common';
 import Svg from '../../../../components/_common/Svg';
 
-export const WorkExternal = styled.a`
+const wrapperStyle = css`
   display: block;
   margin-top: ${(props: any) => {
     if (props.index === 0) {
       return '24px';
     }
 
-    return '60px';
+    return '140px';
   }};
   border-radius: 8px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   transition: box-shadow 0.25s ease-out;
   &:active {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  }
+
+  ${wide} {
+    box-shadow: none;
+    ${row};
+    justify-content: space-between;
+
+    ${(props: any) => {
+    if (props.index % 2 === 0) {
+      return css`
+          flex-flow: row-reverse;
+        `;
+    }
+  }};
+
+    &:hover {
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 `;
 
-export const Work = styled(Link)`
-  display: block;
-  margin-top: ${(props: any) => {
-    if (props.index === 0) {
-      return '24px';
-    }
+export const WorkExternal = styled.a`
+  ${wrapperStyle};
+`;
 
-    return '60px';
-  }};
-  border-radius: 8px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.25s ease-out;
-  &:active {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
-  }
+export const Work = styled(Link)`
+  ${wrapperStyle};
 `;
 
 export const Image = styled(Img).attrs({
@@ -51,6 +61,13 @@ export const Image = styled(Img).attrs({
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 `;
+
+export const WideImage = styled(Img).attrs({
+  style: {
+    width: '480px',
+    height: '480px',
+  },
+})``;
 
 export const Captions = styled.section`
   padding: 8px;

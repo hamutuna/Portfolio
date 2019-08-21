@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column, row } from '../../common';
-import { wide, colors, weights } from '../../var';
+import { wide, colors, weights, marginHorizontal } from '../../var';
 import Svg from '../../../components/_common/Svg';
 
 export const Section = styled.section`
@@ -12,7 +12,7 @@ export const Section = styled.section`
   margin: 28px;
 
   ${wide} {
-    margin: 221px 160px;
+    margin: 221px ${marginHorizontal.wide}px;
   }
 `;
 
@@ -40,6 +40,7 @@ export const ListItem = styled.li`
   ${wide} {
     max-width: 226px;
     min-width: 226px;
+    margin-top: 0;
   }
 `;
 

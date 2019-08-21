@@ -4,6 +4,8 @@ import * as React from 'react';
 import * as s from '../../../styles/components/index/PageLinks/PageLink';
 import type { PageLink, ImageSharp } from '../../../entities/types';
 
+import { componentWithMQ } from '../../../utils/withMediaQuery';
+
 type Props = {
   index: number,
   pageLink: PageLink,
@@ -32,9 +34,12 @@ export default (props: Props) => {
   const { index, pageLink, image } = props;
   const { url, title, positionAndDate } = pageLink;
 
+  const ImageComponent = componentWithMQ(s.Image, s.WideImage);
+
   return (
     <LinkItem link={pageLink} index={index} onTouchStart={() => {}}>
-      <s.Image resolutions={image.resolutions} />
+      <ImageComponent resolutions={image.resolutions} />
+
       <s.Captions>
         <s.Title>
           {title}

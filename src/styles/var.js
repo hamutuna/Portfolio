@@ -1,5 +1,5 @@
 export const breakPoint = {
-  wide: 415,
+  wide: 768 + 1,
 };
 export const wide = `@media (min-width: ${breakPoint.wide}px)`;
 
@@ -34,4 +34,9 @@ const hexToRgb = (hex) => {
 export const rgba = (hex, alpha) => {
   const color = hexToRgb(hex);
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
+};
+
+export const marginHorizontal = {
+  base: -1234, // not used
+  wide: 160,
 };
