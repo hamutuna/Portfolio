@@ -14,6 +14,7 @@ export const Section = styled.section`
   ${wide} {
     ${row};
     align-items: flex-start;
+    width: 100%;
 
     ${(props: any) => {
     if (props.index % 2 !== 0) {
