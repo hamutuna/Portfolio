@@ -34,11 +34,11 @@ export default (props: Props) => {
   const { index, pageLink, image } = props;
   const { url, title, positionAndDate } = pageLink;
 
-  const ImageComponent = componentWithMQ(s.Image, s.WideImage);
-
   return (
     <LinkItem link={pageLink} index={index} onTouchStart={() => {}}>
-      <ImageComponent resolutions={image.resolutions} />
+      <s.ImageWrapper>
+        <s.Image resolutions={image.resolutions} />
+      </s.ImageWrapper>
 
       <s.Captions>
         <s.Title>

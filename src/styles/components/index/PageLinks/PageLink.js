@@ -60,22 +60,26 @@ export const Work = styled(Link)`
   ${wrapperStyle};
 `;
 
-export const Image = styled(Img).attrs({
-  style: {
-    width: '100%',
-    height: '180px',
-  },
-})`
+export const ImageWrapper = styled.div`
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+
+  ${wide} {
+    width: 480px;
+    height: ${imgWideHeight}px;
+    border-radius: 8px;
+  }
 `;
 
-export const WideImage = styled(Img).attrs({
+export const Image = styled(Img).attrs({
   style: {
-    width: '480px',
-    height: `${imgWideHeight}px`,
+    width: '100%',
+    height: '100%',
   },
 })``;
 
