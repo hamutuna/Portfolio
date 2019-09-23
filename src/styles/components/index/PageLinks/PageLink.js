@@ -89,7 +89,7 @@ export const Captions = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: ${title2Size}px;
+  font-size: ${title2Size.base}px;
   color: ${colors.black};
 
   ${wide} {
