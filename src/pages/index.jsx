@@ -88,6 +88,9 @@ export const query = graphql`
           url
           title
           positionAndDate
+          work {
+            description
+          }
         }
       }
     }

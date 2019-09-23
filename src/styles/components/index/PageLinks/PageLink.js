@@ -108,6 +108,23 @@ export const Description = styled.p`
   }
 `;
 
+export const Content = styled.p`
+  ${wide} {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: ${weights.regular};
+    color: ${colors.black};
+  }
+`;
+
+export const Continue = styled.p`
+  ${wide} {
+    font-size: 16px;
+    font-weight: ${weights.regular};
+    color: ${colors.gray};
+  }
+`;
+
 export const ExternalIcon = styled(Svg)`
   width: 12px;
   height: 12px;

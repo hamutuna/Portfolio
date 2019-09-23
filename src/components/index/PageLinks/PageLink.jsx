@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as s from '../../../styles/components/index/PageLinks/PageLink';
 import type { PageLink, ImageSharp } from '../../../entities/types';
 
-import { componentWithMQ } from '../../../utils/withMediaQuery';
+import { render } from '../../../utils/withMediaQuery';
 
 type Props = {
   index: number,
@@ -32,7 +32,15 @@ const LinkItem = (props: { index: Number, link: PageLink, children: React.Node }
 
 export default (props: Props) => {
   const { index, pageLink, image } = props;
-  const { url, title, positionAndDate } = pageLink;
+  const { url, title, positionAndDate, work } = pageLink;
+  const summary = (() => {
+    if (!work) {
+      return '';
+    }
+    const { description } = work;
+    const pos = description.indexOf('。');
+    return description.slice(0, pos + 1);
+  })();
 
   return (
     <LinkItem link={pageLink} index={index} onTouchStart={() => {}}>
@@ -46,6 +54,8 @@ export default (props: Props) => {
           {/^http(s):\/\//.test(url) ? <s.ExternalIcon id="externalLink" /> : null}
         </s.Title>
         <s.Description>{positionAndDate}</s.Description>
+        {render(null, <s.Content>{summary}</s.Content>)}
+        {render(null, <s.Continue>続きをみる</s.Continue>)}
       </s.Captions>
     </LinkItem>
   );
