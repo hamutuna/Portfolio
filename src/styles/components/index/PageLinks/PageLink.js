@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import { wide, colors, weights } from '../../../var';
 import { row } from '../../../common';
 import Svg from '../../../../components/_common/Svg';
+import { title2Size } from '../var';
 
 const imgWideHeight = 480;
 
@@ -88,11 +89,11 @@ export const Captions = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 16px;
+  font-size: ${title2Size}px;
   color: ${colors.black};
 
   ${wide} {
-    font-size: 28px;
+    font-size: ${title2Size.wide}px;
   }
 `;
 

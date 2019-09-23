@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import { column, row, dashedLine } from '../../common';
 import { wide, colors, weights, marginHorizontal } from '../../var';
+import { title1Size } from './var';
 
 export const Section = styled.section`
   ${column};
@@ -63,10 +64,10 @@ export const NameAndSocial = styled.div`
 `;
 
 export const Name = styled.h2`
-  font-size: 28px;
+  font-size: ${title1Size.base}px;
 
   ${wide} {
-    font-size: 36px;
+    font-size: ${title1Size.wide}px;
   }
 `;
 

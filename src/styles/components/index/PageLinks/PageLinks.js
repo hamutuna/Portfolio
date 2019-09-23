@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { column } from '../../../common';
 import { wide, marginHorizontal } from '../../../var';
+import { title1Size } from '../var';
 
 export const Section = styled.section`
   ${column};
@@ -16,7 +17,11 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.h1`
-  font-size: 28px;
+  font-size: ${title1Size.base}px;
+
+  ${wide} {
+    font-size: ${title1Size.wide}px;
+  }
 `;
 
 export const WorksWrapper = styled.section`

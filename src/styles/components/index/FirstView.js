@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import { column } from '../../common';
 import { wide, headerHeight, underFirstView, colors } from '../../var';
+import { title1Size } from './var';
 
 export const FirstView = styled.section`
   ${column}
@@ -28,12 +29,12 @@ export const FloatText = styled.div`
   top: calc(50% + 40px);
   transform: translate(-50%, -50%);
   color: #6b4320;
-  font-size: 28px;
+  font-size: ${title1Size.base}px;
   width: calc(100vw - ${textMargin * 2}px);
   max-width: 800px;
 
   ${wide} {
-    font-size: 36px;
+    font-size: ${title1Size.wide}px;
     max-width: 980px;
   }
 `;
