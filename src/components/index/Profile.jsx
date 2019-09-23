@@ -16,15 +16,15 @@ export default ({ avatarImage, twitterImage }: Props) => (
     <s.Images>
       <s.HorizontalLine id={anchors.profile} />
       <s.Avatar resolutions={avatarImage.resolutions} />
-    </s.Images>
-    <s.Scripts>
-      <s.NameAndSocial>
-        <s.Name>tuna</s.Name>
+      <s.SocialWrapper>
         <s.Social href="https://www.twitter.com/tunaoisi4" onTouchStart={() => {}}>
           <s.TwitterIcon resolutions={twitterImage.resolutions} />
           <s.TwitterName>@tunaoisi4</s.TwitterName>
         </s.Social>
-      </s.NameAndSocial>
+      </s.SocialWrapper>
+    </s.Images>
+    <s.Scripts>
+      <s.Name>tuna</s.Name>
       <s.Description>
         1992年生まれ。木のぬくもりが好きで寄木細工から伝統工芸品や和雑貨に興味をもち、そういった活動を自分のスキルを使って応援したいと模索中です。
       </s.Description>

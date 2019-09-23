@@ -47,36 +47,25 @@ export const Avatar = styled(Img).attrs({
   align-self: center;
 `;
 
-export const Scripts = styled.div`
-  ${wide} {
-    flex: 1;
-  }
-`;
-
-export const NameAndSocial = styled.div`
-  ${row};
-  margin-top: 8px;
+export const SocialWrapper = styled.div`
+  position: relative;
   width: 100%;
-
-  ${wide} {
-    margin-top: 0;
-  }
-`;
-
-export const Name = styled.h2`
-  font-size: ${title1Size.base}px;
-
-  ${wide} {
-    font-size: ${title1Size.wide}px;
-  }
 `;
 
 export const Social = styled.a`
   ${row}
-  margin-left: auto;
+  position: absolute;
+  transform: translate(0, 25%);
+  right: 0;
   color: ${colors.black};
   &:active {
     text-decoration: underline;
+  }
+
+  ${wide} {
+    transform: translate(-50%, 25%);
+    left: 50%;
+    right: auto;
   }
 `;
 
@@ -93,6 +82,20 @@ export const TwitterName = styled.p`
   margin-left: 8px;
   font-size: 14px;
   color: ${colors.black};
+`;
+
+export const Scripts = styled.div`
+  ${wide} {
+    flex: 1;
+  }
+`;
+
+export const Name = styled.h2`
+  font-size: ${title1Size.base}px;
+
+  ${wide} {
+    font-size: ${title1Size.wide}px;
+  }
 `;
 
 export const Description = styled.p`
