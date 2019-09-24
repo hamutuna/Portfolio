@@ -32,24 +32,8 @@ const wrapperStyle = css`
     justify-content: space-between;
     min-height: ${imgWideHeight}px;
 
-    ${(props: any) => {
-    if (props.index % 2 === 0) {
-      return css`
-          flex-flow: row-reverse;
-        `;
-    }
-  }};
-    margin-top: ${(props: any) => {
-    if (props.index === 0) {
-      return '140px';
-    }
-
-    return '140px';
-  }};
-
-    &:hover {
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    }
+    ${(props: any) => (props.index % 2 === 0 ? 'flex-flow: row-reverse' : '')};
+    margin-top: ${(props: any) => (props.index === 0 ? '140px' : '140px')};
   }
 `;
 
