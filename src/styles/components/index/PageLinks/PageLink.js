@@ -34,6 +34,11 @@ const wrapperStyle = css`
 
     ${(props: any) => (props.index % 2 === 0 ? 'flex-flow: row-reverse' : '')};
     margin-top: ${(props: any) => (props.index === 0 ? '140px' : '140px')};
+
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-color: ${colors.black};
+    }
   }
 `;
 
