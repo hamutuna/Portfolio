@@ -32,10 +32,11 @@ const LinkItem = (props: { index: Number, link: PageLink, children: React.Node }
 
 export default (props: Props) => {
   const { index, pageLink, image } = props;
-  const { url, title, positionAndDate, work } = pageLink;
+  const { url, title, positionAndDate } = pageLink;
   const summary = (() => {
+    const { work, customSummary } = pageLink;
     if (!work) {
-      return '';
+      return customSummary;
     }
     const { description } = work;
     const pos = description.indexOf('。');

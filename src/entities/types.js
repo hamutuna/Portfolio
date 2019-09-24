@@ -27,6 +27,7 @@ export type PageLink = {
   title: string,
   positionAndDate: string,
   work: Work,
+  customSummary?: string,
 };
 
 export type ImageSharp = {
