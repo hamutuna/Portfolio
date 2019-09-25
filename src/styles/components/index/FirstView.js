@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import { column } from '../../common';
-import { wide, headerHeight, underFirstView, colors } from '../../var';
+import { wide, headerHeight, underFirstView } from '../../var';
 import { title1Size } from './var';
 
 export const FirstView = styled.section`
   ${column}
   width: 100vw;
   height: calc(100vh - ${headerHeight} - ${underFirstView});
-  background-color: ${colors.firstViewBg};
 `;
 
 export const BgImage = styled(Img).attrs({

@@ -9,7 +9,6 @@ export const colors = {
   black: '#212121',
   gray: '#c4c4c4',
   wood: '#BEA992',
-  firstViewBg: 'rgba(37, 34, 190, 0.2)',
 };
 export const weights = {
   regular: 400,
