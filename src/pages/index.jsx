@@ -22,7 +22,6 @@ type JsonEntitiy<T> = {
 type Props = {
   data: {
     allPageLinksJson: JsonEntitiy<WorkLink>,
-    firstViewImage: ImageSharp,
     profileImage: ImageSharp,
   },
 };
@@ -36,7 +35,6 @@ export default ({ data }: Props) => {
     pageLinkImages,
     pageLinkWideImages,
     logoImage,
-    firstViewImage,
     firstViewWideImage,
     avatarImage,
     twitterImage,
@@ -44,15 +42,7 @@ export default ({ data }: Props) => {
 
   return (
     <Layout links={getList(allPageLinksJson)} logoImage={logoImage}>
-      {renderWithMQ(
-        FirstView,
-        {
-          image: firstViewImage,
-        },
-        {
-          image: firstViewWideImage,
-        },
-      )}
+      <FirstView />
       <Workflow workflows={getList(allWorkflowsJson)} />
       {renderWithMQ(
         PageLinks,
@@ -114,12 +104,6 @@ export const query = graphql`
           ...ImgFragment
         }
       }
-    }
-    firstViewImage: imageSharp(resolutions: { originalName: { eq: "first_view.png" } }) {
-      ...ImgFragment
-    }
-    firstViewWideImage: imageSharp(resolutions: { originalName: { eq: "first_view_wide.png" } }) {
-      ...ImgFragment
     }
     logoImage: imageSharp(resolutions: { originalName: { eq: "logo.png" } }) {
       ...ImgFragment
