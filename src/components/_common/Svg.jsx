@@ -1,11 +1,10 @@
 // @flow
 import React from 'react';
 import { withPrefix } from 'gatsby';
-import { className } from 'postcss-selector-parser';
 
 type Props = {
   id: string,
-  className: String,
+  className?: String,
 };
 
 export default (props: Props) => {
