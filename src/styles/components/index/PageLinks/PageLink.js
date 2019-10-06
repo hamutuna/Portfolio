@@ -115,8 +115,9 @@ export const Continue = styled.p`
 `;
 
 export const ExternalIcon = styled(Svg)`
-  width: 12px;
-  height: 12px;
-  margin-left: 4px;
-  margin-bottom: 2px;
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  margin-bottom: -1px;
+}
 `;
