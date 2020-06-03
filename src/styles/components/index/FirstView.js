@@ -11,6 +11,7 @@ const componentHeight = `calc(100vh - ${headerHeight} - ${underFirstView})`;
 export const FirstView = styled.section`
   ${column}
   width: 100vw;
+  max-width: 100%;
   height: ${componentHeight};
 `;
 
@@ -27,6 +28,7 @@ const color2 = '#F5E7E3';
 export const BGWrapper = styled.div`
   display: flex;
   height: ${componentHeight};
+  max-width: 100%;
 `;
 
 const getVw = (position: string, mq: string): string => {
